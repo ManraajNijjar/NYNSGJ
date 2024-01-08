@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Test" ID="{79DB3A1C-11DE-455A-ADC6-4FC0F5EC0D3B}" ShortID="923234199">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX" ID="{7AC0A89F-FA60-4448-9760-6D261DBA8C92}" ShortID="866143789">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Breaking Wooden Crate" ID="{53695E04-3E0D-44E3-8C38-A851F32CCD0D}">
+									<Language>SFX</Language>
+									<AudioFile>Breaking Wooden Crate.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="651466090"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Breaking Wooden Crate" ID="{53695E04-3E0D-44E3-8C38-A851F32CCD0D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

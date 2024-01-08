@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckrlchfn6crri"
+path="res://.godot/imported/Breaking Wooden Crate.wav-2636c192f2e36258ae273969061bd1bd.sample"
+
+[deps]
+
+source_file="res://Wwise/Lasso/Originals/SFX/Breaking Wooden Crate.wav"
+dest_files=["res://.godot/imported/Breaking Wooden Crate.wav-2636c192f2e36258ae273969061bd1bd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

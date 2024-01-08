@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="SFX_TEST" ID="{9238E591-CB54-4B20-96B2-3A512DB15E6B}">
+					<ChildrenList>
+						<Action Name="" ID="{2E6FA178-10AB-4AB9-B218-61BEEDBF695C}" ShortID="994404648">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Test" ID="{79DB3A1C-11DE-455A-ADC6-4FC0F5EC0D3B}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
