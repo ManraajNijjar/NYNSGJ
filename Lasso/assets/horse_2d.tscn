@@ -11,7 +11,9 @@ size = Vector2(13.25, 20)
 [node name="Horse2D" type="CharacterBody2D" groups=["lassoable"]]
 position = Vector2(-400, 150)
 collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_43hr3")
+kickCooldownMax = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, 0)
@@ -23,7 +25,7 @@ scale = Vector2(0.104, 0.104)
 texture = ExtResource("2_i728c")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_mask = 5
+collision_mask = 12
 
 [node name="HoldArea" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2(4, 3)

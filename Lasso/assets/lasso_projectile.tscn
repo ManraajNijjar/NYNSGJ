@@ -7,7 +7,7 @@
 
 [node name="LassoProjectile" type="RigidBody2D"]
 collision_layer = 8
-collision_mask = 3
+collision_mask = 10
 script = ExtResource("1_wqmnj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,7 +18,8 @@ scale = Vector2(0.065, 0.065)
 texture = ExtResource("1_whlvl")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_mask = 3
+collision_layer = 0
+collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2(4, 4)

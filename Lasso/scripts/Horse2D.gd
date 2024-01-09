@@ -9,6 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var holdArea = $Area2D/HoldArea
 @export var cowboy : CharacterBody2D;
+@export var kickCooldownMax : float = 0.2;
 
 var bodiesInArea = [];
 
@@ -39,9 +40,11 @@ func _physics_process(delta):
 		print(canCarry);
 
 	if Input.is_action_just_pressed("down") && canCarry && !isCarrying:
+		print("picked up");
 		cowboy.held = true;
 		isCarrying = true;
 	elif Input.is_action_just_pressed("down") && isCarrying:
+		print("dropped");
 		cowboy.held = false;
 		isCarrying = false;
 	
@@ -49,7 +52,7 @@ func _physics_process(delta):
 		for body in bodiesInArea:
 			if body.has_method("apply_impulse"):
 				body.apply_impulse(Vector2(horseMoveDirection * 500, -500));
-		kickCooldown = 0.5;
+		kickCooldown = kickCooldownMax;
 	if kickCooldown > 0.0:
 		kickCooldown -= 1 * delta;
 	move_and_slide()
