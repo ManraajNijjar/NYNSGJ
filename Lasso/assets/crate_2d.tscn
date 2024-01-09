@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://caf3mirb7diwx"]
+
+[ext_resource type="Texture2D" uid="uid://bm33f1136ust8" path="res://images/development/wooden-box-PNG-free-thumb19.png" id="1_uc3li"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xvbt"]
+
+[node name="Crate2D" type="RigidBody2D" groups=["lassoable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_0xvbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("1_uc3li")

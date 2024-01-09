@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://pfaye5172xfs"]
+
+[ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="1_aqbvv"]
+[ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="2_qxeya"]
+[ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="3_8pgrh"]
+[ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="3_osjbi"]
+[ext_resource type="Script" path="res://scripts/crate_2d.gd" id="4_mr8sr"]
+[ext_resource type="PackedScene" uid="uid://8v36g1aui6t4" path="res://assets/fruit.tscn" id="4_tx8y6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7x0u"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j1dgl"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(0, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_r7x0u")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Ground"]
+scale = Vector2(1200, 20)
+mesh = SubResource("BoxMesh_j1dgl")
+
+[node name="Ground2" type="StaticBody2D" parent="."]
+position = Vector2(-300, 200)
+rotation = 0.174533
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_r7x0u")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Ground2"]
+scale = Vector2(1200, 20)
+mesh = SubResource("BoxMesh_j1dgl")
+
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("1_aqbvv")]
+position = Vector2(-300, 150)
+cowboy = NodePath("../Cowboy2D")
+
+[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("2_qxeya")]
+position = Vector2(0, 100)
+horse = NodePath("../Horse2D")
+lassoProjectile = ExtResource("3_osjbi")
+
+[node name="Fruit" parent="." instance=ExtResource("4_tx8y6")]
+
+[node name="Crate2D" parent="." instance=ExtResource("3_8pgrh")]
+position = Vector2(406, 157)
+script = ExtResource("4_mr8sr")

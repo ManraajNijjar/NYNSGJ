@@ -1,0 +1,74 @@
+[gd_scene load_steps=13 format=3 uid="uid://21k4r4u1nekc"]
+
+[ext_resource type="PackedScene" uid="uid://bqwaqw6m5c4rg" path="res://assets/horse.tscn" id="1_h8nnh"]
+[ext_resource type="Texture2D" uid="uid://i5k5exprt3ae" path="res://images/development/Name_1m x 1m.png" id="1_yqai2"]
+[ext_resource type="PackedScene" uid="uid://dybkaip6ok25a" path="res://assets/cowboy.tscn" id="3_mb842"]
+[ext_resource type="Texture2D" uid="uid://bm33f1136ust8" path="res://images/development/wooden-box-PNG-free-thumb19.png" id="4_8sx2t"]
+[ext_resource type="Script" path="res://scripts/Crate.gd" id="4_w2l6w"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ve8bh"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_c3rj7"]
+sky_material = SubResource("ProceduralSkyMaterial_ve8bh")
+
+[sub_resource type="Environment" id="Environment_7n0q5"]
+background_mode = 2
+sky = SubResource("Sky_c3rj7")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m0emc"]
+albedo_texture = ExtResource("1_yqai2")
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_y8lpx"]
+material = SubResource("StandardMaterial3D_m0emc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_355qn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u42nm"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7n0q5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1, 4)
+
+[node name="Horse" parent="." instance=ExtResource("1_h8nnh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81518, 0.0138965, -0.00272036)
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 0, -1, 0)
+mesh = SubResource("BoxMesh_y8lpx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+collision_layer = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("BoxShape3D_355qn")
+
+[node name="Cowboy" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("3_mb842")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.969796)
+horse = NodePath("../Horse")
+
+[node name="Crate" type="RigidBody3D" parent="." node_paths=PackedStringArray("cowboy") groups=["Lassoable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4812, 0.0691059, 1.93942)
+script = ExtResource("4_w2l6w")
+cowboy = NodePath("../Cowboy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Crate"]
+shape = SubResource("BoxShape3D_u42nm")
+
+[node name="Sprite3D" type="Sprite3D" parent="Crate"]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, 0, 0, 0)
+texture = ExtResource("4_8sx2t")
+
+[node name="LassoCenter" type="Node3D" parent="Crate"]
