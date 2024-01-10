@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://psdf317vs0op"]
+
+[ext_resource type="Texture2D" uid="uid://b40cwwp8a8vjq" path="res://icon.svg" id="1_mkgfe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_buxap"]
+
+[node name="RopeEndPiece2D" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 16
+freeze = true
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_buxap")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="CollisionShape2D"]
+bias = 0.5
+softness = 0.1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("1_mkgfe")

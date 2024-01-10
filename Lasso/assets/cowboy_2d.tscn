@@ -7,11 +7,16 @@
 
 [node name="Cowboy2D" type="CharacterBody2D"]
 collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_7j0x8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2.5, 2.5)
 shape = SubResource("RectangleShape2D_i65h3")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="CollisionShape2D"]
+scale = Vector2(0.4, 0.4)
+node_a = NodePath("../..")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.09, 0.09)

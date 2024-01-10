@@ -10,7 +10,7 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	apply_impulse((targetPosition - originPosition).normalized() * force * 1000, Vector2(0,0));
+	apply_impulse((targetPosition - originPosition).normalized() * force * 250, Vector2(0,0));
 	if heldByHorse:
 		collision_mask = 1;
 	pass # Replace with function body.

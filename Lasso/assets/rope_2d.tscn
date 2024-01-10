@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmcnowghx3bui"]
+
+[ext_resource type="Script" path="res://Rope2D.gd" id="1_mtpcx"]
+[ext_resource type="PackedScene" uid="uid://psdf317vs0op" path="res://assets/rope_end_piece_2d.tscn" id="2_6iyb5"]
+[ext_resource type="PackedScene" uid="uid://b8cwploetb51r" path="res://assets/rope_final_piece_2d.tscn" id="3_etwj1"]
+
+[node name="Rope2D" type="Node"]
+script = ExtResource("1_mtpcx")
+
+[node name="RopeEndPiece2D" parent="." instance=ExtResource("2_6iyb5")]
+
+[node name="RopeStartPiece2D" parent="." instance=ExtResource("2_6iyb5")]
+
+[node name="RopeFinalPiece2D" parent="." instance=ExtResource("3_etwj1")]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://db0cxis78kwsv"]
+
+[ext_resource type="Script" path="res://scripts/rope_piece_2d.gd" id="1_t77vy"]
+[ext_resource type="Texture2D" uid="uid://b40cwwp8a8vjq" path="res://icon.svg" id="2_mb21d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0miw"]
+
+[node name="RopePiece2D" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 16
+angular_damp = 1.0
+script = ExtResource("1_t77vy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15)
+shape = SubResource("CapsuleShape2D_v0miw")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="CollisionShape2D"]
+position = Vector2(0, 15)
+bias = 0.1
+softness = 0.1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 15)
+scale = Vector2(0.15, 0.25)
+texture = ExtResource("2_mb21d")

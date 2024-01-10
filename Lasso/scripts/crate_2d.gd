@@ -12,7 +12,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if isLassoed:
-		lassoed(delta);
+		pass
+		#lassoed(delta);
 	pass
 
 func lassoed(delta):
@@ -24,4 +25,6 @@ func lassoed(delta):
 
 func set_lassoed(lassoed: bool):
 	isLassoed = lassoed;
+	if isLassoed:
+		linear_velocity = Vector2(linear_velocity.x/10, linear_velocity.y/10);
 	pass

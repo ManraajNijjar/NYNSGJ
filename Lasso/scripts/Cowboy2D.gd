@@ -22,11 +22,17 @@ var lassoTimeOut = 0;
 
 var horseLassoed = false;
 
+var Rope = preload("res://assets/rope_2d.tscn");
+
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed && !hasLassoedObject:
 				leftMouseHeld = true;
+				#var rope = Rope.instantiate()
+				#add_child(rope);
+				#rope.spawn_rope(position, get_global_mouse_position());
+				#rope.spawn_rope_to_object(position, horse);
 			elif event.pressed && hasLassoedObject:
 				lassoedObject.set_lassoed(false);
 				lassoedObject = null;
@@ -54,6 +60,8 @@ func _physics_process(delta):
 	if held:
 		velocity.x = horse.velocity.x
 		velocity.y = horse.velocity.y
+		if(position.distance_to(horse.position) > 100):
+			position = horse.position
 		wasHeld = true;
 	elif horseLassoed:
 		print(horse);
@@ -88,7 +96,16 @@ func _physics_process(delta):
 func throwLasso():
 	var temp = lassoProjectile.instantiate()
 	temp.targetPosition = get_global_mouse_position()
-	temp.originPosition = global_position;
+	var originPosition = global_position;
+	if temp.targetPosition.x < originPosition.x:
+		originPosition.x = originPosition.x - 10;
+	else:
+		originPosition.x = originPosition.x + 10;
+	if temp.targetPosition.y < originPosition.y:
+		originPosition.y = originPosition.y - 100;
+	else:
+		originPosition.y = originPosition.y + 10;
+	temp.originPosition = originPosition;
 	temp.force = throwCharge;
 	temp.heldByHorse = held;
 	temp.cowboy = self;
@@ -104,5 +121,8 @@ func set_Lassoed(body: Node2D):
 	else:
 		lassoedObject = body;
 		hasLassoedObject = true;
+		var rope = Rope.instantiate()
+		add_child(rope);
+		rope.spawn_rope_to_object(position, body);
 		body.set_lassoed(true);
 	pass
