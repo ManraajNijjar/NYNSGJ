@@ -1,19 +1,73 @@
-[gd_scene load_steps=5 format=3 uid="uid://brwftp8w3m6ti"]
+[gd_scene load_steps=9 format=3 uid="uid://brwftp8w3m6ti"]
 
 [ext_resource type="Script" path="res://scripts/Horse2D.gd" id="1_43hr3"]
-[ext_resource type="Texture2D" uid="uid://dc2v5k6mu8rgp" path="res://images/development/pngimg.com - horse_PNG2523.png" id="2_i728c"]
+[ext_resource type="Texture2D" uid="uid://bc1xppwow6ve0" path="res://images/Horse_sprite_sheet.png" id="2_atdfs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffurk"]
 size = Vector2(13.25, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mpg1v"]
 
+[sub_resource type="Animation" id="Animation_oyyhd"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_lcv4f"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_4roj5"]
+resource_name = "kick"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3rkxe"]
+_data = {
+"idle": SubResource("Animation_lcv4f"),
+"kick": SubResource("Animation_4roj5"),
+"walk": SubResource("Animation_oyyhd")
+}
+
 [node name="Horse2D" type="CharacterBody2D" groups=["lassoable"]]
 position = Vector2(-400, 150)
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("1_43hr3")
-kickCooldownMax = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, 0)
@@ -21,8 +75,12 @@ scale = Vector2(4, 3)
 shape = SubResource("RectangleShape2D_ffurk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.104, 0.104)
-texture = ExtResource("2_i728c")
+position = Vector2(0, -13)
+scale = Vector2(0.254, 0.254)
+texture = ExtResource("2_atdfs")
+hframes = 5
+vframes = 2
+frame = 1
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 12
@@ -30,6 +88,12 @@ collision_mask = 12
 [node name="HoldArea" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2(4, 3)
 shape = SubResource("RectangleShape2D_mpg1v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3rkxe")
+}
+autoplay = "idle"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

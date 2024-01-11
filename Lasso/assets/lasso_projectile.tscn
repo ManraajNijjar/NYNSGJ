@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1naniduoabeq"]
 
-[ext_resource type="Texture2D" uid="uid://bm4w1t3k8nd5e" path="res://images/development/lasso.png" id="1_whlvl"]
 [ext_resource type="Script" path="res://scripts/lasso_projectile.gd" id="1_wqmnj"]
+[ext_resource type="Texture2D" uid="uid://bjlpcwrgmagsx" path="res://images/Baby_sprite_sheet23.png" id="2_rwlck"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_41qtv"]
 
@@ -14,8 +14,13 @@ script = ExtResource("1_wqmnj")
 shape = SubResource("CircleShape2D_41qtv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.065, 0.065)
-texture = ExtResource("1_whlvl")
+texture_filter = 3
+rotation = 1.5708
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("2_rwlck")
+hframes = 5
+vframes = 3
+frame = 10
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
@@ -29,6 +34,11 @@ shape = SubResource("CircleShape2D_41qtv")
 wait_time = 2.0
 autostart = true
 
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

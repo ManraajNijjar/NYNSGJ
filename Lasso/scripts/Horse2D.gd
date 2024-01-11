@@ -8,7 +8,9 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var holdArea = $Area2D/HoldArea
-@export var cowboy : CharacterBody2D;
+@onready var animationPlayer = $AnimationPlayer
+@onready var sprite2D = $Sprite2D
+@export var cowboy : Node2D;
 @export var kickCooldownMax : float = 0.2;
 
 var bodiesInArea = [];
@@ -30,31 +32,33 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right")
+	
 	if direction:
+		if kickCooldown <= 0:
+			sprite2D.flip_h = (direction != 1)
+		setAnimation("walk");
 		horseMoveDirection = direction;
 		velocity.x = direction * SPEED
 	else:
+		setAnimation("idle");
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	if Input.is_action_just_pressed("down"):
-		print(canCarry);
-
 	if Input.is_action_just_pressed("down") && canCarry && !isCarrying:
-		print("picked up");
 		cowboy.held = true;
 		isCarrying = true;
 	elif Input.is_action_just_pressed("down") && isCarrying:
-		print("dropped");
 		cowboy.held = false;
 		isCarrying = false;
 	
 	if Input.is_action_just_pressed("kick") && kickCooldown <= 0.0:
+		sprite2D.flip_h = !sprite2D.flip_h
+		setAnimation("kick");
 		for body in bodiesInArea:
 			if body.has_method("apply_impulse"):
 				body.apply_impulse(Vector2(horseMoveDirection * 500, -500));
 		kickCooldown = kickCooldownMax;
 	if kickCooldown > 0.0:
-		kickCooldown -= 1 * delta;
+		kickCooldown -= delta;
 	move_and_slide()
 
 
@@ -74,3 +78,7 @@ func _on_area_2d_body_exited(body:Node2D):
 	else:
 		bodiesInArea.remove_at(bodiesInArea.find(body));
 	pass # Replace with function body.
+
+func setAnimation(animName: String):
+	if animationPlayer.current_animation != "kick":
+		animationPlayer.play(animName);

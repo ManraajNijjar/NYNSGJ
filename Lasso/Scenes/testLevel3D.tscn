@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://21k4r4u1nekc"]
 
-[ext_resource type="PackedScene" uid="uid://bqwaqw6m5c4rg" path="res://assets/horse.tscn" id="1_h8nnh"]
+[ext_resource type="PackedScene" uid="uid://bqwaqw6m5c4rg" path="res://assets/deprecated/horse.tscn" id="1_h8nnh"]
 [ext_resource type="Texture2D" uid="uid://i5k5exprt3ae" path="res://images/development/Name_1m x 1m.png" id="1_yqai2"]
-[ext_resource type="PackedScene" uid="uid://dybkaip6ok25a" path="res://assets/cowboy.tscn" id="3_mb842"]
+[ext_resource type="PackedScene" uid="uid://dybkaip6ok25a" path="res://assets/deprecated/cowboy.tscn" id="3_mb842"]
 [ext_resource type="Texture2D" uid="uid://bm33f1136ust8" path="res://images/development/wooden-box-PNG-free-thumb19.png" id="4_8sx2t"]
 [ext_resource type="Script" path="res://scripts/Crate.gd" id="4_w2l6w"]
 

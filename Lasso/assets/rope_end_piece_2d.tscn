@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://psdf317vs0op"]
 
-[ext_resource type="Texture2D" uid="uid://b40cwwp8a8vjq" path="res://icon.svg" id="1_mkgfe"]
+[ext_resource type="Texture2D" uid="uid://bjlpcwrgmagsx" path="res://images/Baby_sprite_sheet23.png" id="1_6miav"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_buxap"]
 
@@ -18,5 +18,9 @@ bias = 0.5
 softness = 0.1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.13, 0.13)
-texture = ExtResource("1_mkgfe")
+texture = ExtResource("1_6miav")
+hframes = 5
+vframes = 3
+frame = 12

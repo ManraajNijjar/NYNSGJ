@@ -1,0 +1,136 @@
+[gd_scene load_steps=9 format=3 uid="uid://cfihmde84hidu"]
+
+[ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="1_3yin7"]
+[ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="2_l6vw0"]
+[ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="3_mm6t5"]
+[ext_resource type="PackedScene" uid="uid://sxatfbe5l6ol" path="res://assets/lasso_post_2d.tscn" id="4_pxaw4"]
+[ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="5_0gg66"]
+[ext_resource type="PackedScene" uid="uid://c66d37c47tpld" path="res://assets/button_area_2d.tscn" id="6_j168t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33enh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_w5qty"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-14, 90)
+zoom = Vector2(1.5, 1.5)
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Ground" type="StaticBody2D" parent="Environment"]
+position = Vector2(0, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground"]
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_33enh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environment/Ground"]
+scale = Vector2(1200, 20)
+mesh = SubResource("BoxMesh_w5qty")
+
+[node name="Ground2" type="StaticBody2D" parent="Environment"]
+position = Vector2(0, -300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground2"]
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_33enh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environment/Ground2"]
+scale = Vector2(1200, 20)
+mesh = SubResource("BoxMesh_w5qty")
+
+[node name="Ground5" type="StaticBody2D" parent="Environment"]
+position = Vector2(900, -150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground5"]
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_33enh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environment/Ground5"]
+scale = Vector2(1200, 20)
+mesh = SubResource("BoxMesh_w5qty")
+
+[node name="Ground6" type="StaticBody2D" parent="Environment"]
+position = Vector2(900, 150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground6"]
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_33enh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environment/Ground6"]
+scale = Vector2(1200, 20)
+mesh = SubResource("BoxMesh_w5qty")
+
+[node name="Ground7" type="StaticBody2D" parent="Environment"]
+position = Vector2(-500, -50)
+rotation = 0.122173
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground7"]
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_33enh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environment/Ground7"]
+scale = Vector2(1200, 20)
+mesh = SubResource("BoxMesh_w5qty")
+
+[node name="Ground3" type="StaticBody2D" parent="Environment"]
+position = Vector2(550, 0)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground3"]
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_33enh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environment/Ground3"]
+scale = Vector2(1200, 20)
+mesh = SubResource("BoxMesh_w5qty")
+
+[node name="Ground4" type="StaticBody2D" parent="Environment"]
+position = Vector2(-550, 0)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground4"]
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_33enh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environment/Ground4"]
+scale = Vector2(1200, 20)
+mesh = SubResource("BoxMesh_w5qty")
+
+[node name="Ground8" type="StaticBody2D" parent="Environment"]
+position = Vector2(-50, -500)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground8"]
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_33enh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environment/Ground8"]
+scale = Vector2(1200, 20)
+mesh = SubResource("BoxMesh_w5qty")
+
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("3_mm6t5")]
+position = Vector2(40, -126)
+cowboy = NodePath("../Cowboy2D")
+
+[node name="LassoPost2D" parent="." instance=ExtResource("4_pxaw4")]
+position = Vector2(314, 114)
+
+[node name="LassoPost2D2" parent="." instance=ExtResource("4_pxaw4")]
+position = Vector2(318, -176)
+
+[node name="Crate2D" parent="." instance=ExtResource("5_0gg66")]
+position = Vector2(207, 261)
+
+[node name="Crate2D2" parent="." instance=ExtResource("5_0gg66")]
+position = Vector2(-288, 254)
+
+[node name="ButtonArea2D" parent="." instance=ExtResource("6_j168t")]
+position = Vector2(-110, 241)
+
+[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("1_3yin7")]
+position = Vector2(46, -37)
+horse = NodePath("../Horse2D")
+lassoProjectile = ExtResource("2_l6vw0")

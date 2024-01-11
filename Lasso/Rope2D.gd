@@ -9,13 +9,16 @@ var piece_length := 25
 @onready var rope_end_piece = $RopeEndPiece2D
 @onready var rope_final_piece = $RopeFinalPiece2D
 var cowboy;
+var playerTrack = false;
 
 func _ready():
 	cowboy = get_node("/root/Node2D/Cowboy2D");
 	pass # Replace with function body.
 
 func _process(delta):
-	rope_start_piece.global_position = cowboy.position;
+	if playerTrack:
+		rope_start_piece.global_position = cowboy.position;
+	pass
 
 func spawn_rope(start_pos:Vector2, end_pos:Vector2):
 	rope_start_piece.global_position = start_pos;
@@ -31,6 +34,10 @@ func spawn_rope(start_pos:Vector2, end_pos:Vector2):
 	pass
 
 func spawn_rope_to_object(start_pos:Vector2, endObject: Object):
+	playerTrack = true;
+
+	cowboy.get_node("CollisionShape2D/PinJoint2D").node_b = rope_start_piece.get_path()
+
 	rope_start_piece.global_position = start_pos;
 	rope_final_piece.global_position = endObject.global_position
 	start_pos = rope_start_piece.get_node("CollisionShape2D/PinJoint2D").global_position
@@ -44,7 +51,7 @@ func spawn_rope_to_object(start_pos:Vector2, endObject: Object):
 
 func create_rope(pieces_amount: int, parent:Object, end_pos:Vector2, spawn_angle:float)-> void:
 	for i in pieces_amount:
-		parent = add_piece(parent, i, spawn_angle, 16)
+		parent = add_piece(parent, i, spawn_angle, 30)
 		parent.set_name("rope_piece_"+str(i))
 		rope_parts.append(parent)
 
@@ -80,3 +87,13 @@ func add_piece(parent: Object, id:int, spawn_angle:float, layerMaskValue: int) -
 	joint.node_a = parent.get_path();
 	joint.node_b = piece.get_path();
 	return piece;
+
+func remove_piece():
+	var piece : Object = rope_parts.pop_back()
+	var parentPiece : Object = piece.parent;
+	print("Parent");
+	print(parentPiece);
+	print("Parent Node");
+	print(parentPiece.get_node("CollisionShape2D/PinJoint2D"));
+	parentPiece.get_node("CollisionShape2D/PinJoint2D").node_b = rope_final_piece.get_path()
+	piece.queue_free();

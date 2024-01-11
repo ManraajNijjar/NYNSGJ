@@ -1,0 +1,133 @@
+extends RigidBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+@export var held = false;
+@export var horse: CharacterBody2D = null;
+var wasHeld = false;
+
+var leftMouseHeld = false;
+var leftMouseReleased = false;
+var hasLassoedObject = false;
+var lassoedObject = null;
+var throwCharge = 0;
+@export var lassoProjectile: PackedScene = null;
+var currentLasso = null;
+var lassoTimeOut = 0;
+
+var horseLassoed = false;
+
+var Rope = preload("res://assets/rope_2d.tscn");
+var ropeToObject = null;
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed && !hasLassoedObject:
+				leftMouseHeld = true;
+			elif event.pressed && hasLassoedObject:
+				lassoedObject.set_lassoed(false);
+				lassoedObject = null;
+				hasLassoedObject = false;
+				ropeToObject.queue_free();
+				lassoTimeOut = 0.5;
+			else:
+				leftMouseHeld = false;
+				leftMouseReleased = true;
+				hasLassoedObject = false;
+		if event.button_index == MOUSE_BUTTON_RIGHT:
+			if event.pressed:
+				if ropeToObject != null:
+					#ropeToObject.remove_piece();
+					pass
+
+func _process(delta):
+	if leftMouseHeld && !hasLassoedObject && currentLasso == null:
+		throwCharge += 2 * delta;
+		if throwCharge > 10:
+			throwCharge = 10;
+		pass
+	elif leftMouseReleased && !hasLassoedObject && currentLasso == null:
+		if lassoTimeOut <= 0:
+			throwLasso();
+		leftMouseReleased = false;
+		pass
+	lassoTimeOut -= delta;
+
+func _physics_process(delta):
+	if held:
+		linear_velocity.x = horse.velocity.x
+		linear_velocity.y = horse.velocity.y
+		if(position.distance_to(horse.position) > 100):
+			position = horse.position
+		wasHeld = true;
+	elif horseLassoed:
+		var horsePosition = horse.position;
+		var horseDistance = horsePosition.distance_to(position);
+		if horseDistance > 40:
+			linear_velocity.x = (horsePosition.x - position.x) * 2;
+			linear_velocity.y = (horsePosition.y - position.y) * 2;
+		else:
+			horseLassoed = false;
+			linear_velocity.x = 0;
+			linear_velocity.y = 0;
+	else:
+		#Calculate remaining physics from being held by the horse
+		if wasHeld:
+			if linear_velocity.x < 0:
+				linear_velocity.x = linear_velocity.x + (200 * delta);
+			elif linear_velocity.x > 0:
+				linear_velocity.x = linear_velocity.x - (200 * delta);
+			if(abs(linear_velocity.x) < 20):
+				linear_velocity.x = 0
+				wasHeld = false;
+
+
+func throwLasso():
+	var temp = lassoProjectile.instantiate()
+	temp.targetPosition = get_global_mouse_position()
+	var originPosition = global_position;
+	if temp.targetPosition.x < originPosition.x:
+		originPosition.x = originPosition.x - 10;
+	else:
+		originPosition.x = originPosition.x + 10;
+	if temp.targetPosition.y < originPosition.y:
+		originPosition.y = originPosition.y - 100;
+	else:
+		originPosition.y = originPosition.y + 10;
+	temp.originPosition = originPosition;
+	temp.force = throwCharge;
+	temp.heldByHorse = held;
+	temp.cowboy = self;
+	add_child(temp);
+	throwCharge = 0;
+	currentLasso = temp;
+	pass
+
+func set_Lassoed(body: Node2D):
+	if body.name == "Horse2D":
+		horseLassoed = true;
+		#var rope = Rope.instantiate()
+		#add_child(rope);
+		#rope.spawn_rope_to_object(position, body);
+		#ropeToObject = rope;
+	else:
+		lassoedObject = body;
+		hasLassoedObject = true;
+		var rope = Rope.instantiate()
+		add_child(rope);
+		rope.spawn_rope_to_object(position, body);
+		ropeToObject = rope;
+		print(body.name);
+		body.set_lassoed(true);
+	pass
+
+func set_Lassoed_Area(area: Area2D):
+	var rope = Rope.instantiate()
+	add_child(rope);
+	rope.spawn_rope(position, area.global_position);

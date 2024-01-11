@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://sxatfbe5l6ol"]
+
+[ext_resource type="Texture2D" uid="uid://cls3ofykvrl8j" path="res://images/development/Tree_Transparent_Background.png" id="1_1rha4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bn3js"]
+
+[node name="LassoPost2D" type="Area2D" groups=["lassoable"]]
+position = Vector2(200, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_bn3js")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("1_1rha4")

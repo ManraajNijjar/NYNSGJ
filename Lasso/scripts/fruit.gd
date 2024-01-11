@@ -26,5 +26,6 @@ func lassoed(delta):
 func set_lassoed(lassoed: bool):
 	isLassoed = lassoed;
 	if isLassoed:
-		linear_velocity = Vector2(linear_velocity.x/10, linear_velocity.y/10);
+		pass
+		#linear_velocity = Vector2(linear_velocity.x/10, linear_velocity.y/10);
 	pass

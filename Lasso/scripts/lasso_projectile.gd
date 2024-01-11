@@ -8,6 +8,8 @@ extends RigidBody2D
 
 @export var heldByHorse = false;
 
+var canGrab = false;
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	apply_impulse((targetPosition - originPosition).normalized() * force * 250, Vector2(0,0));
@@ -16,17 +18,27 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_area_2d_area_entered(area:Area2D):
+	if(canGrab):
+		if area.is_in_group("lassoable"):
+			cowboy.set_Lassoed_Area(area);
+			queue_free();
 	pass # Replace with function body.
 
 func _on_area_2d_body_entered(body:Node2D):
-	if body.is_in_group("lassoable"):
-		if body.name == "Horse2D" and heldByHorse:
-			return;
-		cowboy.set_Lassoed(body);
-		queue_free();
+	if(canGrab):
+		if body.is_in_group("lassoable"):
+			if body.name == "Horse2D" and heldByHorse:
+				return;
+			cowboy.set_Lassoed(body);
+			queue_free();
 	pass # Replace with function body.
 
 
 func _on_timer_timeout():
 	queue_free();
+	pass # Replace with function body.
+
+
+func _on_start_timer_timeout():
+	canGrab = true;
 	pass # Replace with function body.

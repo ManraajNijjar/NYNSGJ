@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cngo4bxnoc550"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_ls22c"]
-
-[node name="GrappleRope" type="MeshInstance3D"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
-mesh = SubResource("CylinderMesh_ls22c")
