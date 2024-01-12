@@ -93,5 +93,28 @@ libraries = {
 }
 autoplay = "idle"
 
+[node name="AkBank_Init" type="AkBank" parent="."]
+bank = {
+"id": 1355168291,
+"name": "Init"
+}
+load_on = 1
+
+[node name="AkBank_Default_Soundbank" type="AkBank" parent="AkBank_Init"]
+bank = {
+"id": 2218482606,
+"name": "Default_Soundbank"
+}
+load_on = 1
+
+[node name="Horse_Walk" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+event = {
+"id": 4152520648,
+"name": "Horse_Neigh"
+}
+trigger_on = 1
+
+[node name="AkListener2D" type="AkListener2D" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -9,6 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var holdArea = $Area2D/HoldArea
 @onready var animationPlayer = $AnimationPlayer
+@onready var soundBank = $AkBank_Init/AkBank_Default_Soundbank/Horse_Walk
 @onready var sprite2D = $Sprite2D
 @export var cowboy : Node2D;
 @export var kickCooldownMax : float = 0.2;
@@ -37,6 +38,7 @@ func _physics_process(delta):
 		if kickCooldown <= 0:
 			sprite2D.flip_h = (direction != 1)
 		setAnimation("walk");
+		#soundBank.post_event();
 		horseMoveDirection = direction;
 		velocity.x = direction * SPEED
 	else:
