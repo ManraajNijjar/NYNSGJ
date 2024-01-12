@@ -24,3 +24,5 @@ event = {
 trigger_on = 1
 
 [node name="AkListener2D" type="AkListener2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
