@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/button_area_2d.gd" id="1_pv6g1"]
 [ext_resource type="Texture2D" uid="uid://dsvsuq4r856be" path="res://images/Barrel button-sunset.png" id="2_q83d0"]
-[ext_resource type="Texture2D" uid="uid://bwcr2diich6se" path="res://images/Barrel button.png" id="3_us8aw"]
+[ext_resource type="Texture2D" uid="uid://bte3gr0ns5di4" path="res://images/Barrel button v2.png" id="3_pdg0m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3d6a"]
 size = Vector2(62, 21)
@@ -24,7 +24,7 @@ hframes = 2
 [node name="Sprite2DAfternoon" type="Sprite2D" parent="."]
 position = Vector2(0, 10)
 scale = Vector2(0.238912, 0.240896)
-texture = ExtResource("3_us8aw")
+texture = ExtResource("3_pdg0m")
 hframes = 2
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

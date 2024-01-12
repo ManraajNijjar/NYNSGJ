@@ -6,7 +6,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xvbt"]
 
-[node name="Crate2D" type="RigidBody2D" groups=["lassoable"]]
+[node name="Crate2D" type="RigidBody2D" groups=["canBreak", "lassoable"]]
 collision_layer = 30
 collision_mask = 31
 script = ExtResource("1_p8exr")

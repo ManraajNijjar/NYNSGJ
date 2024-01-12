@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmeyi43yare64"]
+
+[ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_dxe4f"]
+[ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_ifv54"]
+[ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="3_gbnyr"]
+[ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="4_hxopd"]
+[ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="5_fikh6"]
+[ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="6_cu4yc"]
+[ext_resource type="PackedScene" uid="uid://doy8ch5n8h1as" path="res://assets/javelina.tscn" id="7_80hay"]
+[ext_resource type="PackedScene" uid="uid://8v36g1aui6t4" path="res://assets/fruit.tscn" id="8_mus3i"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Ground" parent="Environment" instance=ExtResource("1_dxe4f")]
+position = Vector2(-370, 184)
+
+[node name="Ground2" parent="Environment" instance=ExtResource("1_dxe4f")]
+position = Vector2(31, 184)
+
+[node name="Ground5" parent="Environment" instance=ExtResource("1_dxe4f")]
+position = Vector2(433, 184)
+
+[node name="Ground3" parent="Environment" instance=ExtResource("1_dxe4f")]
+position = Vector2(-406, 10)
+rotation = 1.5708
+
+[node name="Ground4" parent="Environment" instance=ExtResource("1_dxe4f")]
+position = Vector2(402, 29)
+rotation = 1.5708
+
+[node name="Background" parent="Environment" instance=ExtResource("2_ifv54")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+
+[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("3_gbnyr")]
+z_index = 2
+position = Vector2(-243, 124)
+horse = NodePath("../Horse2D")
+lassoProjectile = ExtResource("4_hxopd")
+
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("5_fikh6")]
+z_index = 1
+position = Vector2(-332, 129)
+cowboy = NodePath("../Cowboy2D")
+
+[node name="VictorySign" parent="." instance=ExtResource("6_cu4yc")]
+position = Vector2(282, 103)
+
+[node name="Javelina" parent="." instance=ExtResource("7_80hay")]
+position = Vector2(127, 67)
+scale = Vector2(1.46, 1.46)
+hunger = 3
+
+[node name="Fruit" parent="." instance=ExtResource("8_mus3i")]
+position = Vector2(-312, -78)
+
+[node name="Fruit2" parent="." instance=ExtResource("8_mus3i")]
+position = Vector2(-233, -2)
+
+[node name="Fruit3" parent="." instance=ExtResource("8_mus3i")]
+position = Vector2(-130, -89)

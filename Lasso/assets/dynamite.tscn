@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://r0dgr3x7tb2l"]
+
+[ext_resource type="Script" path="res://scripts/Dynamite.gd" id="1_hh6v8"]
+[ext_resource type="Texture2D" uid="uid://pwhr3w48jntx" path="res://images/Dynamite.png" id="2_5velx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rs34v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vbdel"]
+
+[node name="Dynamite" type="RigidBody2D" groups=["flammable", "lassoable"]]
+collision_layer = 15
+collision_mask = 31
+script = ExtResource("1_hh6v8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_rs34v")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_5velx")
+hframes = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+collision_layer = 31
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(4.34, 4.34)
+shape = SubResource("CircleShape2D_vbdel")
+
+[node name="Timer" type="Timer" parent="Area2D"]
+wait_time = 3.0
+
+[connection signal="timeout" from="Area2D/Timer" to="." method="_on_timer_timeout"]

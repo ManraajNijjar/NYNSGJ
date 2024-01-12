@@ -54,6 +54,7 @@ func _physics_process(delta):
 		sprite2D.flip_h = !sprite2D.flip_h
 		setAnimation("kick");
 		for body in bodiesInArea:
+			print(body.name);
 			if body.has_method("apply_impulse"):
 				body.apply_impulse(Vector2(horseMoveDirection * 500, -500));
 		kickCooldown = kickCooldownMax;
@@ -64,6 +65,7 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body:Node2D):
+	print(body.name)
 	if body.name == "Cowboy2D":
 		canCarry = true;
 	else:

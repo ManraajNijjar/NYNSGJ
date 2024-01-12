@@ -6,9 +6,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d78i8"]
 
-[node name="Fruit" type="RigidBody2D" groups=["lassoable"]]
+[node name="Fruit" type="RigidBody2D" groups=["edible", "lassoable"]]
 position = Vector2(0, -50)
-collision_layer = 14
+collision_layer = 8
 collision_mask = 15
 freeze = true
 script = ExtResource("1_ko0m0")
