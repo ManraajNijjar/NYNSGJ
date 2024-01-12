@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjfa5kxh5bijq"]
+
+[ext_resource type="Script" path="res://scripts/decor.gd" id="1_amgxn"]
+[ext_resource type="Texture2D" uid="uid://ciektlq6samdn" path="res://images/LBush.png" id="1_dj4x6"]
+[ext_resource type="Texture2D" uid="uid://roo7t20m2u3p" path="res://images/LBush-sunset.png" id="2_60g1f"]
+
+[node name="DecorLargeBush" type="Node2D"]
+z_index = -2
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_amgxn")
+
+[node name="Sprite2DAfternoon" type="Sprite2D" parent="."]
+texture = ExtResource("1_dj4x6")
+
+[node name="Sprite2DSunset" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("2_60g1f")

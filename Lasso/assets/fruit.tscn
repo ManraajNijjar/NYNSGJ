@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://8v36g1aui6t4"]
+[gd_scene load_steps=5 format=3 uid="uid://8v36g1aui6t4"]
 
-[ext_resource type="Texture2D" uid="uid://dllaqtxj1xfou" path="res://images/development/apple-43-1024x1015.png" id="1_cbfap"]
 [ext_resource type="Script" path="res://scripts/fruit.gd" id="1_ko0m0"]
+[ext_resource type="Texture2D" uid="uid://ftu5leeg06th" path="res://images/Prickly fruit(1).png" id="2_t1g43"]
+[ext_resource type="Texture2D" uid="uid://dllu5uc6yhvcp" path="res://images/Prickly fruit-sunset.png" id="3_jnfed"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d78i8"]
 
@@ -16,6 +17,13 @@ script = ExtResource("1_ko0m0")
 scale = Vector2(3.53, 3.53)
 shape = SubResource("CircleShape2D_d78i8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.075, 0.075)
-texture = ExtResource("1_cbfap")
+[node name="Sprite2DAfternoon" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(0.566572, 0.566572)
+scale = Vector2(0.106, 0.106)
+texture = ExtResource("2_t1g43")
+
+[node name="Sprite2DSunset" type="Sprite2D" parent="CollisionShape2D"]
+visible = false
+position = Vector2(0.566572, 0.566572)
+scale = Vector2(0.106, 0.106)
+texture = ExtResource("3_jnfed")

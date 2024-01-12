@@ -26,7 +26,7 @@ softness = 0.01
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
 rotation = 1.5708
-scale = Vector2(0.165, 0.165)
+scale = Vector2(0.355, 0.355)
 texture = ExtResource("2_xf3wc")
 hframes = 5
 vframes = 3

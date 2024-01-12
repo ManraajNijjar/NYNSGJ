@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://crkuk68ie5k5u"]
+
+[ext_resource type="Script" path="res://scripts/spriteSwitch.gd" id="1_0gj37"]
+[ext_resource type="Texture2D" uid="uid://cae5ia7ms4581" path="res://images/Backgrounds-02.png" id="1_3118a"]
+[ext_resource type="Texture2D" uid="uid://83h40hwrrvgd" path="res://images/Backgrounds-01.png" id="2_yifvy"]
+
+[node name="Background" type="Node2D"]
+z_index = -5
+script = ExtResource("1_0gj37")
+
+[node name="BackgroundSunset" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_3118a")
+
+[node name="BackgroundAfternoon" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_yifvy")

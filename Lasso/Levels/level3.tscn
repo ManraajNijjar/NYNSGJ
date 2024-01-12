@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://l8g4tx1kuubh"]
+
+[ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_kc77c"]
+[ext_resource type="Script" path="res://Levels/level3.gd" id="1_s2hgr"]
+[ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_4mpr3"]
+[ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="3_qvqqx"]
+[ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="4_oyba4"]
+[ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="5_v77eg"]
+[ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="7_snblq"]
+[ext_resource type="PackedScene" uid="uid://c66d37c47tpld" path="res://assets/button_area_2d.tscn" id="8_6fht2"]
+[ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="8_x64b3"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_s2hgr")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Ground" parent="Environment" instance=ExtResource("1_kc77c")]
+position = Vector2(-200, 128)
+
+[node name="Ground3" parent="Environment" instance=ExtResource("1_kc77c")]
+position = Vector2(-406, 10)
+rotation = 1.5708
+
+[node name="Ground4" parent="Environment" instance=ExtResource("1_kc77c")]
+position = Vector2(402, 29)
+rotation = 1.5708
+
+[node name="Ground2" parent="Environment" instance=ExtResource("1_kc77c")]
+position = Vector2(202, 128)
+
+[node name="Background" parent="Environment" instance=ExtResource("2_4mpr3")]
+useSunset = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+
+[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("3_qvqqx")]
+z_index = 2
+position = Vector2(-355, 63)
+horse = NodePath("../Horse2D")
+lassoProjectile = ExtResource("4_oyba4")
+
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("5_v77eg")]
+z_index = 1
+position = Vector2(-181, 65)
+cowboy = NodePath("../Cowboy2D")
+
+[node name="Crate2D" parent="." instance=ExtResource("7_snblq")]
+position = Vector2(1, 75)
+
+[node name="VictorySign" parent="." instance=ExtResource("8_x64b3")]
+position = Vector2(286, 47)
+
+[node name="ButtonArea2D" parent="." instance=ExtResource("8_6fht2")]
+position = Vector2(-270, 93)
+
+[node name="GroundLong" parent="." instance=ExtResource("1_kc77c")]
+position = Vector2(99, -91)
+rotation = -1.5708

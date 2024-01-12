@@ -31,7 +31,7 @@ scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_41qtv")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 4.0
 autostart = true
 
 [node name="StartTimer" type="Timer" parent="."]

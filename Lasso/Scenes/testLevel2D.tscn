@@ -43,7 +43,6 @@ position = Vector2(-300, 150)
 cowboy = NodePath("../Cowboy2D")
 
 [node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("2_qxeya")]
-visible = false
 position = Vector2(0, 100)
 horse = NodePath("../Horse2D")
 lassoProjectile = ExtResource("3_osjbi")

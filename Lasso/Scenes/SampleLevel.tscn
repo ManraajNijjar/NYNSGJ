@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfihmde84hidu"]
+[gd_scene load_steps=11 format=3 uid="uid://cfihmde84hidu"]
 
 [ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="1_3yin7"]
 [ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="2_l6vw0"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://sxatfbe5l6ol" path="res://assets/lasso_post_2d.tscn" id="4_pxaw4"]
 [ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="5_0gg66"]
 [ext_resource type="PackedScene" uid="uid://c66d37c47tpld" path="res://assets/button_area_2d.tscn" id="6_j168t"]
+[ext_resource type="Texture2D" uid="uid://dq5u4frjusvg1" path="res://images/Cactus2.png" id="7_efrh8"]
+[ext_resource type="PackedScene" uid="uid://8v36g1aui6t4" path="res://assets/fruit.tscn" id="8_6nej0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33enh"]
 
@@ -128,9 +130,18 @@ position = Vector2(207, 261)
 position = Vector2(-288, 254)
 
 [node name="ButtonArea2D" parent="." instance=ExtResource("6_j168t")]
-position = Vector2(-110, 241)
+position = Vector2(-106, 275)
 
 [node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("1_3yin7")]
 position = Vector2(46, -37)
 horse = NodePath("../Horse2D")
 lassoProjectile = ExtResource("2_l6vw0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(108, 241)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("7_efrh8")
+
+[node name="Fruit" parent="." instance=ExtResource("8_6nej0")]
+position = Vector2(197, 97)

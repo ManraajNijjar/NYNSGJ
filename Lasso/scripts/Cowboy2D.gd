@@ -29,6 +29,7 @@ var timeToHorse = 1;
 
 @onready var animationPlayer = $AnimationPlayer
 @onready var sprite2D = $Sprite2D;
+@onready var progressBar = $ProgressBar;
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -53,12 +54,15 @@ func _input(event):
 
 func _process(delta):
 	if leftMouseHeld && !hasLassoedObject && currentLasso == null:
+		progressBar.visible = true;
 		setAnimation("lasso_charge")
-		throwCharge += 2 * delta;
+		throwCharge += 5 * delta;
+		progressBar.value = throwCharge;
 		if throwCharge > 10:
 			throwCharge = 10;
 		pass
 	elif leftMouseReleased && !hasLassoedObject && currentLasso == null:
+		progressBar.visible = false;
 		setAnimation("lasso_out")
 		if lassoTimeOut <= 0:
 			throwLasso();
@@ -104,8 +108,8 @@ func _physics_process(delta):
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta
-
-	sprite2D.flip_h = velocity.x > 0;
+	if abs(velocity.x) > 0:
+		sprite2D.flip_h = velocity.x > 0;
 	move_and_slide()
 
 

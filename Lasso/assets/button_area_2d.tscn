@@ -1,21 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://c66d37c47tpld"]
+[gd_scene load_steps=5 format=3 uid="uid://c66d37c47tpld"]
 
 [ext_resource type="Script" path="res://scripts/button_area_2d.gd" id="1_pv6g1"]
-[ext_resource type="Texture2D" uid="uid://3pf6af7jbh5i" path="res://images/development/button.png" id="2_6vsd2"]
+[ext_resource type="Texture2D" uid="uid://dsvsuq4r856be" path="res://images/Barrel button-sunset.png" id="2_q83d0"]
+[ext_resource type="Texture2D" uid="uid://bwcr2diich6se" path="res://images/Barrel button.png" id="3_us8aw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3d6a"]
 size = Vector2(62, 21)
 
 [node name="ButtonArea2D" type="Area2D"]
+collision_mask = 255
 script = ExtResource("1_pv6g1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_m3d6a")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.105, 0.105)
-texture = ExtResource("2_6vsd2")
+[node name="Sprite2DSunset" type="Sprite2D" parent="."]
+position = Vector2(0, 10)
+scale = Vector2(0.238912, 0.240896)
+texture = ExtResource("2_q83d0")
+hframes = 2
+
+[node name="Sprite2DAfternoon" type="Sprite2D" parent="."]
+position = Vector2(0, 10)
+scale = Vector2(0.238912, 0.240896)
+texture = ExtResource("3_us8aw")
+hframes = 2
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

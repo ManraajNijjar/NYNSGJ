@@ -1,10 +1,15 @@
 extends RigidBody2D
 
-@export var isLassoed = false;
+@export var useSunset : bool = false;
+@export var isLassoed : bool = false;
 @export var pullStrength = 10000;
+@onready var afternoon : Sprite2D = $Sprite2DAfternoon
+@onready var sunset : Sprite2D = $Sprite2DSunset
 var cowboy;
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	afternoon.visible = !useSunset
+	sunset.visible = useSunset
 	cowboy = get_node("/root/Node2D/Cowboy2D");
 	pass # Replace with function body.
 

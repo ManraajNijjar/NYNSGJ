@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://bt6a1ar70ffh2"]
+
+[ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="1_6nst2"]
+[ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="2_xauqs"]
+[ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="3_67nbg"]
+[ext_resource type="PackedScene" uid="uid://sxatfbe5l6ol" path="res://assets/lasso_post_2d.tscn" id="4_85tej"]
+[ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="5_fsb7i"]
+[ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="6_4jisj"]
+[ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="7_ryi72"]
+[ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="8_24h8c"]
+[ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="9_rfqrk"]
+[ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="10_haejg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Ground" parent="Environment" instance=ExtResource("5_fsb7i")]
+position = Vector2(-368, 36)
+
+[node name="Ground3" parent="Environment" instance=ExtResource("5_fsb7i")]
+position = Vector2(-406, 10)
+rotation = 1.5708
+
+[node name="Ground4" parent="Environment" instance=ExtResource("5_fsb7i")]
+position = Vector2(402, 29)
+rotation = 1.5708
+
+[node name="Ground2" parent="Environment" instance=ExtResource("5_fsb7i")]
+position = Vector2(358, -10)
+
+[node name="Node2D" parent="Environment" instance=ExtResource("6_4jisj")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+
+[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("1_6nst2")]
+z_index = 2
+position = Vector2(-349, -14)
+horse = NodePath("../Horse2D")
+lassoProjectile = ExtResource("2_xauqs")
+
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("3_67nbg")]
+z_index = 1
+position = Vector2(-249, -19)
+cowboy = NodePath("../Cowboy2D")
+
+[node name="LassoPost2D" parent="." instance=ExtResource("4_85tej")]
+position = Vector2(211, -67)
+
+[node name="VictorySign" parent="." instance=ExtResource("7_ryi72")]
+position = Vector2(306, -86)
+
+[node name="Decor" type="Node2D" parent="."]
+
+[node name="Node2D" parent="." instance=ExtResource("8_24h8c")]
+position = Vector2(-334, -3)
+
+[node name="Node2D2" parent="." instance=ExtResource("9_rfqrk")]
+position = Vector2(-260, -7)
+
+[node name="Node2D3" parent="." instance=ExtResource("10_haejg")]
+position = Vector2(-188, -39)
+
+[node name="DecorLargeBush" parent="." instance=ExtResource("9_rfqrk")]
+position = Vector2(277, -49)

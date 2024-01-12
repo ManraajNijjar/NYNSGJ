@@ -1,15 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://sxatfbe5l6ol"]
+[gd_scene load_steps=6 format=3 uid="uid://sxatfbe5l6ol"]
 
-[ext_resource type="Texture2D" uid="uid://cls3ofykvrl8j" path="res://images/development/Tree_Transparent_Background.png" id="1_1rha4"]
+[ext_resource type="Script" path="res://scripts/lasso_post_2d.gd" id="1_1othh"]
+[ext_resource type="Texture2D" uid="uid://dq5u4frjusvg1" path="res://images/Cactus2.png" id="1_hhk60"]
+[ext_resource type="Texture2D" uid="uid://djhl1sasr8u4g" path="res://images/Cactusv2.png" id="3_w0fr1"]
+[ext_resource type="Texture2D" uid="uid://cnlfebms2ey65" path="res://images/Cactuses-sunset.png" id="4_dbs10"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bn3js"]
 
 [node name="LassoPost2D" type="Area2D" groups=["lassoable"]]
-position = Vector2(200, 0)
+script = ExtResource("1_1othh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
 shape = SubResource("CapsuleShape2D_bn3js")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("1_1rha4")
+[node name="Sprite2DAfternoon" type="Sprite2D" parent="CollisionShape2D"]
+texture_filter = 3
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(0.0865525, 0.0832431)
+texture = ExtResource("1_hhk60")
+
+[node name="Sprite2DAfternoon2" type="Sprite2D" parent="CollisionShape2D"]
+visible = false
+texture_filter = 3
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(0.0865525, 0.0832431)
+texture = ExtResource("3_w0fr1")
+
+[node name="Sprite2DSunset" type="Sprite2D" parent="CollisionShape2D"]
+visible = false
+texture_filter = 3
+position = Vector2(-0.666667, 0.333333)
+scale = Vector2(0.0865525, 0.0832431)
+texture = ExtResource("4_dbs10")
+hframes = 3
