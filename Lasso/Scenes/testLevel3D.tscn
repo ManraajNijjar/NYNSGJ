@@ -55,9 +55,10 @@ collision_layer = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
 shape = SubResource("BoxShape3D_355qn")
 
-[node name="Cowboy" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("3_mb842")]
+[node name="Cowboy" parent="." instance=ExtResource("3_mb842")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.969796)
-horse = NodePath("../Horse")
+horse = Object(CharacterBody3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81518, 0.0138965, -0.00272036),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":1,"collision_mask":1,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"axis_lock_linear_x":false,"axis_lock_linear_y":false,"axis_lock_linear_z":false,"axis_lock_angular_x":false,"axis_lock_angular_y":false,"axis_lock_angular_z":false,"motion_mode":0,"up_direction":Vector3(0, 1, 0),"slide_on_ceiling":true,"velocity":Vector3(0, 0, 0),"max_slides":6,"wall_min_slide_angle":0.261799,"floor_stop_on_slope":true,"floor_constant_speed":false,"floor_block_on_wall":true,"floor_max_angle":0.785398,"floor_snap_length":0.1,"platform_on_leave":0,"platform_floor_layers":4294967295,"platform_wall_layers":0,"safe_margin":0.001,"script":Resource("res://scripts/Horse.gd"))
+
 
 [node name="Crate" type="RigidBody3D" parent="." node_paths=PackedStringArray("cowboy") groups=["Lassoable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4812, 0.0691059, 1.93942)

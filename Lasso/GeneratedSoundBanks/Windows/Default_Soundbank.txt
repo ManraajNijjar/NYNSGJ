@@ -1,6 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
+	701459736	Horse_Footsteps			\Default Work Unit\Horse_Footsteps	
+	1367699361	Lasso_Catch			\Default Work Unit\Lasso_Catch	
 	3018450665	SFX_TEST			\Default Work Unit\SFX_TEST	
+	4152520648	Horse_Neigh			\Default Work Unit\Horse_Neigh	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	651466090	SFX	C:\Users\asher\Documents\Godot Projects\Game Jams\Lasso\Wwise\Lasso\.cache\Windows\SFX\Breaking Wooden Crate_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test\SFX		302372
+	95272385	Lasso_Catch	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Lasso_Catch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Lasso_Catch\Lasso_Catch		76580
+	651466090	SFX	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Breaking Wooden Crate_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test\SFX		302372
+	919367116	Horse_Neigh	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Horse_Neigh_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Horse\Horse_Neigh\Horse_Neigh		211428
 

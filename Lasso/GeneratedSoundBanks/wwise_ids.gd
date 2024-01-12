@@ -3,9 +3,15 @@ class_name AK
 class EVENTS:
 
 	const SFX_TEST = 3018450665
+	const HORSE_NEIGH = 4152520648
+	const LASSO_CATCH = 1367699361
+	const HORSE_FOOTSTEPS = 701459736
 
 	const _dict = {
-		"SFX_TEST": SFX_TEST
+		"SFX_TEST": SFX_TEST,
+		"Horse_Neigh": HORSE_NEIGH,
+		"Lasso_Catch": LASSO_CATCH,
+		"Horse_Footsteps": HORSE_FOOTSTEPS
 	}
 
 class STATES:
@@ -48,12 +54,12 @@ class AUX_BUSSES:
 
 class AUDIO_DEVICES:
 
-	const NO_OUTPUT = 2317455096
 	const SYSTEM = 3859886410
+	const NO_OUTPUT = 2317455096
 
 	const _dict = {
-		"No_Output": NO_OUTPUT,
-		"System": SYSTEM
+		"System": SYSTEM,
+		"No_Output": NO_OUTPUT
 	}
 
 class EXTERNAL_SOURCES:
