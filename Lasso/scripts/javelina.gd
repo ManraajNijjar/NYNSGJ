@@ -31,6 +31,8 @@ func _on_animation_player_animation_finished(anim_name:StringName):
 	if anim_name == "eat" && hunger > 0:
 		animationPlayer.play("idle");
 	elif anim_name == "eat" && hunger <= 0:
+		animationPlayer.play("wakeup");
+	elif anim_name == "wakeup":
 		animationPlayer.play("walk");
 	elif anim_name == "walk":
 		queue_free();

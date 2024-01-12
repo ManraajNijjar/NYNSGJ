@@ -30,6 +30,7 @@ var timeToHorse = 1;
 @onready var animationPlayer = $AnimationPlayer
 @onready var sprite2D = $Sprite2D;
 @onready var progressBar = $ProgressBar;
+@onready var soundBank = $AkBank_Init/AkBank_Default_Soundbank/Horse_Walk
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -114,6 +115,7 @@ func _physics_process(delta):
 
 
 func throwLasso():
+	#soundBank.post_event();
 	var temp = lassoProjectile.instantiate()
 	temp.targetPosition = get_global_mouse_position()
 	var originPosition = global_position;
