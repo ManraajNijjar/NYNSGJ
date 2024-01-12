@@ -5,7 +5,22 @@
 			<ChildrenList>
 				<SoundBank Name="Default_Soundbank" ID="{29406ABD-555F-4765-B834-DAE76889AF66}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Baby_Talk_Positive" ID="{8E55F71A-F334-4334-9D11-F6E48506F74C}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Horse_Footsteps" ID="{41B164F5-C5D5-434B-96A2-60905185D817}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Lasso_Throw" ID="{44DE9677-95D5-43A2-B210-DAB02E5FF6A8}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Baby_Fly" ID="{A468F97D-C2DB-44B1-9208-62D5D3C39541}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Fruit_Pluck" ID="{69E7640F-8489-4554-9FAE-0C8C7C422A5D}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Horse_Neigh_Baby_Sits" ID="{514B07AE-1857-4563-836A-8E2191747905}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Hog_Sleeping" ID="{B1701E26-A5B9-4607-82A6-7FF7B2DD03E2}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Whip_Tansition" ID="{46F1AF93-1F93-469D-A4F4-88108B53F53B}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Lasso_Whirl" ID="{F0435F45-0E81-4767-A7B9-7F5E0835A3F5}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Horse_Neigh_Positive" ID="{A2B3BB25-3E6F-479B-9F32-8D7111144CB0}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Baby_Talk_Throw" ID="{7D88BC92-9297-4871-BC0D-4E1D3D914E02}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Lasso_Catch" ID="{21EA1B30-5C0F-490A-8EB4-9337D04D0351}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Hog_Walk" ID="{43D46F63-2847-494A-BA0C-E5682AC928A1}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Hog_Eat" ID="{C0FE9C65-A103-497D-95CA-DEE3F025FB9E}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SFX_TEST" ID="{9238E591-CB54-4B20-96B2-3A512DB15E6B}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Horse_Kick" ID="{23BA6693-7D20-4F37-9757-0D491C95C6A0}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

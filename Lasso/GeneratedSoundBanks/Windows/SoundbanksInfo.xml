@@ -150,17 +150,41 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{533CB727-A89C-58B7-2A26-4B5831A54DC8}">
+		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{8FEDC6B7-649A-B93B-34EE-B89A9EACBF95}">
 			<ShortName>Default_Soundbank</ShortName>
 			<Path>Default_Soundbank.bnk</Path>
 			<Media>
+				<File Id="47533" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lasso_Whirl.wav</ShortName>
+					<CachePath>SFX/Lasso_Whirl_DDD558DB.wem</CachePath>
+				</File>
+				<File Id="44562895" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Baby_Positive.wav</ShortName>
+					<CachePath>SFX/Baby_Positive_818F3B66.wem</CachePath>
+				</File>
+				<File Id="67786165" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Baby_Fly.wav</ShortName>
+					<CachePath>SFX/Baby_Fly_818F3B66.wem</CachePath>
+				</File>
 				<File Id="95272385" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lasso_Catch.wav</ShortName>
-					<CachePath>SFX/Lasso_Catch_818F3B66.wem</CachePath>
+					<CachePath>SFX/Lasso_Catch_B5DC2C2D.wem</CachePath>
+				</File>
+				<File Id="344937593" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lasso_Throw.wav</ShortName>
+					<CachePath>SFX/Lasso_Throw_818F3B66.wem</CachePath>
+				</File>
+				<File Id="526766481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Horse_Kick.wav</ShortName>
+					<CachePath>SFX/Horse_Kick_818F3B66.wem</CachePath>
 				</File>
 				<File Id="651466090" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Breaking Wooden Crate.wav</ShortName>
 					<CachePath>SFX/Breaking Wooden Crate_818F3B66.wem</CachePath>
+				</File>
+				<File Id="797284294" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Horse_Footsteps.wav</ShortName>
+					<CachePath>SFX/Horse_Footsteps_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="919367116" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horse_Neigh.wav</ShortName>
@@ -168,8 +192,37 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="701459736" Name="Horse_Footsteps"/>
-				<Event Id="4152520648" Name="Horse_Neigh">
+				<Event Id="1288370271" Name="Baby_Fly">
+					<MediaRefs>
+						<MediaRef Id="67786165"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3269556576" Name="Baby_Talk_Positive">
+					<MediaRefs>
+						<MediaRef Id="44562895"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3342570235" Name="Baby_Talk_Throw"/>
+				<Event Id="336049027" Name="Fruit_Pluck"/>
+				<Event Id="2529140474" Name="Hog_Eat"/>
+				<Event Id="998140643" Name="Hog_Sleeping"/>
+				<Event Id="1493740447" Name="Hog_Walk"/>
+				<Event Id="701459736" Name="Horse_Footsteps">
+					<MediaRefs>
+						<MediaRef Id="797284294"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3198588461" Name="Horse_Kick">
+					<MediaRefs>
+						<MediaRef Id="526766481"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3018083661" Name="Horse_Neigh_Baby_Sits">
+					<MediaRefs>
+						<MediaRef Id="919367116"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="487887902" Name="Horse_Neigh_Positive">
 					<MediaRefs>
 						<MediaRef Id="919367116"/>
 					</MediaRefs>
@@ -179,13 +232,24 @@
 						<MediaRef Id="95272385"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="362990204" Name="Lasso_Throw">
+					<MediaRefs>
+						<MediaRef Id="344937593"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2401031616" Name="Lasso_Whirl">
+					<MediaRefs>
+						<MediaRef Id="47533"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3018450665" Name="SFX_TEST">
 					<MediaRefs>
 						<MediaRef Id="651466090"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3944649217" Name="Whip_Tansition"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5F760703-E83D-2A35-98A9-4DF4A25A2E88}</FileHash>
+	<FileHash>{1F3BD990-B1BA-3EC7-D9AC-EF2C1AF0D89A}</FileHash>
 </SoundBanksInfo>

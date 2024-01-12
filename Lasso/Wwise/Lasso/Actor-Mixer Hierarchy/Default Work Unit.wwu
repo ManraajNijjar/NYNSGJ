@@ -37,6 +37,330 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<ActorMixer Name="Baby" ID="{477F7D7A-D6F3-46BD-BE8B-6EE730AD06F2}" ShortID="581027226">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Lasso_Throw" ID="{77426AD3-BBB5-4006-AA76-87B77C4E2D9F}" ShortID="931847309">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Lasso_Throw" ID="{1155456E-9342-4650-B93D-8928D8F33CC6}" ShortID="25512764">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lasso_Throw" ID="{8A8CF051-F0EB-41E8-8EAA-C35F37C3DBAB}">
+											<Language>SFX</Language>
+											<AudioFile>Lasso_Throw.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="344937593"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lasso_Throw" ID="{8A8CF051-F0EB-41E8-8EAA-C35F37C3DBAB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Lasso_Catch" ID="{1C0C3B36-F8E6-4843-AA12-17070339216D}" ShortID="1013697273">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Lasso_Catch" ID="{98A9E114-CED5-4053-979A-403EE0D027CC}" ShortID="537443677">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lasso_Catch" ID="{3BFD6CC3-5204-48A3-9DF9-02C7E94D2590}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0602350050403226"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Lasso_Catch.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="95272385"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lasso_Catch" ID="{3BFD6CC3-5204-48A3-9DF9-02C7E94D2590}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Baby_Talk" ID="{768AA94D-8EF2-49D1-95E2-44D04FDA2F6F}" ShortID="153367288">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Baby_Positive" ID="{04219076-892E-4BB7-83BA-EB2FBE5D6789}" ShortID="42063459">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Baby_Positive" ID="{10ACB0F9-6B7A-4573-8FBB-6A14D379B319}">
+											<Language>SFX</Language>
+											<AudioFile>Baby_Positive.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="44562895"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Baby_Positive" ID="{10ACB0F9-6B7A-4573-8FBB-6A14D379B319}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Baby_Fly" ID="{7D5AD2C1-0ACC-455D-8CA6-DB8E6A3D8E94}" ShortID="1039769399">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Baby_Fly" ID="{E276C435-6F9A-486D-842D-30C22F035C9F}" ShortID="793477575">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Baby_Fly" ID="{6983D361-5D00-4B24-8550-EE1527912EB9}">
+											<Language>SFX</Language>
+											<AudioFile>Baby_Fly.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="67786165"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Baby_Fly" ID="{6983D361-5D00-4B24-8550-EE1527912EB9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Lasso_Whirl" ID="{40BE2275-2ADD-427B-B999-E3094A7868D1}" ShortID="814943480">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Lasso_Whirl" ID="{FEBE31FF-F156-4BCF-8C43-3BA2FB844DFD}" ShortID="755003278">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lasso_Whirl" ID="{4F8418E7-E518-4A33-9897-C0C4B3050537}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.18849080141129"/>
+												<Property Name="TrimEnd" Type="Real64" Value="11.8970354712702"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Lasso_Whirl.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="47533"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lasso_Whirl" ID="{4F8418E7-E518-4A33-9897-C0C4B3050537}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Horse" ID="{06C5C924-4620-4F2D-9722-9D5C5A03566E}" ShortID="991375451">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="8"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Horse_Neigh" ID="{EC7E0F18-1D5C-4179-9D65-F5861BFF9CC1}" ShortID="712784781">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Horse_Neigh" ID="{1B99758A-B183-4E51-A3F7-30C50B08C80B}" ShortID="401720149">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Horse_Neigh" ID="{220F6D5A-0283-4D38-879B-161738C2999D}">
+											<Language>SFX</Language>
+											<AudioFile>Horse_Neigh.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="919367116"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Horse_Neigh" ID="{220F6D5A-0283-4D38-879B-161738C2999D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Horse_Footsteps" ID="{321395CC-9869-4D11-BB34-D099A87157FA}" ShortID="514768891">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Horse_Footsteps" ID="{21520178-0C4E-45F6-AD70-E5F9554AD15E}" ShortID="385679548">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Horse_Footsteps" ID="{EC8DE5EA-C48B-4818-A59C-CA805C618487}">
+											<Language>SFX</Language>
+											<AudioFile>Horse_Footsteps.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="797284294"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Horse_Footsteps" ID="{EC8DE5EA-C48B-4818-A59C-CA805C618487}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Horse_Kick" ID="{77662C2A-0058-4342-BFDF-1631F951EB87}" ShortID="924492662">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Horse_Kick" ID="{FB88D6CB-941D-4200-AFB6-BCC9A575EC2E}" ShortID="506174815">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E5D21885-1CD6-4224-B9E4-7A5E2C347972}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Horse_Kick" ID="{B213E909-84ED-447F-BB4C-5D26246CF25E}">
+											<Language>SFX</Language>
+											<AudioFile>Horse_Kick.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="526766481"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Horse_Kick" ID="{B213E909-84ED-447F-BB4C-5D26246CF25E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

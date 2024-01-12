@@ -14,6 +14,144 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Horse_Footsteps" ID="{41B164F5-C5D5-434B-96A2-60905185D817}">
+					<ChildrenList>
+						<Action Name="" ID="{18C5382C-E0DD-4F3C-848F-E89D421D6A6E}" ShortID="937450315">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Horse_Footsteps" ID="{321395CC-9869-4D11-BB34-D099A87157FA}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Horse_Neigh_Baby_Sits" ID="{514B07AE-1857-4563-836A-8E2191747905}">
+					<ChildrenList>
+						<Action Name="" ID="{726E0F03-3C14-4BBC-98EA-52F2C9D12E83}" ShortID="504094723">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Horse_Neigh" ID="{EC7E0F18-1D5C-4179-9D65-F5861BFF9CC1}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lasso_Catch" ID="{21EA1B30-5C0F-490A-8EB4-9337D04D0351}">
+					<ChildrenList>
+						<Action Name="" ID="{683C4CD7-9B14-46B3-AFE9-19FE3765889A}" ShortID="973658349">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lasso_Catch" ID="{1C0C3B36-F8E6-4843-AA12-17070339216D}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lasso_Whirl" ID="{F0435F45-0E81-4767-A7B9-7F5E0835A3F5}">
+					<ChildrenList>
+						<Action Name="" ID="{F548E922-A711-42AA-B0E7-9265BC6754AB}" ShortID="576978276">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lasso_Whirl" ID="{40BE2275-2ADD-427B-B999-E3094A7868D1}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lasso_Throw" ID="{44DE9677-95D5-43A2-B210-DAB02E5FF6A8}">
+					<ChildrenList>
+						<Action Name="" ID="{8E442928-267E-48A1-97A0-8DE7C63F083B}" ShortID="570721149">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lasso_Throw" ID="{77426AD3-BBB5-4006-AA76-87B77C4E2D9F}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Horse_Kick" ID="{23BA6693-7D20-4F37-9757-0D491C95C6A0}">
+					<ChildrenList>
+						<Action Name="" ID="{377A1EF0-A4CF-4DED-8565-D3CF2C02BAEF}" ShortID="591980444">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Horse_Kick" ID="{77662C2A-0058-4342-BFDF-1631F951EB87}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Baby_Fly" ID="{A468F97D-C2DB-44B1-9208-62D5D3C39541}">
+					<ChildrenList>
+						<Action Name="" ID="{B2D667DF-7F57-43A7-BC0E-6CCB58FF7FF1}" ShortID="479079655">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Baby_Fly" ID="{7D5AD2C1-0ACC-455D-8CA6-DB8E6A3D8E94}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Baby_Talk_Positive" ID="{8E55F71A-F334-4334-9D11-F6E48506F74C}">
+					<ChildrenList>
+						<Action Name="" ID="{BC4F2F18-5835-4260-AE74-713B33E96BC3}" ShortID="1022782916">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Baby_Talk" ID="{768AA94D-8EF2-49D1-95E2-44D04FDA2F6F}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Hog_Eat" ID="{C0FE9C65-A103-497D-95CA-DEE3F025FB9E}"/>
+				<Event Name="Whip_Tansition" ID="{46F1AF93-1F93-469D-A4F4-88108B53F53B}"/>
+				<Event Name="Fruit_Pluck" ID="{69E7640F-8489-4554-9FAE-0C8C7C422A5D}"/>
+				<Event Name="Hog_Walk" ID="{43D46F63-2847-494A-BA0C-E5682AC928A1}"/>
+				<Event Name="Hog_Sleeping" ID="{B1701E26-A5B9-4607-82A6-7FF7B2DD03E2}"/>
+				<Event Name="Baby_Talk_Throw" ID="{7D88BC92-9297-4871-BC0D-4E1D3D914E02}"/>
+				<Event Name="Horse_Neigh_Positive" ID="{A2B3BB25-3E6F-479B-9F32-8D7111144CB0}">
+					<ChildrenList>
+						<Action Name="" ID="{C90D41FB-D1E5-4275-84D2-0857B9F66FB1}" ShortID="138502884">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Horse_Neigh" ID="{EC7E0F18-1D5C-4179-9D65-F5861BFF9CC1}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Main_Menu_Music" ID="{01A223BA-216C-48AA-8E0B-5C86E4C9E192}">
+					<ChildrenList>
+						<Action Name="" ID="{456CC868-0885-41A4-A1D7-FCD900897127}" ShortID="713279432">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main Menu Music" ID="{EA766B89-DF70-4238-A009-87B89CC20CAA}" WorkUnitID="{BD6C800F-310C-4F58-95E7-4A4D5E2ECB0C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Gameplay_Music" ID="{7F970973-4ED1-434E-9798-0E4285BB8A2E}">
+					<ChildrenList>
+						<Action Name="" ID="{3C18D750-7C62-4250-B3CA-FA5CD0CF8CDE}" ShortID="801791650">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gameplay Music" ID="{8FA03045-ECF7-40FE-9D80-760AE1A6D320}" WorkUnitID="{BD6C800F-310C-4F58-95E7-4A4D5E2ECB0C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="End_Music" ID="{8402ED7C-68B4-4719-8598-42CF29ACF72C}">
+					<ChildrenList>
+						<Action Name="" ID="{3BC882BA-2405-437E-B3DB-4F009901FAEE}" ShortID="1047270128">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="End Game Music" ID="{32448E1B-CAFF-4065-9864-F00BA5CA8D49}" WorkUnitID="{BD6C800F-310C-4F58-95E7-4A4D5E2ECB0C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
