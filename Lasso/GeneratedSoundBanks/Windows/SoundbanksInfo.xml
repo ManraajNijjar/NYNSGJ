@@ -150,10 +150,14 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{AC6000C2-C87F-B4AB-CCC9-92BEFA753218}">
+		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{D3E35625-A56C-4A93-C731-6E52266AFEE7}">
 			<ShortName>Default_Soundbank</ShortName>
 			<Path>Default_Soundbank.bnk</Path>
 			<Media>
+				<File Id="18479950" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sign Turn On.wav</ShortName>
+					<CachePath>SFX/Sign Turn On_818F3B66.wem</CachePath>
+				</File>
 				<File Id="44562895" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Baby_Positive.wav</ShortName>
 					<CachePath>SFX/Baby_Positive_818F3B66.wem</CachePath>
@@ -166,17 +170,41 @@
 					<ShortName>Lasso_Catch.wav</ShortName>
 					<CachePath>SFX/Lasso_Catch_B5DC2C2D.wem</CachePath>
 				</File>
+				<File Id="140461079" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rock Moving.wav</ShortName>
+					<CachePath>SFX/Rock Moving_FAE079E3.wem</CachePath>
+				</File>
+				<File Id="218572268" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Button Activated.wav</ShortName>
+					<CachePath>SFX/Button Activated_818F3B66.wem</CachePath>
+				</File>
+				<File Id="230453451" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Menu.wav</ShortName>
+					<CachePath>SFX/Music_Menu_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="313669753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Baby_Throw.wav</ShortName>
-					<CachePath>SFX/Baby_Throw_AB4FA49D.wem</CachePath>
+					<CachePath>SFX/Baby_Throw_9453AB0F.wem</CachePath>
+				</File>
+				<File Id="343948218" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Whip Transition.wav</ShortName>
+					<CachePath>SFX/Whip Transition_818F3B66.wem</CachePath>
 				</File>
 				<File Id="344937593" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lasso_Throw.wav</ShortName>
 					<CachePath>SFX/Lasso_Throw_818F3B66.wem</CachePath>
 				</File>
+				<File Id="508155028" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dynamite Activated.wav</ShortName>
+					<CachePath>SFX/Dynamite Activated_958F44C7.wem</CachePath>
+				</File>
 				<File Id="526766481" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horse_Kick.wav</ShortName>
 					<CachePath>SFX/Horse_Kick_818F3B66.wem</CachePath>
+				</File>
+				<File Id="528347092" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Horse Jump.wav</ShortName>
+					<CachePath>SFX/Horse Jump_818F3B66.wem</CachePath>
 				</File>
 				<File Id="546832929" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fruit Pluck.wav</ShortName>
@@ -198,17 +226,33 @@
 					<ShortName>Hog Exit.wav</ShortName>
 					<CachePath>SFX/Hog Exit_818F3B66.wem</CachePath>
 				</File>
+				<File Id="756702451" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sign Turn Off.wav</ShortName>
+					<CachePath>SFX/Sign Turn Off_818F3B66.wem</CachePath>
+				</File>
 				<File Id="797284294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horse_Footsteps.wav</ShortName>
 					<CachePath>SFX/Horse_Footsteps_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="888079425" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music_Gameplay.wav</ShortName>
+					<CachePath>SFX/Music_Gameplay_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="895549754" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Hog Eat.wav</ShortName>
 					<CachePath>SFX/Hog Eat_818F3B66.wem</CachePath>
 				</File>
+				<File Id="903791659" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Button Deactivated.wav</ShortName>
+					<CachePath>SFX/Button Deactivated_818F3B66.wem</CachePath>
+				</File>
 				<File Id="919367116" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horse_Neigh.wav</ShortName>
 					<CachePath>SFX/Horse_Neigh_818F3B66.wem</CachePath>
+				</File>
+				<File Id="973881866" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dynamite Activated.wav</ShortName>
+					<CachePath>SFX/Dynamite Activated_818F3B66.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -227,9 +271,44 @@
 						<MediaRef Id="313669753"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3746142581" Name="Button_Activated">
+					<MediaRefs>
+						<MediaRef Id="218572268"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3236117730" Name="Button_Deactivated">
+					<MediaRefs>
+						<MediaRef Id="903791659"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="704518912" Name="Dynamite_Activated">
+					<MediaRefs>
+						<MediaRef Id="508155028"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1512346300" Name="Dynamite_Explosion">
+					<MediaRefs>
+						<MediaRef Id="895549754"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1428057472" Name="End_Music">
+					<MediaRefs>
+						<MediaRef Id="888079425"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2678880713" Name="Fire">
+					<MediaRefs>
+						<MediaRef Id="973881866"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="336049027" Name="Fruit_Pluck">
 					<MediaRefs>
 						<MediaRef Id="546832929"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2322231365" Name="Gameplay_Music">
+					<MediaRefs>
+						<MediaRef Id="888079425"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2529140474" Name="Hog_Eat">
@@ -250,6 +329,11 @@
 				<Event Id="701459736" Name="Horse_Footsteps">
 					<MediaRefs>
 						<MediaRef Id="797284294"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1466783479" Name="Horse_Jump">
+					<MediaRefs>
+						<MediaRef Id="528347092"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3198588461" Name="Horse_Kick">
@@ -282,14 +366,43 @@
 						<MediaRef Id="625980483"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4278251541" Name="Level_Finish">
+					<MediaRefs>
+						<MediaRef Id="44562895"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3399698792" Name="Main_Menu_Music">
+					<MediaRefs>
+						<MediaRef Id="230453451"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2491012383" Name="Rock_Moving">
+					<MediaRefs>
+						<MediaRef Id="140461079"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3018450665" Name="SFX_TEST">
 					<MediaRefs>
 						<MediaRef Id="651466090"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3944649217" Name="Whip_Tansition"/>
+				<Event Id="1130713572" Name="Sign_Off">
+					<MediaRefs>
+						<MediaRef Id="756702451"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1295442366" Name="Sign_On">
+					<MediaRefs>
+						<MediaRef Id="18479950"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3944649217" Name="Whip_Tansition">
+					<MediaRefs>
+						<MediaRef Id="343948218"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A24EB99F-6897-15F7-CF1B-3088B85AECA5}</FileHash>
+	<FileHash>{C580170E-D889-61DA-B8C2-5F93F5493C50}</FileHash>
 </SoundBanksInfo>
