@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ciot3xjonoff4"
+path="res://.godot/imported/Whip Transition.wav-e583c5c6cf510b95bed11468e42a5255.sample"
+
+[deps]
+
+source_file="res://Wwise/Lasso/Originals/SFX/Whip Transition.wav"
+dest_files=["res://.godot/imported/Whip Transition.wav-e583c5c6cf510b95bed11468e42a5255.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

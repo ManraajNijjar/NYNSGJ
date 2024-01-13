@@ -152,6 +152,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Level_Finish" ID="{DE7232F0-A373-44C0-83BC-E9A3EDFA6C7A}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

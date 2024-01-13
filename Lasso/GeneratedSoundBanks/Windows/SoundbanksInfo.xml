@@ -150,14 +150,10 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{8FEDC6B7-649A-B93B-34EE-B89A9EACBF95}">
+		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{AC6000C2-C87F-B4AB-CCC9-92BEFA753218}">
 			<ShortName>Default_Soundbank</ShortName>
 			<Path>Default_Soundbank.bnk</Path>
 			<Media>
-				<File Id="47533" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Lasso_Whirl.wav</ShortName>
-					<CachePath>SFX/Lasso_Whirl_DDD558DB.wem</CachePath>
-				</File>
 				<File Id="44562895" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Baby_Positive.wav</ShortName>
 					<CachePath>SFX/Baby_Positive_818F3B66.wem</CachePath>
@@ -170,6 +166,10 @@
 					<ShortName>Lasso_Catch.wav</ShortName>
 					<CachePath>SFX/Lasso_Catch_B5DC2C2D.wem</CachePath>
 				</File>
+				<File Id="313669753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Baby_Throw.wav</ShortName>
+					<CachePath>SFX/Baby_Throw_AB4FA49D.wem</CachePath>
+				</File>
 				<File Id="344937593" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lasso_Throw.wav</ShortName>
 					<CachePath>SFX/Lasso_Throw_818F3B66.wem</CachePath>
@@ -178,13 +178,33 @@
 					<ShortName>Horse_Kick.wav</ShortName>
 					<CachePath>SFX/Horse_Kick_818F3B66.wem</CachePath>
 				</File>
+				<File Id="546832929" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fruit Pluck.wav</ShortName>
+					<CachePath>SFX/Fruit Pluck_818F3B66.wem</CachePath>
+				</File>
+				<File Id="609357073" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hog Sleeping.wav</ShortName>
+					<CachePath>SFX/Hog Sleeping_818F3B66.wem</CachePath>
+				</File>
+				<File Id="625980483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lasso Whirl.wav</ShortName>
+					<CachePath>SFX/Lasso Whirl_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="651466090" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Breaking Wooden Crate.wav</ShortName>
 					<CachePath>SFX/Breaking Wooden Crate_818F3B66.wem</CachePath>
 				</File>
+				<File Id="746391585" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hog Exit.wav</ShortName>
+					<CachePath>SFX/Hog Exit_818F3B66.wem</CachePath>
+				</File>
 				<File Id="797284294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horse_Footsteps.wav</ShortName>
 					<CachePath>SFX/Horse_Footsteps_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="895549754" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hog Eat.wav</ShortName>
+					<CachePath>SFX/Hog Eat_818F3B66.wem</CachePath>
 				</File>
 				<File Id="919367116" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horse_Neigh.wav</ShortName>
@@ -202,11 +222,31 @@
 						<MediaRef Id="44562895"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3342570235" Name="Baby_Talk_Throw"/>
-				<Event Id="336049027" Name="Fruit_Pluck"/>
-				<Event Id="2529140474" Name="Hog_Eat"/>
-				<Event Id="998140643" Name="Hog_Sleeping"/>
-				<Event Id="1493740447" Name="Hog_Walk"/>
+				<Event Id="3342570235" Name="Baby_Talk_Throw">
+					<MediaRefs>
+						<MediaRef Id="313669753"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="336049027" Name="Fruit_Pluck">
+					<MediaRefs>
+						<MediaRef Id="546832929"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2529140474" Name="Hog_Eat">
+					<MediaRefs>
+						<MediaRef Id="895549754"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="998140643" Name="Hog_Sleeping">
+					<MediaRefs>
+						<MediaRef Id="609357073"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1493740447" Name="Hog_Walk">
+					<MediaRefs>
+						<MediaRef Id="746391585"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="701459736" Name="Horse_Footsteps">
 					<MediaRefs>
 						<MediaRef Id="797284294"/>
@@ -239,7 +279,7 @@
 				</Event>
 				<Event Id="2401031616" Name="Lasso_Whirl">
 					<MediaRefs>
-						<MediaRef Id="47533"/>
+						<MediaRef Id="625980483"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3018450665" Name="SFX_TEST">
@@ -251,5 +291,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1F3BD990-B1BA-3EC7-D9AC-EF2C1AF0D89A}</FileHash>
+	<FileHash>{A24EB99F-6897-15F7-CF1B-3088B85AECA5}</FileHash>
 </SoundBanksInfo>

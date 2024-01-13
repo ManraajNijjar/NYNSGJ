@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ci5dkboxy2vvy"
+path="res://.godot/imported/Button Activated.wav-6c1fbe4bed1555417fa9279973e7f07d.sample"
+
+[deps]
+
+source_file="res://Wwise/Lasso/Originals/SFX/Button Activated.wav"
+dest_files=["res://.godot/imported/Button Activated.wav-6c1fbe4bed1555417fa9279973e7f07d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cud4uoxkrt2aw"
+path="res://.godot/imported/Fruit Pluck.wav-d356ceea9447670c7f9987c34007558a.sample"
+
+[deps]
+
+source_file="res://Wwise/Lasso/Originals/SFX/Fruit Pluck.wav"
+dest_files=["res://.godot/imported/Fruit Pluck.wav-d356ceea9447670c7f9987c34007558a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

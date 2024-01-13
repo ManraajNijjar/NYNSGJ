@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://kjgcmx7nsmdd"
+path="res://.godot/imported/Hog Eat.wav-3b8a8ed8d454a82c66108b81142aaa65.sample"
+
+[deps]
+
+source_file="res://Wwise/Lasso/Originals/SFX/Hog Eat.wav"
+dest_files=["res://.godot/imported/Hog Eat.wav-3b8a8ed8d454a82c66108b81142aaa65.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
