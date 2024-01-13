@@ -5,9 +5,9 @@ extends Area2D
 @onready var sprite2DIdle : Sprite2D = $CollisionShape2D/Sprite2DIdle
 @onready var sprite2DWalk : Sprite2D = $CollisionShape2D/Sprite2DWalk
 
-@onready var soundBankHogSleep = $AkBank_Init/AkBank_Default_Soundbank/Hog_Sleeping
-@onready var soundBankHogWalk = $AkBank_Init/AkBank_Default_Soundbank/Hog_Walk
-@onready var soundBankHogEat = $AkBank_Init/AkBank_Default_Soundbank/Hog_Eat
+@onready var soundBankHogSleep = $Hog_Sleeping
+@onready var soundBankHogWalk = $Hog_Walk
+@onready var soundBankHogEat = $Hog_Eat
 
 var leaving = false;
 var finishWakeUp = false;

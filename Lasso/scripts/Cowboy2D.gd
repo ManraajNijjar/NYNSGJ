@@ -30,13 +30,13 @@ var timeToHorse = 1;
 @onready var animationPlayer = $AnimationPlayer
 @onready var sprite2D = $Sprite2D;
 @onready var progressBar = $ProgressBar;
-@onready var soundBankLassoThrow = $AkBank_Init/AkBank_Default_Soundbank/Lasso_Throw
-@onready var soundBankLassoWhirl = $AkBank_Init/AkBank_Default_Soundbank/Lasso_Whirl
-@onready var soundBankLassoCatch = $AkBank_Init/AkBank_Default_Soundbank/Lasso_Catch
-@onready var soundBankBabyHeld = $AkBank_Init/AkBank_Default_Soundbank/Baby_Sits
-@onready var soundBankBabyTalk = $AkBank_Init/AkBank_Default_Soundbank/Baby_Talk
-@onready var soundBankBabyThrow = $AkBank_Init/AkBank_Default_Soundbank/Baby_Throw
-@onready var soundBankBabyFly = $AkBank_Init/AkBank_Default_Soundbank/Baby_Fly
+@onready var soundBankLassoThrow = $Lasso_Throw
+@onready var soundBankLassoWhirl = $Lasso_Whirl
+@onready var soundBankLassoCatch = $Lasso_Catch
+@onready var soundBankBabyHeld = $Baby_Sits
+@onready var soundBankBabyTalk = $Baby_Talk
+@onready var soundBankBabyThrow = $Baby_Throw
+@onready var soundBankBabyFly = $Baby_Fly
 
 var babyFlyPlayed = false;
 

@@ -24,6 +24,10 @@ var horseMoveDirection = 1;
 var kickCooldown = 0.0;
 var hasWalked = false;
 
+func _ready():
+	Wwise.load_bank("Init");
+	Wwise.load_bank("Default_Soundbank");
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():

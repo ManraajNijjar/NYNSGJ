@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2aw85e7h4bjw"]
+[gd_scene load_steps=12 format=3 uid="uid://c2aw85e7h4bjw"]
 
+[ext_resource type="Script" path="res://Levels/level5.gd" id="1_fenpu"]
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_krhgh"]
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_dl7lo"]
 [ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="3_5iqk7"]
@@ -9,18 +10,18 @@
 [ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="7_s5uxx"]
 [ext_resource type="PackedScene" uid="uid://d0lfg7gahhae3" path="res://assets/fire.tscn" id="8_tdv66"]
 [ext_resource type="PackedScene" uid="uid://r0dgr3x7tb2l" path="res://assets/dynamite.tscn" id="9_8jd3q"]
+[ext_resource type="PackedScene" uid="uid://c66d37c47tpld" path="res://assets/button_area_2d.tscn" id="11_e41ve"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_fenpu")
 
 [node name="Environment" type="Node2D" parent="."]
 
 [node name="Ground" parent="Environment" instance=ExtResource("1_krhgh")]
 position = Vector2(-370, 184)
-useSunset = true
 
 [node name="Ground2" parent="Environment" instance=ExtResource("1_krhgh")]
 position = Vector2(31, 184)
-useSunset = true
 
 [node name="Ground5" parent="Environment" instance=ExtResource("1_krhgh")]
 position = Vector2(433, 184)
@@ -29,15 +30,12 @@ useSunset = true
 [node name="Ground3" parent="Environment" instance=ExtResource("1_krhgh")]
 position = Vector2(-406, 10)
 rotation = 1.5708
-useSunset = true
 
 [node name="Ground4" parent="Environment" instance=ExtResource("1_krhgh")]
 position = Vector2(402, 29)
 rotation = 1.5708
-useSunset = true
 
 [node name="Background" parent="Environment" instance=ExtResource("2_dl7lo")]
-useSunset = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
@@ -77,23 +75,23 @@ position = Vector2(281, 70)
 mass = 10.0
 
 [node name="Crate2D6" parent="." instance=ExtResource("7_s5uxx")]
-position = Vector2(251, 11)
+position = Vector2(128, 129)
 mass = 10.0
 
 [node name="Crate2D7" parent="." instance=ExtResource("7_s5uxx")]
-position = Vector2(251, -52)
+position = Vector2(155, 68)
 mass = 10.0
 
 [node name="Crate2D8" parent="." instance=ExtResource("7_s5uxx")]
-position = Vector2(220, -116)
+position = Vector2(181, 10)
 mass = 10.0
 
 [node name="Crate2D9" parent="." instance=ExtResource("7_s5uxx")]
-position = Vector2(280, -116)
+position = Vector2(247, 9)
 mass = 10.0
 
 [node name="Crate2D10" parent="." instance=ExtResource("7_s5uxx")]
-position = Vector2(251, -179)
+position = Vector2(214, -53)
 mass = 10.0
 
 [node name="fire" parent="." instance=ExtResource("8_tdv66")]
@@ -102,11 +100,5 @@ position = Vector2(27, 134)
 [node name="Dynamite" parent="." instance=ExtResource("9_8jd3q")]
 position = Vector2(-79, 129)
 
-[node name="Dynamite2" parent="." instance=ExtResource("9_8jd3q")]
-position = Vector2(-353, 20)
-
-[node name="Dynamite3" parent="." instance=ExtResource("9_8jd3q")]
-position = Vector2(-345, 74)
-
-[node name="Dynamite4" parent="." instance=ExtResource("9_8jd3q")]
-position = Vector2(-344, 125)
+[node name="ButtonArea2D" parent="." instance=ExtResource("11_e41ve")]
+position = Vector2(-329, 147)

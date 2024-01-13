@@ -28,25 +28,10 @@ position = Vector2(0.566572, 0.566572)
 scale = Vector2(0.106, 0.106)
 texture = ExtResource("3_jnfed")
 
-[node name="AkBank_Init" type="AkBank" parent="."]
-bank = {
-"id": 1355168291,
-"name": "Init"
-}
-load_on = 1
-
-[node name="AkBank_Default_Soundbank" type="AkBank" parent="AkBank_Init"]
-bank = {
-"id": 2218482606,
-"name": "Default_Soundbank"
-}
-load_on = 1
-
-[node name="Fruit_Pluck" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+[node name="Fruit_Pluck" type="AkEvent2D" parent="."]
 event = {
 "id": 336049027,
 "name": "Fruit_Pluck"
 }
 trigger_on = 1
-
-[node name="AkListener2D" type="AkListener2D" parent="."]
+position = Vector2(0, 50)

@@ -112,66 +112,44 @@ libraries = {
 }
 autoplay = "idle"
 
-[node name="AkBank_Init" type="AkBank" parent="."]
-bank = {
-"id": 1355168291,
-"name": "Init"
-}
-
-[node name="AkBank_Default_Soundbank" type="AkBank" parent="AkBank_Init"]
-bank = {
-"id": 2218482606,
-"name": "Default_Soundbank"
-}
-load_on = 1
-
-[node name="Lasso_Throw" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+[node name="Lasso_Throw" type="AkEvent2D" parent="."]
 event = {
 "id": 362990204,
 "name": "Lasso_Throw"
 }
-trigger_on = 1
 
-[node name="Baby_Sits" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+[node name="Baby_Sits" type="AkEvent2D" parent="."]
 event = {
 "id": 3018083661,
 "name": "Horse_Neigh_Baby_Sits"
 }
-trigger_on = 1
 
-[node name="Baby_Talk" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+[node name="Baby_Talk" type="AkEvent2D" parent="."]
 event = {
 "id": 3269556576,
 "name": "Baby_Talk_Positive"
 }
-trigger_on = 1
 
-[node name="Baby_Throw" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+[node name="Baby_Throw" type="AkEvent2D" parent="."]
 event = {
 "id": 1288370271,
 "name": "Baby_Fly"
 }
-trigger_on = 1
 
-[node name="Baby_Fly" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+[node name="Baby_Fly" type="AkEvent2D" parent="."]
 event = {
 "id": 1288370271,
 "name": "Baby_Fly"
 }
-trigger_on = 1
 
-[node name="Lasso_Whirl" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+[node name="Lasso_Whirl" type="AkEvent2D" parent="."]
 event = {
 "id": 2401031616,
 "name": "Lasso_Whirl"
 }
-trigger_on = 1
 
-[node name="Lasso_Catch" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+[node name="Lasso_Catch" type="AkEvent2D" parent="."]
 event = {
 "id": 1367699361,
 "name": "Lasso_Catch"
 }
-trigger_on = 1
-
-[node name="AkListener2D" type="AkListener2D" parent="."]
