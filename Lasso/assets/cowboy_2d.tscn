@@ -132,8 +132,8 @@ event = {
 
 [node name="Baby_Throw" type="AkEvent2D" parent="."]
 event = {
-"id": 1288370271,
-"name": "Baby_Fly"
+"id": 3342570235,
+"name": "Baby_Talk_Throw"
 }
 
 [node name="Baby_Fly" type="AkEvent2D" parent="."]

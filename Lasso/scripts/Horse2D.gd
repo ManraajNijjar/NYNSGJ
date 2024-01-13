@@ -12,6 +12,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var soundBankHorseWalk = $AkBank_Init/AkBank_Default_Soundbank/Horse_Walk
 @onready var soundBankHorseKick = $AkBank_Init/AkBank_Default_Soundbank/Horse_Kick
 @onready var soundBankHorseNeigh = $AkBank_Init/AkBank_Default_Soundbank/Horse_Neigh
+@onready var soundBankHorseJump = $AkBank_Init/AkBank_Default_Soundbank/Horse_Jump
 @onready var sprite2D = $Sprite2D
 @export var cowboy : Node2D;
 @export var kickCooldownMax : float = 0.2;
@@ -37,6 +38,7 @@ func _physics_process(delta):
 		get_tree().reload_current_scene();
 	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
+		soundBankHorseJump.post_event();
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.

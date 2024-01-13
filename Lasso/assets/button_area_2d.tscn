@@ -28,5 +28,17 @@ scale = Vector2(0.238912, 0.240896)
 texture = ExtResource("3_p7eur")
 hframes = 2
 
+[node name="Button_Activated" type="AkEvent2D" parent="."]
+event = {
+"id": 3746142581,
+"name": "Button_Activated"
+}
+
+[node name="Button_Deactivated" type="AkEvent2D" parent="."]
+event = {
+"id": 3236117730,
+"name": "Button_Deactivated"
+}
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

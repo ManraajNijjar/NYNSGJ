@@ -33,4 +33,16 @@ shape = SubResource("CircleShape2D_vbdel")
 [node name="Timer" type="Timer" parent="Area2D"]
 wait_time = 3.0
 
+[node name="Dynamite_Activated" type="AkEvent2D" parent="."]
+event = {
+"id": 704518912,
+"name": "Dynamite_Activated"
+}
+
+[node name="Dynamite_Explosion" type="AkEvent2D" parent="."]
+event = {
+"id": 1512346300,
+"name": "Dynamite_Explosion"
+}
+
 [connection signal="timeout" from="Area2D/Timer" to="." method="_on_timer_timeout"]

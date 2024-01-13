@@ -48,16 +48,14 @@ useSunset = true
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.25, 1.25)
 
-[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("3_2nnph")]
+[node name="Cowboy2D" parent="." instance=ExtResource("3_2nnph")]
 z_index = 2
 position = Vector2(12, -193)
-horse = NodePath("")
 lassoProjectile = ExtResource("4_wur5e")
 
-[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("5_0mlo5")]
+[node name="Horse2D" parent="." instance=ExtResource("5_0mlo5")]
 z_index = 1
 position = Vector2(-68, -193)
-cowboy = NodePath("")
 
 [node name="VictorySign" parent="." instance=ExtResource("6_cexpj")]
 position = Vector2(390, 104)

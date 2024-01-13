@@ -21,6 +21,7 @@ func _ready():
 func _on_body_entered(body:Node2D):
 	if body.is_in_group("edible"):
 		soundBankHogEat.post_event();
+		soundBankHogSleep.stop_event();
 		animationPlayer.play("eat");
 		body.queue_free()
 		hunger -=1;
@@ -30,6 +31,7 @@ func _process(delta):
 	if leaving:
 		if !walkSoundPlaying:
 			walkSoundPlaying = true;
+			soundBankHogSleep.stop_event();
 			soundBankHogWalk.post_event();
 		position.x += 1;
 	elif hunger <= 0 && finishWakeUp:

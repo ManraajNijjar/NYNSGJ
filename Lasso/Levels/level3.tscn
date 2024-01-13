@@ -59,3 +59,9 @@ position = Vector2(-270, 93)
 [node name="GroundLong" parent="." instance=ExtResource("1_kc77c")]
 position = Vector2(99, -91)
 rotation = -1.5708
+
+[node name="Rock_Moving" type="AkEvent2D" parent="."]
+event = {
+"id": 2491012383,
+"name": "Rock_Moving"
+}

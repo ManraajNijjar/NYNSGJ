@@ -112,6 +112,12 @@ event = {
 "name": "Horse_Neigh_Positive"
 }
 
+[node name="Horse_Jump" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+event = {
+"id": 1466783479,
+"name": "Horse_Jump"
+}
+
 [node name="Horse_Kick" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
 event = {
 "id": 3198588461,

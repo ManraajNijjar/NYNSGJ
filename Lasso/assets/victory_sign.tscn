@@ -39,6 +39,41 @@ hframes = 4
 wait_time = 3.0
 one_shot = true
 
+[node name="Sign_On" type="AkEvent2D" parent="."]
+event = {
+"id": 1295442366,
+"name": "Sign_On"
+}
+
+[node name="Sign_Off" type="AkEvent2D" parent="."]
+event = {
+"id": 1130713572,
+"name": "Sign_Off"
+}
+
+[node name="Whip_Transition" type="AkEvent2D" parent="."]
+event = {
+"id": 3944649217,
+"name": "Whip_Tansition"
+}
+
+[node name="Level_Finish" type="AkEvent2D" parent="."]
+event = {
+"id": 4278251541,
+"name": "Level_Finish"
+}
+
+[node name="Level_Music" type="AkEvent2D" parent="."]
+event = {
+"id": 2322231365,
+"name": "Gameplay_Music"
+}
+
+[node name="WhipTimer" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="WhipTimer" to="." method="_on_whip_timer_timeout"]
