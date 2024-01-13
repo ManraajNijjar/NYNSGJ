@@ -13,6 +13,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1466783479	Horse_Jump			\Default Work Unit\Horse_Jump	
 	1493740447	Hog_Walk			\Default Work Unit\Hog_Walk	
 	1512346300	Dynamite_Explosion			\Default Work Unit\Dynamite_Explosion	
+	1539411869	Intro_Music			\Default Work Unit\Intro_Music	
 	2322231365	Gameplay_Music			\Default Work Unit\Gameplay_Music	
 	2401031616	Lasso_Whirl			\Default Work Unit\Lasso_Whirl	
 	2491012383	Rock_Moving			\Default Work Unit\Rock_Moving	

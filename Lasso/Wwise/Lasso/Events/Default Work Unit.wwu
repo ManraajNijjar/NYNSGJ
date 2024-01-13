@@ -322,6 +322,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Intro_Music" ID="{0797110E-3905-48A1-B305-18FE793ABB6F}">
+					<ChildrenList>
+						<Action Name="" ID="{F68BF681-A164-476A-9D05-E954C486A558}" ShortID="824265035">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Intro Music" ID="{6DA5B88D-2783-492E-9C94-7883D0F3D7E9}" WorkUnitID="{BD6C800F-310C-4F58-95E7-4A4D5E2ECB0C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

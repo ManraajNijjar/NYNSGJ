@@ -31,6 +31,7 @@ class EVENTS:
 	const DYNAMITE_ACTIVATED = 704518912
 	const BUTTON_DEACTIVATED = 3236117730
 	const FIRE = 2678880713
+	const INTRO_MUSIC = 1539411869
 
 	const _dict = {
 		"Lasso_Catch": LASSO_CATCH,
@@ -61,7 +62,8 @@ class EVENTS:
 		"End_Music": END_MUSIC,
 		"Dynamite_Activated": DYNAMITE_ACTIVATED,
 		"Button_Deactivated": BUTTON_DEACTIVATED,
-		"Fire": FIRE
+		"Fire": FIRE,
+		"Intro_Music": INTRO_MUSIC
 	}
 
 class STATES:

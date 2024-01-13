@@ -26,6 +26,7 @@
 						<ObjectRef Name="Horse_Neigh_Positive" ID="{A2B3BB25-3E6F-479B-9F32-8D7111144CB0}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Baby_Talk_Throw" ID="{7D88BC92-9297-4871-BC0D-4E1D3D914E02}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Rock_Moving" ID="{2984D50B-2E2F-48A1-BF44-1A0808673283}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Intro_Music" ID="{0797110E-3905-48A1-B305-18FE793ABB6F}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Main_Menu_Music" ID="{01A223BA-216C-48AA-8E0B-5C86E4C9E192}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lasso_Catch" ID="{21EA1B30-5C0F-490A-8EB4-9337D04D0351}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Hog_Walk" ID="{43D46F63-2847-494A-BA0C-E5682AC928A1}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>

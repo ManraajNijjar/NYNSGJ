@@ -150,7 +150,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{D3E35625-A56C-4A93-C731-6E52266AFEE7}">
+		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{273DA27B-BAFF-CCB2-3F6E-1FCC543D587B}">
 			<ShortName>Default_Soundbank</ShortName>
 			<Path>Default_Soundbank.bnk</Path>
 			<Media>
@@ -351,6 +351,11 @@
 						<MediaRef Id="919367116"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1539411869" Name="Intro_Music">
+					<MediaRefs>
+						<MediaRef Id="888079425"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1367699361" Name="Lasso_Catch">
 					<MediaRefs>
 						<MediaRef Id="95272385"/>
@@ -404,5 +409,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C580170E-D889-61DA-B8C2-5F93F5493C50}</FileHash>
+	<FileHash>{20280642-24FA-1981-B32D-7730A8797AB1}</FileHash>
 </SoundBanksInfo>
