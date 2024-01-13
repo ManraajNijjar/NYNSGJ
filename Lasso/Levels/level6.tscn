@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://34312c1wwd6f"]
+[gd_scene load_steps=10 format=3 uid="uid://34312c1wwd6f"]
 
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_c1ihq"]
+[ext_resource type="Script" path="res://Levels/level6.gd" id="1_mbpgv"]
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_8dg30"]
 [ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="3_2nnph"]
 [ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="4_wur5e"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c40nag2xlkk4f" path="res://assets/ground_short.tscn" id="8_svkw7"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_mbpgv")
 
 [node name="Environment" type="Node2D" parent="."]
 
@@ -18,10 +20,6 @@ position = Vector2(-370, 184)
 useSunset = true
 
 [node name="Ground2" parent="Environment" instance=ExtResource("1_c1ihq")]
-position = Vector2(13, -139)
-useSunset = true
-
-[node name="Ground6" parent="Environment" instance=ExtResource("1_c1ihq")]
 position = Vector2(13, -139)
 useSunset = true
 
@@ -48,22 +46,29 @@ useSunset = true
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.25, 1.25)
 
-[node name="Cowboy2D" parent="." instance=ExtResource("3_2nnph")]
+[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("3_2nnph")]
 z_index = 2
 position = Vector2(12, -193)
+horse = NodePath("../Horse2D")
 lassoProjectile = ExtResource("4_wur5e")
 
-[node name="Horse2D" parent="." instance=ExtResource("5_0mlo5")]
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("5_0mlo5")]
 z_index = 1
-position = Vector2(-68, -193)
+position = Vector2(313, 101)
+cowboy = NodePath("../Cowboy2D")
 
 [node name="VictorySign" parent="." instance=ExtResource("6_cexpj")]
-position = Vector2(390, 104)
+position = Vector2(298, 117)
 rotation = -0.0872665
 useSunset = true
 
 [node name="ButtonArea2D" parent="." instance=ExtResource("7_13wvf")]
 position = Vector2(-329, 147)
+useSunset = true
+
+[node name="ButtonArea2D2" parent="." instance=ExtResource("7_13wvf")]
+position = Vector2(414, 147)
+rotation = -0.0872665
 useSunset = true
 
 [node name="GroundShort" parent="." instance=ExtResource("8_svkw7")]

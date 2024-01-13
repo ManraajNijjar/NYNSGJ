@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c2aw85e7h4bjw"]
+[gd_scene load_steps=13 format=3 uid="uid://c2aw85e7h4bjw"]
 
 [ext_resource type="Script" path="res://Levels/level5.gd" id="1_fenpu"]
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_krhgh"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="5_7dr1h"]
 [ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="6_v81pu"]
 [ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="7_s5uxx"]
+[ext_resource type="PackedScene" uid="uid://34312c1wwd6f" path="res://Levels/level6.tscn" id="8_cisxk"]
 [ext_resource type="PackedScene" uid="uid://d0lfg7gahhae3" path="res://assets/fire.tscn" id="8_tdv66"]
 [ext_resource type="PackedScene" uid="uid://r0dgr3x7tb2l" path="res://assets/dynamite.tscn" id="9_8jd3q"]
 [ext_resource type="PackedScene" uid="uid://c66d37c47tpld" path="res://assets/button_area_2d.tscn" id="11_e41ve"]
@@ -53,6 +54,7 @@ cowboy = NodePath("../Cowboy2D")
 
 [node name="VictorySign" parent="." instance=ExtResource("6_v81pu")]
 position = Vector2(282, 103)
+nextScene = ExtResource("8_cisxk")
 
 [node name="Crate2D" parent="." instance=ExtResource("7_s5uxx")]
 position = Vector2(189, 131)
