@@ -8,7 +8,7 @@ var cowboy;
 
 @onready var sunset: Sprite2D = $CollisionShape2D/Sprite2DSunset
 @onready var afternoon: Sprite2D = $CollisionShape2D/Sprite2DAfternoon
-@onready var soundBankFruitPluck = $AkBank_Init/AkBank_Default_Soundbank/Fruit_Pluck
+@onready var soundBankFruitPluck = $Fruit_Pluck
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

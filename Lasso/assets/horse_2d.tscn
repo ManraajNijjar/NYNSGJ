@@ -98,7 +98,6 @@ bank = {
 "id": 1355168291,
 "name": "Init"
 }
-load_on = 1
 
 [node name="AkBank_Default_Soundbank" type="AkBank" parent="AkBank_Init"]
 bank = {
@@ -112,21 +111,18 @@ event = {
 "id": 487887902,
 "name": "Horse_Neigh_Positive"
 }
-trigger_on = 1
 
 [node name="Horse_Kick" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
 event = {
 "id": 3198588461,
 "name": "Horse_Kick"
 }
-trigger_on = 1
 
 [node name="Horse_Walk" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
 event = {
 "id": 701459736,
 "name": "Horse_Footsteps"
 }
-trigger_on = 1
 
 [node name="AkListener2D" type="AkListener2D" parent="."]
 

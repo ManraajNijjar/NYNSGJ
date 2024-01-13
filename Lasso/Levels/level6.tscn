@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://34312c1wwd6f"]
+
+[ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_c1ihq"]
+[ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_8dg30"]
+[ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="3_2nnph"]
+[ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="4_wur5e"]
+[ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="5_0mlo5"]
+[ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="6_cexpj"]
+[ext_resource type="PackedScene" uid="uid://c66d37c47tpld" path="res://assets/button_area_2d.tscn" id="7_13wvf"]
+[ext_resource type="PackedScene" uid="uid://c40nag2xlkk4f" path="res://assets/ground_short.tscn" id="8_svkw7"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Ground" parent="Environment" instance=ExtResource("1_c1ihq")]
+position = Vector2(-370, 184)
+useSunset = true
+
+[node name="Ground2" parent="Environment" instance=ExtResource("1_c1ihq")]
+position = Vector2(13, -139)
+useSunset = true
+
+[node name="Ground6" parent="Environment" instance=ExtResource("1_c1ihq")]
+position = Vector2(13, -139)
+useSunset = true
+
+[node name="Ground5" parent="Environment" instance=ExtResource("1_c1ihq")]
+position = Vector2(433, 184)
+rotation = -0.0872665
+useSunset = true
+
+[node name="Ground3" parent="Environment" instance=ExtResource("1_c1ihq")]
+position = Vector2(-485, -57)
+rotation = 1.5708
+useSunset = true
+
+[node name="Ground4" parent="Environment" instance=ExtResource("1_c1ihq")]
+position = Vector2(502, -58)
+rotation = 1.5708
+useSunset = true
+
+[node name="Background" parent="Environment" instance=ExtResource("2_8dg30")]
+position = Vector2(-3, -6)
+scale = Vector2(1.23896, 1.23896)
+useSunset = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.25, 1.25)
+
+[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("3_2nnph")]
+z_index = 2
+position = Vector2(12, -193)
+horse = NodePath("")
+lassoProjectile = ExtResource("4_wur5e")
+
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("5_0mlo5")]
+z_index = 1
+position = Vector2(-68, -193)
+cowboy = NodePath("")
+
+[node name="VictorySign" parent="." instance=ExtResource("6_cexpj")]
+position = Vector2(390, 104)
+rotation = -0.0872665
+useSunset = true
+
+[node name="ButtonArea2D" parent="." instance=ExtResource("7_13wvf")]
+position = Vector2(-329, 147)
+useSunset = true
+
+[node name="GroundShort" parent="." instance=ExtResource("8_svkw7")]
+position = Vector2(297, -138)
+useSunset = true
+
+[node name="GroundShort2" parent="." instance=ExtResource("8_svkw7")]
+position = Vector2(457, -150)
+rotation = -0.174533
+useSunset = true
