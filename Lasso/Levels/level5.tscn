@@ -16,22 +16,28 @@
 
 [node name="Ground" parent="Environment" instance=ExtResource("1_krhgh")]
 position = Vector2(-370, 184)
+useSunset = true
 
 [node name="Ground2" parent="Environment" instance=ExtResource("1_krhgh")]
 position = Vector2(31, 184)
+useSunset = true
 
 [node name="Ground5" parent="Environment" instance=ExtResource("1_krhgh")]
 position = Vector2(433, 184)
+useSunset = true
 
 [node name="Ground3" parent="Environment" instance=ExtResource("1_krhgh")]
 position = Vector2(-406, 10)
 rotation = 1.5708
+useSunset = true
 
 [node name="Ground4" parent="Environment" instance=ExtResource("1_krhgh")]
 position = Vector2(402, 29)
 rotation = 1.5708
+useSunset = true
 
 [node name="Background" parent="Environment" instance=ExtResource("2_dl7lo")]
+useSunset = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)

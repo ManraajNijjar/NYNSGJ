@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dmeyi43yare64"]
+[gd_scene load_steps=11 format=3 uid="uid://dmeyi43yare64"]
 
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_dxe4f"]
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_ifv54"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="4_hxopd"]
 [ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="5_fikh6"]
 [ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="6_cu4yc"]
+[ext_resource type="PackedScene" uid="uid://c2aw85e7h4bjw" path="res://Levels/level5.tscn" id="7_18wtw"]
 [ext_resource type="PackedScene" uid="uid://doy8ch5n8h1as" path="res://assets/javelina.tscn" id="7_80hay"]
 [ext_resource type="PackedScene" uid="uid://8v36g1aui6t4" path="res://assets/fruit.tscn" id="8_mus3i"]
 [ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="9_iirqg"]
@@ -49,6 +50,7 @@ cowboy = NodePath("../Cowboy2D")
 
 [node name="VictorySign" parent="." instance=ExtResource("6_cu4yc")]
 position = Vector2(282, 103)
+nextScene = ExtResource("7_18wtw")
 
 [node name="Javelina" parent="." instance=ExtResource("7_80hay")]
 position = Vector2(127, 67)

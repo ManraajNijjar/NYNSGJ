@@ -9,7 +9,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var holdArea = $Area2D/HoldArea
 @onready var animationPlayer = $AnimationPlayer
-@onready var soundBank = $AkBank_Init/AkBank_Default_Soundbank/Horse_Walk
+@onready var soundBankHorseWalk = $AkBank_Init/AkBank_Default_Soundbank/Horse_Walk
+@onready var soundBankHorseKick = $AkBank_Init/AkBank_Default_Soundbank/Horse_Kick
+@onready var soundBankHorseNeigh = $AkBank_Init/AkBank_Default_Soundbank/Horse_Neigh
 @onready var sprite2D = $Sprite2D
 @export var cowboy : Node2D;
 @export var kickCooldownMax : float = 0.2;
@@ -20,12 +22,15 @@ var canCarry = false;
 var isCarrying = false;
 var horseMoveDirection = 1;
 var kickCooldown = 0.0;
+var hasWalked = false;
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
+	if Input.is_action_just_pressed("reset"):
+		get_tree().reload_current_scene();
 	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -38,11 +43,15 @@ func _physics_process(delta):
 		if kickCooldown <= 0:
 			sprite2D.flip_h = (direction != 1)
 		setAnimation("walk");
-		#soundBank.post_event();
+		if !hasWalked:
+			hasWalked = true;
+			soundBankHorseWalk.post_event();
 		horseMoveDirection = direction;
 		velocity.x = direction * SPEED
 	else:
 		setAnimation("idle");
+		hasWalked = false;
+		soundBankHorseWalk.stop_event();
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	if Input.is_action_just_pressed("down") && canCarry && !isCarrying:
@@ -55,8 +64,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("kick") && kickCooldown <= 0.0:
 		sprite2D.flip_h = !sprite2D.flip_h
 		setAnimation("kick");
+		soundBankHorseNeigh.post_event();
+		soundBankHorseKick.post_event();
 		for body in bodiesInArea:
-			print(body.name);
 			if body.has_method("apply_impulse"):
 				body.apply_impulse(Vector2(horseMoveDirection * 500, -500));
 		kickCooldown = kickCooldownMax;
@@ -67,7 +77,6 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body:Node2D):
-	print(body.name)
 	if body.name == "Cowboy2D":
 		canCarry = true;
 	else:

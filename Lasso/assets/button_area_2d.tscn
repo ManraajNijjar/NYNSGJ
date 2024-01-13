@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c66d37c47tpld"]
 
 [ext_resource type="Script" path="res://scripts/button_area_2d.gd" id="1_pv6g1"]
-[ext_resource type="Texture2D" uid="uid://dsvsuq4r856be" path="res://images/Barrel button-sunset.png" id="2_q83d0"]
-[ext_resource type="Texture2D" uid="uid://bte3gr0ns5di4" path="res://images/Barrel button v2.png" id="3_pdg0m"]
+[ext_resource type="Texture2D" uid="uid://bxknhaoe4y4pt" path="res://images/NewImages/Barrel button sunset-09.png" id="2_b0uru"]
+[ext_resource type="Texture2D" uid="uid://cl06e7rmf7dkp" path="res://images/NewImages/Barrel button(1).png" id="3_p7eur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3d6a"]
 size = Vector2(62, 21)
@@ -18,13 +18,14 @@ shape = SubResource("RectangleShape2D_m3d6a")
 [node name="Sprite2DSunset" type="Sprite2D" parent="."]
 position = Vector2(0, 10)
 scale = Vector2(0.238912, 0.240896)
-texture = ExtResource("2_q83d0")
+texture = ExtResource("2_b0uru")
 hframes = 2
 
 [node name="Sprite2DAfternoon" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, 10)
 scale = Vector2(0.238912, 0.240896)
-texture = ExtResource("3_pdg0m")
+texture = ExtResource("3_p7eur")
 hframes = 2
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

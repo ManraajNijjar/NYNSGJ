@@ -1,13 +1,16 @@
 extends Area2D
 
 @export var useSunset: bool = false;
-@export var victory: bool = false;
+var victory: bool = false;
+@export var nextScene : PackedScene;
 
 @onready var sunset: Sprite2D = $CollisionShape2D/Sprite2DSunset
 @onready var afternoon: Sprite2D = $CollisionShape2D/Sprite2DAfternoon
+@onready var timer : Timer = $Timer
 
 var hasCowboy = false;
 var hasHorse = false;
+var timeStarted = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,6 +22,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if victory:
+		if !timeStarted:
+			timer.start();
+			timeStarted = true;
 		sunset.frame = 3;
 		afternoon.frame = 3;
 	elif hasCowboy && hasHorse:
@@ -50,4 +56,9 @@ func _on_body_entered(body:Node2D):
 		hasHorse = true;
 	if body.name == "Cowboy2D":
 		hasCowboy = true;
+	pass # Replace with function body.
+
+
+func _on_timer_timeout():
+	get_tree().change_scene_to_packed(nextScene);
 	pass # Replace with function body.

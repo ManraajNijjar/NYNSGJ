@@ -30,7 +30,16 @@ var timeToHorse = 1;
 @onready var animationPlayer = $AnimationPlayer
 @onready var sprite2D = $Sprite2D;
 @onready var progressBar = $ProgressBar;
-@onready var soundBank = $AkBank_Init/AkBank_Default_Soundbank/Horse_Walk
+@onready var soundBankLassoThrow = $AkBank_Init/AkBank_Default_Soundbank/Lasso_Throw
+@onready var soundBankLassoWhirl = $AkBank_Init/AkBank_Default_Soundbank/Lasso_Whirl
+@onready var soundBankLassoCatch = $AkBank_Init/AkBank_Default_Soundbank/Lasso_Catch
+@onready var soundBankBabyHeld = $AkBank_Init/AkBank_Default_Soundbank/Baby_Sits
+@onready var soundBankBabyTalk = $AkBank_Init/AkBank_Default_Soundbank/Baby_Talk
+@onready var soundBankBabyThrow = $AkBank_Init/AkBank_Default_Soundbank/Baby_Throw
+@onready var soundBankBabyFly = $AkBank_Init/AkBank_Default_Soundbank/Baby_Fly
+
+var babyFlyPlayed = false;
+
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -38,7 +47,8 @@ func _input(event):
 			if event.pressed && !hasLassoedObject:
 				leftMouseHeld = true;
 			elif event.pressed && hasLassoedObject:
-				lassoedObject.set_lassoed(false);
+				if(lassoedObject!= null):
+					lassoedObject.set_lassoed(false);
 				lassoedObject = null;
 				hasLassoedObject = false;
 				ropeToObject.queue_free();
@@ -54,7 +64,11 @@ func _input(event):
 					pass
 
 func _process(delta):
+	if throwCharge == 0:
+		soundBankLassoWhirl.stop_event();
 	if leftMouseHeld && !hasLassoedObject && currentLasso == null:
+		if throwCharge == 0:
+			soundBankLassoWhirl.post_event();
 		progressBar.visible = true;
 		setAnimation("lasso_charge")
 		throwCharge += 5 * delta;
@@ -67,6 +81,7 @@ func _process(delta):
 		setAnimation("lasso_out")
 		if lassoTimeOut <= 0:
 			throwLasso();
+			soundBankLassoWhirl.stop_event();
 		leftMouseReleased = false;
 		pass
 	else:
@@ -78,6 +93,9 @@ func _process(delta):
 
 func _physics_process(delta):
 	if held:
+		if !wasHeld:
+			soundBankBabyHeld.post_event();
+			soundBankBabyTalk.post_event();
 		velocity.x = horse.velocity.x
 		velocity.y = horse.velocity.y
 		if(position.distance_to(horse.position) > 100):
@@ -91,6 +109,7 @@ func _physics_process(delta):
 			velocity.y = (horsePosition.y - position.y) * (2 * timeToHorse);
 			timeToHorse += delta; 
 		else:
+			soundBankBabyFly.stop_event()
 			horseLassoed = false;
 			velocity.x = 0;
 			velocity.y = 0;
@@ -115,7 +134,8 @@ func _physics_process(delta):
 
 
 func throwLasso():
-	#soundBank.post_event();
+	soundBankLassoThrow.post_event();
+	soundBankBabyThrow.post_event();
 	var temp = lassoProjectile.instantiate()
 	temp.targetPosition = get_global_mouse_position()
 	var originPosition = global_position;
@@ -138,12 +158,11 @@ func throwLasso():
 
 func set_Lassoed(body: Node2D):
 	if body.name == "Horse2D":
+		soundBankBabyFly.post_event()
+		soundBankLassoCatch.post_event()
 		horseLassoed = true;
-		#var rope = Rope.instantiate()
-		#add_child(rope);
-		#rope.spawn_rope_to_object(position, body);
-		#ropeToObject = rope;
 	else:
+		soundBankLassoCatch.post_event();
 		lassoedObject = body;
 		hasLassoedObject = true;
 		var rope = Rope.instantiate()

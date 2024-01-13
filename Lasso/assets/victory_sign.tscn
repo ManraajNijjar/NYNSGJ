@@ -35,5 +35,10 @@ scale = Vector2(0.067, 0.067)
 texture = ExtResource("3_bssqj")
 hframes = 4
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

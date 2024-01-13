@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://l8g4tx1kuubh"]
+[gd_scene load_steps=11 format=3 uid="uid://l8g4tx1kuubh"]
 
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_kc77c"]
 [ext_resource type="Script" path="res://Levels/level3.gd" id="1_s2hgr"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="7_snblq"]
 [ext_resource type="PackedScene" uid="uid://c66d37c47tpld" path="res://assets/button_area_2d.tscn" id="8_6fht2"]
 [ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="8_x64b3"]
+[ext_resource type="PackedScene" uid="uid://dmeyi43yare64" path="res://Levels/level4.tscn" id="9_ltrdk"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_s2hgr")
@@ -30,7 +31,6 @@ rotation = 1.5708
 position = Vector2(202, 128)
 
 [node name="Background" parent="Environment" instance=ExtResource("2_4mpr3")]
-useSunset = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
@@ -51,6 +51,7 @@ position = Vector2(1, 75)
 
 [node name="VictorySign" parent="." instance=ExtResource("8_x64b3")]
 position = Vector2(286, 47)
+nextScene = ExtResource("9_ltrdk")
 
 [node name="ButtonArea2D" parent="." instance=ExtResource("8_6fht2")]
 position = Vector2(-270, 93)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://rxdyejdjqenf"]
+[gd_scene load_steps=10 format=3 uid="uid://rxdyejdjqenf"]
 
 [ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="1_kyue4"]
 [ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="2_s0xo8"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="6_smc8y"]
 [ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="7_yb4ox"]
 [ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="8_yag3t"]
+[ext_resource type="PackedScene" uid="uid://l8g4tx1kuubh" path="res://Levels/level3.tscn" id="9_4swqx"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -33,16 +34,16 @@ rotation = -0.20944
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
 
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("3_wbts6")]
+z_index = 1
+position = Vector2(-345, 45)
+cowboy = NodePath("../Cowboy2D")
+
 [node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("1_kyue4")]
 z_index = 2
 position = Vector2(-276, -13)
 horse = NodePath("../Horse2D")
 lassoProjectile = ExtResource("2_s0xo8")
-
-[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("3_wbts6")]
-z_index = 1
-position = Vector2(-345, 45)
-cowboy = NodePath("../Cowboy2D")
 
 [node name="LassoPost2D" parent="." instance=ExtResource("4_5yc2y")]
 position = Vector2(-190, 38)
@@ -54,3 +55,4 @@ position = Vector2(-270, 44)
 [node name="VictorySign" parent="." instance=ExtResource("8_yag3t")]
 position = Vector2(274, 50)
 rotation = -0.174533
+nextScene = ExtResource("9_4swqx")

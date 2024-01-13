@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var button = $ButtonArea2D
 @onready var rotateObject = $GroundLong
+@onready var soundBankLevelMusic = $AkBank_Init/AkBank_Default_Soundbank/Level_Music
 
 var rotationDestination = 0.0;
 var rotationOriginal = -90.0;
@@ -13,6 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	soundBankLevelMusic.post_event();
 	if button.buttonActive == true :
 		rotateObject.rotation += deg_to_rad(1);
 		if rotateObject.rotation > deg_to_rad(0):

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://caf3mirb7diwx"]
 
 [ext_resource type="Script" path="res://scripts/crate_2d.gd" id="1_p8exr"]
-[ext_resource type="Texture2D" uid="uid://dyifo2dhym4uk" path="res://images/Barrel.png" id="2_o4k4x"]
-[ext_resource type="Texture2D" uid="uid://bq8yj26412lst" path="res://images/Barrel-sunset-08.png" id="3_oh6y1"]
+[ext_resource type="Texture2D" uid="uid://b6ul20jbk8n5i" path="res://images/NewImages/Barrel-outlined.png" id="2_p1b75"]
+[ext_resource type="Texture2D" uid="uid://dva0kt4b07du2" path="res://images/NewImages/Barrel outlined-sunset.png" id="3_4pmpb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xvbt"]
 
@@ -19,10 +19,10 @@ shape = SubResource("RectangleShape2D_0xvbt")
 texture_filter = 3
 position = Vector2(1, -4.76837e-07)
 scale = Vector2(0.40693, 0.402973)
-texture = ExtResource("2_o4k4x")
+texture = ExtResource("2_p1b75")
 
 [node name="Sprite2DSunset" type="Sprite2D" parent="."]
 texture_filter = 3
 position = Vector2(1, -4.76837e-07)
 scale = Vector2(0.40693, 0.402973)
-texture = ExtResource("3_oh6y1")
+texture = ExtResource("3_4pmpb")

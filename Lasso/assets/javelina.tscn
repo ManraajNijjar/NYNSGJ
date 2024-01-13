@@ -38,6 +38,22 @@ tracks/0/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_nelj6"]
+resource_name = "wakeup"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D/Sprite2DIdle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
 [sub_resource type="Animation" id="Animation_jw378"]
 resource_name = "walk"
 length = 2.0
@@ -64,22 +80,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_nelj6"]
-resource_name = "wakeup"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CollisionShape2D/Sprite2DIdle:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_urj2e"]
@@ -126,5 +126,43 @@ libraries = {
 }
 autoplay = "idle"
 
+[node name="AkBank_Init" type="AkBank" parent="."]
+bank = {
+"id": 1355168291,
+"name": "Init"
+}
+load_on = 1
+
+[node name="AkBank_Default_Soundbank" type="AkBank" parent="AkBank_Init"]
+bank = {
+"id": 2218482606,
+"name": "Default_Soundbank"
+}
+load_on = 1
+
+[node name="Hog_Sleeping" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+event = {
+"id": 998140643,
+"name": "Hog_Sleeping"
+}
+trigger_on = 1
+
+[node name="Hog_Walk" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+event = {
+"id": 1493740447,
+"name": "Hog_Walk"
+}
+trigger_on = 1
+
+[node name="Hog_Eat" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+event = {
+"id": 2529140474,
+"name": "Hog_Eat"
+}
+trigger_on = 1
+
+[node name="AkListener2D" type="AkListener2D" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="end_of_event" from="AkBank_Init/AkBank_Default_Soundbank/Hog_Eat" to="." method="_on_hog_eat_end_of_event"]

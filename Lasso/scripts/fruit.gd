@@ -8,6 +8,7 @@ var cowboy;
 
 @onready var sunset: Sprite2D = $CollisionShape2D/Sprite2DSunset
 @onready var afternoon: Sprite2D = $CollisionShape2D/Sprite2DAfternoon
+@onready var soundBankFruitPluck = $AkBank_Init/AkBank_Default_Soundbank/Fruit_Pluck
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,6 +33,8 @@ func lassoed(delta):
 		linear_velocity = Vector2(0, 0);
 
 func set_lassoed(lassoed: bool):
+	if isLassoed == false:
+		soundBankFruitPluck.post_event()
 	isLassoed = lassoed;
 	if isLassoed:
 		pass

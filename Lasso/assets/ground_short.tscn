@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c40nag2xlkk4f"]
 
 [ext_resource type="Script" path="res://scripts/GroundLong.gd" id="1_wor1h"]
-[ext_resource type="Texture2D" uid="uid://cgkhuwh132sms" path="res://images/Short platform v2.png" id="2_yxqgj"]
-[ext_resource type="Texture2D" uid="uid://ybruoacl257w" path="res://images/Short platform-sunset-09.png" id="3_fhv67"]
+[ext_resource type="Texture2D" uid="uid://bf27fdci5i0eb" path="res://images/NewImages/Short platform.png" id="2_uxf3u"]
+[ext_resource type="Texture2D" uid="uid://bx8qxjf7et5cu" path="res://images/NewImages/Short platform sunset-08.png" id="3_3anqk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj566"]
 size = Vector2(20, 29.5)
@@ -18,12 +18,11 @@ shape = SubResource("RectangleShape2D_oj566")
 [node name="Sprite2DAfternoon" type="Sprite2D" parent="CollisionShape2D"]
 position = Vector2(-1.5, -1.75)
 scale = Vector2(0.049, 0.504)
-texture = ExtResource("2_yxqgj")
+texture = ExtResource("2_uxf3u")
 offset = Vector2(38.415, 0)
 
 [node name="Sprite2DSunset" type="Sprite2D" parent="CollisionShape2D"]
-visible = false
-position = Vector2(-1.5, 3.34)
+position = Vector2(-1.375, -0.75)
 scale = Vector2(0.049, 0.504)
-texture = ExtResource("3_fhv67")
+texture = ExtResource("3_3anqk")
 offset = Vector2(38.415, 0)

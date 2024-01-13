@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bt6a1ar70ffh2"]
+[gd_scene load_steps=12 format=3 uid="uid://bt6a1ar70ffh2"]
 
 [ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="1_6nst2"]
 [ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="2_xauqs"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="6_4jisj"]
 [ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="7_ryi72"]
 [ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="8_24h8c"]
+[ext_resource type="PackedScene" uid="uid://rxdyejdjqenf" path="res://Levels/level2.tscn" id="8_cw4sf"]
 [ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="9_rfqrk"]
 [ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="10_haejg"]
 
@@ -50,6 +51,7 @@ position = Vector2(211, -67)
 
 [node name="VictorySign" parent="." instance=ExtResource("7_ryi72")]
 position = Vector2(306, -86)
+nextScene = ExtResource("8_cw4sf")
 
 [node name="Decor" type="Node2D" parent="."]
 
