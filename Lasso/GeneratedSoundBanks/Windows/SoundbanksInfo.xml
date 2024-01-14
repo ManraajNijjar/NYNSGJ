@@ -150,7 +150,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{273DA27B-BAFF-CCB2-3F6E-1FCC543D587B}">
+		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{3923D0A2-848A-601E-13E1-A18D949FB9DD}">
 			<ShortName>Default_Soundbank</ShortName>
 			<Path>Default_Soundbank.bnk</Path>
 			<Media>
@@ -162,9 +162,21 @@
 					<ShortName>Baby_Positive.wav</ShortName>
 					<CachePath>SFX/Baby_Positive_818F3B66.wem</CachePath>
 				</File>
+				<File Id="63415594" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lasso_Catch_2.wav</ShortName>
+					<CachePath>SFX/Lasso_Catch_2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="67786165" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Baby_Fly.wav</ShortName>
 					<CachePath>SFX/Baby_Fly_818F3B66.wem</CachePath>
+				</File>
+				<File Id="75466385" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Horse_Neigh_5.wav</ShortName>
+					<CachePath>SFX/Horse_Neigh_5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="77716993" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Baby_Throw_5.wav</ShortName>
+					<CachePath>SFX/Baby_Throw_5_1FFB45D7.wem</CachePath>
 				</File>
 				<File Id="95272385" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lasso_Catch.wav</ShortName>
@@ -174,25 +186,61 @@
 					<ShortName>Rock Moving.wav</ShortName>
 					<CachePath>SFX/Rock Moving_FAE079E3.wem</CachePath>
 				</File>
+				<File Id="206783646" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Baby_Throw_2.wav</ShortName>
+					<CachePath>SFX/Baby_Throw_2_4EB54B8A.wem</CachePath>
+				</File>
 				<File Id="218572268" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Button Activated.wav</ShortName>
 					<CachePath>SFX/Button Activated_818F3B66.wem</CachePath>
 				</File>
-				<File Id="230453451" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Music_Menu.wav</ShortName>
-					<CachePath>SFX/Music_Menu_FBC78EF0.wem</CachePath>
+				<File Id="237961405" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dynamite_Explosion.wav</ShortName>
+					<CachePath>SFX/Dynamite_Explosion_818F3B66.wem</CachePath>
+				</File>
+				<File Id="290688754" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Horse_Neigh_2.wav</ShortName>
+					<CachePath>SFX/Horse_Neigh_2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="313669753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Baby_Throw.wav</ShortName>
 					<CachePath>SFX/Baby_Throw_9453AB0F.wem</CachePath>
 				</File>
+				<File Id="326452975" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gameplay_Music.wav</ShortName>
+					<CachePath>SFX/Gameplay_Music_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="343948218" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Whip Transition.wav</ShortName>
 					<CachePath>SFX/Whip Transition_818F3B66.wem</CachePath>
 				</File>
+				<File Id="344768612" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fire.wav</ShortName>
+					<CachePath>SFX/Fire_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="344937593" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lasso_Throw.wav</ShortName>
 					<CachePath>SFX/Lasso_Throw_818F3B66.wem</CachePath>
+				</File>
+				<File Id="375319896" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lasso_Catch_4.wav</ShortName>
+					<CachePath>SFX/Lasso_Catch_4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="420131888" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lasso_Catch_3.wav</ShortName>
+					<CachePath>SFX/Lasso_Catch_3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="429452082" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level_Finished.wav</ShortName>
+					<CachePath>SFX/Level_Finished_E376AEA8.wem</CachePath>
+				</File>
+				<File Id="474620729" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Horse_Neigh_4.wav</ShortName>
+					<CachePath>SFX/Horse_Neigh_4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="488817919" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lasso_Catch_5.wav</ShortName>
+					<CachePath>SFX/Lasso_Catch_5_818F3B66.wem</CachePath>
 				</File>
 				<File Id="508155028" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dynamite Activated.wav</ShortName>
@@ -210,17 +258,33 @@
 					<ShortName>Fruit Pluck.wav</ShortName>
 					<CachePath>SFX/Fruit Pluck_818F3B66.wem</CachePath>
 				</File>
+				<File Id="546891727" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Baby_Positive_5.wav</ShortName>
+					<CachePath>SFX/Baby_Positive_5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="587545019" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Baby_Positive_2.wav</ShortName>
+					<CachePath>SFX/Baby_Positive_2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="609357073" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Hog Sleeping.wav</ShortName>
-					<CachePath>SFX/Hog Sleeping_818F3B66.wem</CachePath>
+					<CachePath>SFX/Hog Sleeping_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="625980483" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lasso Whirl.wav</ShortName>
 					<CachePath>SFX/Lasso Whirl_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="636329215" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Baby_Throw_3.wav</ShortName>
+					<CachePath>SFX/Baby_Throw_3_CFCDA907.wem</CachePath>
+				</File>
 				<File Id="651466090" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Breaking Wooden Crate.wav</ShortName>
 					<CachePath>SFX/Breaking Wooden Crate_818F3B66.wem</CachePath>
+				</File>
+				<File Id="680249149" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Baby_Throw_4.wav</ShortName>
+					<CachePath>SFX/Baby_Throw_4_442F8D42.wem</CachePath>
 				</File>
 				<File Id="746391585" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Hog Exit.wav</ShortName>
@@ -233,6 +297,10 @@
 				<File Id="797284294" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horse_Footsteps.wav</ShortName>
 					<CachePath>SFX/Horse_Footsteps_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="806269238" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Baby_Positive_4.wav</ShortName>
+					<CachePath>SFX/Baby_Positive_4_818F3B66.wem</CachePath>
 				</File>
 				<File Id="888079425" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Music_Gameplay.wav</ShortName>
@@ -250,9 +318,9 @@
 					<ShortName>Horse_Neigh.wav</ShortName>
 					<CachePath>SFX/Horse_Neigh_818F3B66.wem</CachePath>
 				</File>
-				<File Id="973881866" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Dynamite Activated.wav</ShortName>
-					<CachePath>SFX/Dynamite Activated_818F3B66.wem</CachePath>
+				<File Id="1070208433" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Main_Menu_Music.wav</ShortName>
+					<CachePath>SFX/Main_Menu_Music_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -264,11 +332,18 @@
 				<Event Id="3269556576" Name="Baby_Talk_Positive">
 					<MediaRefs>
 						<MediaRef Id="44562895"/>
+						<MediaRef Id="546891727"/>
+						<MediaRef Id="587545019"/>
+						<MediaRef Id="806269238"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3342570235" Name="Baby_Talk_Throw">
 					<MediaRefs>
+						<MediaRef Id="77716993"/>
+						<MediaRef Id="206783646"/>
 						<MediaRef Id="313669753"/>
+						<MediaRef Id="636329215"/>
+						<MediaRef Id="680249149"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3746142581" Name="Button_Activated">
@@ -288,7 +363,7 @@
 				</Event>
 				<Event Id="1512346300" Name="Dynamite_Explosion">
 					<MediaRefs>
-						<MediaRef Id="895549754"/>
+						<MediaRef Id="237961405"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1428057472" Name="End_Music">
@@ -298,7 +373,7 @@
 				</Event>
 				<Event Id="2678880713" Name="Fire">
 					<MediaRefs>
-						<MediaRef Id="973881866"/>
+						<MediaRef Id="344768612"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="336049027" Name="Fruit_Pluck">
@@ -308,7 +383,7 @@
 				</Event>
 				<Event Id="2322231365" Name="Gameplay_Music">
 					<MediaRefs>
-						<MediaRef Id="888079425"/>
+						<MediaRef Id="326452975"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2529140474" Name="Hog_Eat">
@@ -343,11 +418,17 @@
 				</Event>
 				<Event Id="3018083661" Name="Horse_Neigh_Baby_Sits">
 					<MediaRefs>
+						<MediaRef Id="75466385"/>
+						<MediaRef Id="290688754"/>
+						<MediaRef Id="474620729"/>
 						<MediaRef Id="919367116"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="487887902" Name="Horse_Neigh_Positive">
 					<MediaRefs>
+						<MediaRef Id="75466385"/>
+						<MediaRef Id="290688754"/>
+						<MediaRef Id="474620729"/>
 						<MediaRef Id="919367116"/>
 					</MediaRefs>
 				</Event>
@@ -358,7 +439,11 @@
 				</Event>
 				<Event Id="1367699361" Name="Lasso_Catch">
 					<MediaRefs>
+						<MediaRef Id="63415594"/>
 						<MediaRef Id="95272385"/>
+						<MediaRef Id="375319896"/>
+						<MediaRef Id="420131888"/>
+						<MediaRef Id="488817919"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="362990204" Name="Lasso_Throw">
@@ -373,12 +458,12 @@
 				</Event>
 				<Event Id="4278251541" Name="Level_Finish">
 					<MediaRefs>
-						<MediaRef Id="44562895"/>
+						<MediaRef Id="429452082"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3399698792" Name="Main_Menu_Music">
 					<MediaRefs>
-						<MediaRef Id="230453451"/>
+						<MediaRef Id="1070208433"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2491012383" Name="Rock_Moving">
@@ -409,5 +494,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{20280642-24FA-1981-B32D-7730A8797AB1}</FileHash>
+	<FileHash>{5BD349E8-4038-08BD-B75A-6B28F299E11A}</FileHash>
 </SoundBanksInfo>

@@ -86,6 +86,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Lasso_Catch" ID="{1C0C3B36-F8E6-4843-AA12-17070339216D}" ShortID="1013697273">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -124,6 +131,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Baby_Talk_Positive" ID="{768AA94D-8EF2-49D1-95E2-44D04FDA2F6F}" ShortID="153367288">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -158,6 +172,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Baby_Fly" ID="{7D5AD2C1-0ACC-455D-8CA6-DB8E6A3D8E94}" ShortID="1039769399">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -192,13 +213,6 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Lasso_Whirl" ID="{40BE2275-2ADD-427B-B999-E3094A7868D1}" ShortID="814943480">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -253,6 +267,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Baby_Talk_Throw" ID="{30ED420C-5E5C-44E8-ABC5-2749EAA8BC4E}" ShortID="821429967">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -308,6 +329,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="Horse_Neigh" ID="{EC7E0F18-1D5C-4179-9D65-F5861BFF9CC1}" ShortID="712784781">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -318,6 +346,21 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Horse_Neigh" ID="{1B99758A-B183-4E51-A3F7-30C50B08C80B}" ShortID="401720149">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{956C2B22-1A9B-423F-AFB1-118444718129}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="202"/>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -342,6 +385,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Horse_Footsteps" ID="{321395CC-9869-4D11-BB34-D099A87157FA}" ShortID="514768891">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -379,6 +429,26 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Horse_Kick" ID="{77662C2A-0058-4342-BFDF-1631F951EB87}" ShortID="924492662">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C3CEFFD8-9655-4352-A019-2B17EC649EBA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="201"/>
+													<Property Name="Min" Type="Real64" Value="-177"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -417,6 +487,11 @@
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>29</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -522,6 +597,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -557,6 +637,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Hog Exit" ID="{EEA98018-6826-4747-ADC3-4620326AF3C2}" ShortID="1043283964">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -598,6 +685,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Hog Sleeping" ID="{4A256CE8-FE5E-4267-9209-99BAEA629A36}" ShortID="480600252">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -608,6 +702,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Hog Sleeping" ID="{D78E3CF7-2D86-41B8-BCA4-B44E44FBA5EF}" ShortID="557782584">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -648,6 +745,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="Fruit Pluck" ID="{02E72C9C-8CD9-4FC6-906F-E11EAC6A84A9}" ShortID="159134401">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -692,6 +796,21 @@
 							</ReferenceList>
 							<ChildrenList>
 								<RandomSequenceContainer Name="Dynamite Explosion" ID="{6A01C0B1-05D5-43DA-A96A-985885AA1603}" ShortID="448358719">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{48F9A4BD-5E7C-4D03-B788-8B335CF85606}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -703,19 +822,22 @@
 									<ChildrenList>
 										<Sound Name="Dynamite Explostion" ID="{A95ED36A-4A06-48E0-BFA6-D88360E2732D}" ShortID="934679352">
 											<PropertyList>
-												<Property Name="Highpass" Type="int16">
-													<ValueList>
-														<Value>12</Value>
-													</ValueList>
-												</Property>
 												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>-1340</Value>
-													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7F3BB3D2-3535-4555-A78A-E0FF8E06E4F9}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="101"/>
+																	<Property Name="Min" Type="Real64" Value="-126"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-11</Value>
+														<Value>-8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -735,9 +857,16 @@
 														<MediaID ID="895549754"/>
 													</MediaIDList>
 												</AudioFileSource>
+												<AudioFileSource Name="Dynamite_Explosion" ID="{5BB6462B-0EA0-4CF9-B445-35E9385B18FD}">
+													<Language>SFX</Language>
+													<AudioFile>Dynamite_Explosion.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="237961405"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Hog Eat" ID="{8541627C-2B39-42A4-A2CB-5907CA332959}" Platform="Linked"/>
+												<ActiveSource Name="Dynamite_Explosion" ID="{5BB6462B-0EA0-4CF9-B445-35E9385B18FD}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -745,6 +874,11 @@
 								<Sound Name="Dynamite Activated" ID="{DAA6CCC7-4174-407A-ADD9-6D4BDCB6D980}" ShortID="193457829">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -775,6 +909,13 @@
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Rock" ID="{9888FDE1-CB0B-4C74-B6EB-FDCB2FA386A6}" ShortID="361891097">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -920,6 +1061,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Button Activated" ID="{342FBAF1-659A-40C3-A1D0-505431BA8A0D}" ShortID="319559697">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -956,6 +1104,11 @@
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>-600</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1024,6 +1177,13 @@
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Level Finish" ID="{0E59DF65-4710-4DEC-BD1F-4C91900B31DB}" ShortID="279910869">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -1034,13 +1194,6 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Level Finished" ID="{5228B6F9-4D2B-4BBD-BE46-34795C13298B}" ShortID="706238120">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-930</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8E68CB6E-9381-4935-BAD1-DA59FE172881}"/>
@@ -1057,9 +1210,21 @@
 												<MediaID ID="44562895"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="Level_Finished" ID="{396CE8F3-A6EA-4A4B-9F98-FA9AA8BC4FEA}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.40689374760261"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.36077790563866"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Level_Finished.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="429452082"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Baby_Positive" ID="{6BC1B0A9-F5EA-485A-A656-C8E961B9B9B7}" Platform="Linked"/>
+										<ActiveSource Name="Level_Finished" ID="{396CE8F3-A6EA-4A4B-9F98-FA9AA8BC4FEA}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1076,19 +1241,10 @@
 							<ChildrenList>
 								<Sound Name="Fire" ID="{3EEDCBD1-686E-4F38-AFDD-61D39E7A9382}" ShortID="579136715">
 									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>42</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-1010</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>6</Value>
+												<Value>33</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1108,9 +1264,16 @@
 												<MediaID ID="973881866"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="Fire" ID="{D59BEA74-3D61-4A87-8739-D462EDD25D1C}">
+											<Language>SFX</Language>
+											<AudioFile>Fire.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="344768612"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Dynamite Activated" ID="{D4D45332-118E-4471-A4FC-9D481CB1F5A0}" Platform="Linked"/>
+										<ActiveSource Name="Fire" ID="{D59BEA74-3D61-4A87-8739-D462EDD25D1C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
