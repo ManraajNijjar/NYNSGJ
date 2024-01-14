@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0miw"]
 
-[node name="RopePiece2D" type="RigidBody2D"]
+[node name="RopePiece2D" type="RigidBody2D" groups=["canBreak"]]
 collision_layer = 16
 collision_mask = 16
 angular_damp = 1.0

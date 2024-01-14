@@ -1,0 +1,123 @@
+[gd_scene load_steps=14 format=3 uid="uid://bns6rto0kdnoq"]
+
+[ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="1_w2xth"]
+[ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="2_u6ud8"]
+[ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="3_lxogh"]
+[ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="4_82qeq"]
+[ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="5_42qve"]
+[ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="6_rfxwh"]
+[ext_resource type="PackedScene" uid="uid://c40nag2xlkk4f" path="res://assets/ground_short.tscn" id="7_jchh4"]
+[ext_resource type="PackedScene" uid="uid://bxsj4kelruidt" path="res://Levels/level10.tscn" id="7_qvkdh"]
+[ext_resource type="PackedScene" uid="uid://doy8ch5n8h1as" path="res://assets/javelina.tscn" id="8_s8u1h"]
+[ext_resource type="PackedScene" uid="uid://sxatfbe5l6ol" path="res://assets/lasso_post_2d.tscn" id="9_o1wc3"]
+[ext_resource type="PackedScene" uid="uid://8v36g1aui6t4" path="res://assets/fruit.tscn" id="10_f8ojp"]
+[ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="11_5sart"]
+[ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="12_gclxc"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Background" parent="Environment" instance=ExtResource("1_w2xth")]
+position = Vector2(-5, -2)
+scale = Vector2(1.52101, 1.52101)
+useSunset = true
+
+[node name="GroundLong" parent="Environment" instance=ExtResource("2_u6ud8")]
+position = Vector2(-376, 284)
+useSunset = true
+
+[node name="GroundLong3" parent="Environment" instance=ExtResource("2_u6ud8")]
+position = Vector2(262, 284)
+useSunset = true
+
+[node name="GroundLong8" parent="Environment" instance=ExtResource("2_u6ud8")]
+position = Vector2(36, 107)
+rotation = 0.20944
+useSunset = true
+
+[node name="GroundLong9" parent="Environment" instance=ExtResource("2_u6ud8")]
+position = Vector2(-435, 16)
+rotation = 0.20944
+useSunset = true
+
+[node name="GroundLong10" parent="Environment" instance=ExtResource("2_u6ud8")]
+position = Vector2(-911, -100)
+rotation = 0.20944
+
+[node name="GroundLong4" parent="Environment" instance=ExtResource("2_u6ud8")]
+position = Vector2(-600, 124)
+rotation = 1.5708
+useSunset = true
+
+[node name="GroundLong5" parent="Environment" instance=ExtResource("2_u6ud8")]
+position = Vector2(-600, -275)
+rotation = 1.5708
+useSunset = true
+
+[node name="GroundLong6" parent="Environment" instance=ExtResource("2_u6ud8")]
+position = Vector2(618, 127)
+rotation = 1.5708
+useSunset = true
+
+[node name="GroundLong7" parent="Environment" instance=ExtResource("2_u6ud8")]
+position = Vector2(618, -275)
+rotation = 1.5708
+useSunset = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("3_lxogh")]
+z_index = 2
+position = Vector2(-375, 184)
+horse = NodePath("../Horse2D")
+lassoProjectile = ExtResource("4_82qeq")
+
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("5_42qve")]
+z_index = 1
+position = Vector2(-320, 195)
+cowboy = NodePath("../Cowboy2D")
+
+[node name="VictorySign" parent="." instance=ExtResource("6_rfxwh")]
+position = Vector2(493, -246)
+useSunset = true
+nextScene = ExtResource("7_qvkdh")
+
+[node name="GroundShort4" parent="." instance=ExtResource("7_jchh4")]
+position = Vector2(490, -165)
+useSunset = true
+
+[node name="GroundShort5" parent="." instance=ExtResource("7_jchh4")]
+position = Vector2(167, -148)
+useSunset = true
+
+[node name="GroundShort6" parent="." instance=ExtResource("7_jchh4")]
+position = Vector2(-75, -133)
+useSunset = true
+
+[node name="GroundShort7" parent="." instance=ExtResource("7_jchh4")]
+position = Vector2(-328, -111)
+useSunset = true
+
+[node name="Javelina" parent="." instance=ExtResource("8_s8u1h")]
+position = Vector2(435, -256)
+hunger = 1
+
+[node name="LassoPost2D" parent="." instance=ExtResource("9_o1wc3")]
+position = Vector2(33, 269)
+rotation = -1.2754
+useSunset = true
+useAlternate = true
+
+[node name="LassoPost2D2" parent="." instance=ExtResource("9_o1wc3")]
+position = Vector2(223, 92)
+useSunset = true
+
+[node name="Fruit" parent="." instance=ExtResource("10_f8ojp")]
+position = Vector2(-512, 172)
+
+[node name="DecorPricklyPear" parent="." instance=ExtResource("11_5sart")]
+position = Vector2(-517, 209)
+
+[node name="DecorSmallBush" parent="." instance=ExtResource("12_gclxc")]
+position = Vector2(-553, 242)

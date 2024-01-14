@@ -8,12 +8,14 @@ extends RigidBody2D
 @onready var soundBankDynamiteExplosion = $Dynamite_Explosion
 
 func setFire():
-	soundBankDynamiteActivated.post_event();
-	sprite2D.frame = 1;
-	timer.start();
+	if sprite2D.frame != 1:
+		soundBankDynamiteActivated.post_event();
+		sprite2D.frame = 1;
+		timer.start();
 
 
 func _on_timer_timeout():
+	soundBankDynamiteActivated.stop_event();
 	soundBankDynamiteExplosion.post_event();
 	var bodies = explosionArea.get_overlapping_bodies();
 	for body in bodies:

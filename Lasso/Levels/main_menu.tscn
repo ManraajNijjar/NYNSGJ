@@ -33,4 +33,24 @@ scale = Vector2(0.600009, 0.65014)
 texture_normal = ExtResource("2_ruhpm")
 texture_hover = ExtResource("3_fd88q")
 
+[node name="AkBank_Init" type="AkBank" parent="."]
+bank = {
+"id": 1355168291,
+"name": "Init"
+}
+
+[node name="AkBank_Default_Soundbank" type="AkBank" parent="AkBank_Init"]
+bank = {
+"id": 2218482606,
+"name": "Default_Soundbank"
+}
+
+[node name="Menu_Music" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
+event = {
+"id": 3399698792,
+"name": "Main_Menu_Music"
+}
+
+[node name="AkListener2D" type="AkListener2D" parent="."]
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

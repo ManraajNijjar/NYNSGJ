@@ -9,10 +9,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var holdArea = $Area2D/HoldArea
 @onready var animationPlayer = $AnimationPlayer
-@onready var soundBankHorseWalk = $AkBank_Init/AkBank_Default_Soundbank/Horse_Walk
-@onready var soundBankHorseKick = $AkBank_Init/AkBank_Default_Soundbank/Horse_Kick
-@onready var soundBankHorseNeigh = $AkBank_Init/AkBank_Default_Soundbank/Horse_Neigh
-@onready var soundBankHorseJump = $AkBank_Init/AkBank_Default_Soundbank/Horse_Jump
+@onready var soundBankHorseWalk = $Horse_Walk
+@onready var soundBankHorseKick = $Horse_Kick
+@onready var soundBankHorseNeigh = $Horse_Neigh
+@onready var soundBankHorseJump = $Horse_Jump
 @onready var sprite2D = $Sprite2D
 @export var cowboy : Node2D;
 @export var kickCooldownMax : float = 0.2;
@@ -26,8 +26,7 @@ var kickCooldown = 0.0;
 var hasWalked = false;
 
 func _ready():
-	Wwise.load_bank("Init");
-	Wwise.load_bank("Default_Soundbank");
+	pass
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -35,7 +34,9 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	if Input.is_action_just_pressed("reset"):
+		soundBankHorseWalk.stop_event();
 		get_tree().reload_current_scene();
+
 	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		soundBankHorseJump.post_event();

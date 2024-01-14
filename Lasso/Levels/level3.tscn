@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://l8g4tx1kuubh"]
+[gd_scene load_steps=14 format=3 uid="uid://l8g4tx1kuubh"]
 
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_kc77c"]
 [ext_resource type="Script" path="res://Levels/level3.gd" id="1_s2hgr"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://c66d37c47tpld" path="res://assets/button_area_2d.tscn" id="8_6fht2"]
 [ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="8_x64b3"]
 [ext_resource type="PackedScene" uid="uid://dmeyi43yare64" path="res://Levels/level4.tscn" id="9_ltrdk"]
+[ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="11_m5fjd"]
+[ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="12_h15w5"]
+[ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="13_n3h54"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_s2hgr")
@@ -60,8 +63,32 @@ position = Vector2(-270, 93)
 position = Vector2(99, -91)
 rotation = -1.5708
 
+[node name="DecorLargeBush" parent="GroundLong" instance=ExtResource("11_m5fjd")]
+position = Vector2(69.0002, -44.9998)
+
+[node name="DecorSmallBush" parent="GroundLong" instance=ExtResource("12_h15w5")]
+position = Vector2(-130, -32.0005)
+
+[node name="DecorPricklyPear" parent="GroundLong" instance=ExtResource("13_n3h54")]
+position = Vector2(20.0003, -69.9999)
+
 [node name="Rock_Moving" type="AkEvent2D" parent="."]
 event = {
 "id": 2491012383,
 "name": "Rock_Moving"
 }
+
+[node name="DecorPricklyPear" parent="." instance=ExtResource("13_n3h54")]
+position = Vector2(-85, 56)
+
+[node name="DecorPricklyPear2" parent="." instance=ExtResource("13_n3h54")]
+position = Vector2(236, 49)
+
+[node name="DecorPricklyPear3" parent="." instance=ExtResource("13_n3h54")]
+position = Vector2(320, 48)
+
+[node name="DecorSmallBush" parent="." instance=ExtResource("12_h15w5")]
+position = Vector2(32, 88)
+
+[node name="DecorLargeBush" parent="." instance=ExtResource("11_m5fjd")]
+position = Vector2(-26, 87)

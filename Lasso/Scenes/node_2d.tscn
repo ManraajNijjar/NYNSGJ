@@ -18,8 +18,8 @@ load_on = 1
 
 [node name="AkEvent2D" type="AkEvent2D" parent="AkBank_Init/AkBank_Default_Soundbank"]
 event = {
-"id": 1466783479,
-"name": "Horse_Jump"
+"id": 4278251541,
+"name": "Level_Finish"
 }
 trigger_on = 1
 

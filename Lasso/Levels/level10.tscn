@@ -1,0 +1,138 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxsj4kelruidt"]
+
+[ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="1_7rurt"]
+[ext_resource type="Script" path="res://Levels/level10.gd" id="1_ncfsp"]
+[ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="2_pc05y"]
+[ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="3_2fxif"]
+[ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="4_esqv7"]
+[ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="6_gtbmp"]
+[ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="7_46qbq"]
+[ext_resource type="PackedScene" uid="uid://d0lfg7gahhae3" path="res://assets/fire.tscn" id="8_tusmf"]
+[ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="9_uacej"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ncfsp")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Background" parent="Environment" instance=ExtResource("1_7rurt")]
+position = Vector2(-5, -2)
+scale = Vector2(1.52101, 1.52101)
+useSunset = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("2_pc05y")]
+z_index = 2
+position = Vector2(-375, 184)
+horse = NodePath("../Horse2D")
+lassoProjectile = ExtResource("3_2fxif")
+
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("4_esqv7")]
+z_index = 1
+position = Vector2(-320, 195)
+cowboy = NodePath("../Cowboy2D")
+
+[node name="VictorySign" parent="." instance=ExtResource("6_gtbmp")]
+position = Vector2(513, -266)
+useSunset = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Crate2D3" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(-422, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D4" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(-363, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D5" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(-302, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D6" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(-240, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D7" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(-179, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D8" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(-118, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D9" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(-52, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D10" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(12, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D11" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(74, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D12" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(138, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D13" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(204, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D14" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(270, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D15" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(336, 293)
+freeze = true
+useSunset = true
+
+[node name="Crate2D16" parent="Node2D" instance=ExtResource("7_46qbq")]
+position = Vector2(402, 293)
+freeze = true
+useSunset = true
+
+[node name="fire" parent="." instance=ExtResource("8_tusmf")]
+position = Vector2(-238, -363)
+isMoving = true
+
+[node name="fire2" parent="." instance=ExtResource("8_tusmf")]
+position = Vector2(-1, -362)
+isMoving = true
+
+[node name="fire3" parent="." instance=ExtResource("8_tusmf")]
+position = Vector2(258, -358)
+isMoving = true
+
+[node name="GroundLong" parent="." instance=ExtResource("9_uacej")]
+position = Vector2(-615, 125)
+rotation = 1.5708
+
+[node name="GroundLong2" parent="." instance=ExtResource("9_uacej")]
+position = Vector2(-615, -276)
+rotation = 1.5708
+
+[node name="GroundLong3" parent="." instance=ExtResource("9_uacej")]
+position = Vector2(602, 125)
+rotation = 4.71239
+
+[node name="GroundLong4" parent="." instance=ExtResource("9_uacej")]
+position = Vector2(602, -276)
+rotation = 4.71239

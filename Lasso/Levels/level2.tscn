@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://rxdyejdjqenf"]
+[gd_scene load_steps=14 format=3 uid="uid://rxdyejdjqenf"]
 
 [ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="1_kyue4"]
 [ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="2_s0xo8"]
@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="7_yb4ox"]
 [ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="8_yag3t"]
 [ext_resource type="PackedScene" uid="uid://l8g4tx1kuubh" path="res://Levels/level3.tscn" id="9_4swqx"]
+[ext_resource type="PackedScene" uid="uid://u1sgbxgffb3w" path="res://assets/DecorSpikeAfternoon.tscn" id="10_ulbxm"]
+[ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="11_whjj7"]
+[ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="12_7p6nc"]
+[ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="13_yyh6a"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -56,3 +60,34 @@ position = Vector2(-270, 44)
 position = Vector2(274, 50)
 rotation = -0.174533
 nextScene = ExtResource("9_4swqx")
+
+[node name="CactusSpikes" parent="." instance=ExtResource("10_ulbxm")]
+position = Vector2(-300, 185)
+scale = Vector2(0.433422, 0.433422)
+
+[node name="CactusSpikes2" parent="." instance=ExtResource("10_ulbxm")]
+position = Vector2(-124, 203)
+scale = Vector2(0.433422, 0.433422)
+
+[node name="CactusSpikes3" parent="." instance=ExtResource("10_ulbxm")]
+position = Vector2(47, 214)
+scale = Vector2(0.433422, 0.433422)
+
+[node name="CactusSpikes4" parent="." instance=ExtResource("10_ulbxm")]
+position = Vector2(198, 219)
+scale = Vector2(0.433422, 0.433422)
+
+[node name="DecorLargeBush" parent="." instance=ExtResource("11_whjj7")]
+position = Vector2(184, 101)
+
+[node name="DecorSmallBush" parent="." instance=ExtResource("12_7p6nc")]
+position = Vector2(-233, 56)
+
+[node name="DecorPricklyPear" parent="." instance=ExtResource("13_yyh6a")]
+position = Vector2(-350, 31)
+
+[node name="DecorPricklyPear2" parent="." instance=ExtResource("13_yyh6a")]
+position = Vector2(320, 57)
+
+[node name="DecorSmallBush2" parent="." instance=ExtResource("12_7p6nc")]
+position = Vector2(222, 101)

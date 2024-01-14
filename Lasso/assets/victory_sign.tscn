@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsyq8e0ohiyf8"]
+[gd_scene load_steps=7 format=3 uid="uid://dsyq8e0ohiyf8"]
 
 [ext_resource type="Script" path="res://scripts/victory_sign.gd" id="1_enr2j"]
 [ext_resource type="Texture2D" uid="uid://b18s8fhlhlm0n" path="res://images/Continue sign (no ground).png" id="1_rwhum"]
 [ext_resource type="Texture2D" uid="uid://sn1yki0teulf" path="res://images/Continue sign-sunset.png" id="2_ush58"]
 [ext_resource type="Texture2D" uid="uid://bauv588o4hl0f" path="res://images/Continue sign.png" id="3_bssqj"]
+[ext_resource type="AudioStream" uid="uid://btwmhyjvw05fy" path="res://audio/Gameplay_TEST.wav" id="5_svnf8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yv2j2"]
 
@@ -63,6 +64,12 @@ event = {
 "name": "Level_Finish"
 }
 
+[node name="Level_Finish2" type="AkEvent2D" parent="."]
+event = {
+"id": 1428057472,
+"name": "End_Music"
+}
+
 [node name="Level_Music" type="AkEvent2D" parent="."]
 event = {
 "id": 2322231365,
@@ -73,7 +80,12 @@ event = {
 wait_time = 2.5
 one_shot = true
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_svnf8")
+autoplay = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="end_of_event" from="Level_Music" to="." method="_on_level_music_end_of_event"]
 [connection signal="timeout" from="WhipTimer" to="." method="_on_whip_timer_timeout"]

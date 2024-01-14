@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmeyi43yare64"]
+[gd_scene load_steps=13 format=3 uid="uid://dmeyi43yare64"]
 
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_dxe4f"]
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_ifv54"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://doy8ch5n8h1as" path="res://assets/javelina.tscn" id="7_80hay"]
 [ext_resource type="PackedScene" uid="uid://8v36g1aui6t4" path="res://assets/fruit.tscn" id="8_mus3i"]
 [ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="9_iirqg"]
+[ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="11_r07ba"]
+[ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="12_6dulk"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -70,3 +72,18 @@ rotation = 0.20944
 [node name="DecorPricklyPear" parent="." instance=ExtResource("9_iirqg")]
 position = Vector2(-236, 1.99999)
 scale = Vector2(0.93, 0.93)
+
+[node name="DecorLargeBush" parent="." instance=ExtResource("11_r07ba")]
+position = Vector2(-189, 140)
+
+[node name="DecorSmallBush" parent="." instance=ExtResource("12_6dulk")]
+position = Vector2(-138, 147)
+
+[node name="DecorSmallBush2" parent="." instance=ExtResource("12_6dulk")]
+position = Vector2(-214, 153)
+
+[node name="DecorPricklyPear2" parent="." instance=ExtResource("9_iirqg")]
+position = Vector2(15, 134)
+
+[node name="DecorPricklyPear3" parent="." instance=ExtResource("9_iirqg")]
+position = Vector2(176, 140)

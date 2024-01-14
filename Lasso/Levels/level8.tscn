@@ -1,0 +1,122 @@
+[gd_scene load_steps=14 format=3 uid="uid://b1f0s0vcrm6wn"]
+
+[ext_resource type="Script" path="res://Levels/level8.gd" id="1_bt72k"]
+[ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_ivjdh"]
+[ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_ygx1w"]
+[ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="3_m8nnd"]
+[ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="4_lcd44"]
+[ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="5_feciu"]
+[ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="6_7lb6h"]
+[ext_resource type="PackedScene" uid="uid://c40nag2xlkk4f" path="res://assets/ground_short.tscn" id="7_gcuef"]
+[ext_resource type="PackedScene" uid="uid://bns6rto0kdnoq" path="res://Levels/level9.tscn" id="8_0jcsx"]
+[ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="8_23rsw"]
+[ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="10_8cv3l"]
+[ext_resource type="PackedScene" uid="uid://d0lfg7gahhae3" path="res://assets/fire.tscn" id="10_8qohs"]
+[ext_resource type="PackedScene" uid="uid://sxatfbe5l6ol" path="res://assets/lasso_post_2d.tscn" id="11_klgpf"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_bt72k")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Ground5" parent="Environment" instance=ExtResource("1_ivjdh")]
+position = Vector2(-437, 254)
+useSunset = true
+
+[node name="Ground3" parent="Environment" instance=ExtResource("1_ivjdh")]
+position = Vector2(-461, 45)
+rotation = 1.5708
+useSunset = true
+
+[node name="Ground6" parent="Environment" instance=ExtResource("1_ivjdh")]
+position = Vector2(-466, -286)
+rotation = 1.5708
+useSunset = true
+
+[node name="Ground4" parent="Environment" instance=ExtResource("1_ivjdh")]
+position = Vector2(502, -58)
+rotation = 1.5708
+useSunset = true
+
+[node name="Background" parent="Environment" instance=ExtResource("2_ygx1w")]
+position = Vector2(-3, -6)
+scale = Vector2(1.23896, 1.23896)
+useSunset = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.25, 1.25)
+
+[node name="Cowboy2D" parent="." node_paths=PackedStringArray("horse") instance=ExtResource("3_m8nnd")]
+z_index = 2
+position = Vector2(-375, 184)
+horse = NodePath("../Horse2D")
+lassoProjectile = ExtResource("4_lcd44")
+
+[node name="Horse2D" parent="." node_paths=PackedStringArray("cowboy") instance=ExtResource("5_feciu")]
+z_index = 1
+position = Vector2(-320, 195)
+cowboy = NodePath("../Cowboy2D")
+
+[node name="VictorySign" parent="." instance=ExtResource("6_7lb6h")]
+position = Vector2(292, -232)
+rotation = -0.174533
+useSunset = true
+nextScene = ExtResource("8_0jcsx")
+
+[node name="GroundShort" parent="." instance=ExtResource("7_gcuef")]
+position = Vector2(-394, -58)
+useSunset = true
+
+[node name="GroundShort3" parent="." instance=ExtResource("7_gcuef")]
+position = Vector2(309, -152)
+rotation = -0.239353
+useSunset = true
+
+[node name="GroundShort2" parent="." instance=ExtResource("7_gcuef")]
+position = Vector2(390, 109)
+rotation = -0.174533
+useSunset = true
+
+[node name="LassoPost2D" parent="GroundShort2" instance=ExtResource("11_klgpf")]
+position = Vector2(-71.2583, -45.0584)
+rotation = -0.223195
+useSunset = true
+
+[node name="LassoPost2D2" parent="GroundShort2" instance=ExtResource("11_klgpf")]
+position = Vector2(9.74294, -337.435)
+rotation = -0.223195
+useSunset = true
+useAlternate = true
+
+[node name="LassoPost2D3" parent="GroundShort2" instance=ExtResource("11_klgpf")]
+position = Vector2(-746.468, -431.173)
+rotation = 1.52574
+useSunset = true
+
+[node name="fire" parent="." instance=ExtResource("10_8qohs")]
+position = Vector2(3, -303)
+
+[node name="DecorLargeBush" parent="." instance=ExtResource("8_23rsw")]
+position = Vector2(-410, 208)
+useSunset = true
+
+[node name="DecorLargeBush2" parent="." instance=ExtResource("8_23rsw")]
+position = Vector2(259, -186)
+rotation = -0.120428
+useSunset = true
+
+[node name="GroundShort4" parent="." instance=ExtResource("7_gcuef")]
+position = Vector2(450, -168)
+useSunset = true
+
+[node name="DecorSmallBush" parent="." instance=ExtResource("10_8cv3l")]
+position = Vector2(-419, -97)
+useSunset = true
+
+[node name="DecorSmallBush2" parent="." instance=ExtResource("10_8cv3l")]
+position = Vector2(463, 61)
+useSunset = true
+
+[node name="DecorSmallBush3" parent="." instance=ExtResource("10_8cv3l")]
+position = Vector2(375, -199)
+useSunset = true

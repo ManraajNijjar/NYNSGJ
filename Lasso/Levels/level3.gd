@@ -22,10 +22,11 @@ func _process(delta):
 			buttonPrevious = true;
 		rotateObject.rotation += deg_to_rad(1);
 		if rotateObject.rotation > deg_to_rad(0):
+			soundBankRockMoving.stop_event();
 			rotateObject.rotation = deg_to_rad(0);
 	else: 
 		if buttonPrevious == true:
-			soundBankRockMoving.post_event();
+			soundBankRockMoving.stop_event();
 			buttonPrevious = false;
 		rotateObject.rotation -= deg_to_rad(30);
 		if rotateObject.rotation < deg_to_rad(-90):

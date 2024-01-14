@@ -25,7 +25,7 @@ func spawn_rope(start_pos:Vector2, end_pos:Vector2):
 	rope_end_piece.global_position = end_pos;
 	start_pos = rope_start_piece.get_node("CollisionShape2D/PinJoint2D").global_position
 	end_pos = rope_end_piece.get_node("CollisionShape2D/PinJoint2D").global_position
-	rope_final_piece.visible = false;
+	rope_final_piece.queue_free();
 
 	var distance = start_pos.distance_to(end_pos)
 	var segment_amount = round(distance / piece_length);
@@ -43,7 +43,7 @@ func spawn_rope_to_object(start_pos:Vector2, endObject: Object):
 	rope_final_piece.global_position = endObject.global_position
 	start_pos = rope_start_piece.get_node("CollisionShape2D/PinJoint2D").global_position
 	var end_pos = rope_final_piece.get_node("CollisionShape2D/PinJoint2D").global_position
-	rope_end_piece.visible = false;
+	rope_end_piece.queue_free();
 
 	var distance = start_pos.distance_to(end_pos)
 	var segment_amount = round(distance / piece_length);

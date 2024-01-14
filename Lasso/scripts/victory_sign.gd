@@ -1,7 +1,8 @@
 extends Area2D
 
 @export var useSunset: bool = false;
-var victory: bool = false;
+@export var isLevelOne: bool = true;
+@export var victory: bool = false;
 @export var nextScene : PackedScene;
 
 @onready var sunset: Sprite2D = $CollisionShape2D/Sprite2DSunset
@@ -13,7 +14,9 @@ var victory: bool = false;
 @onready var soundBankSignOff = $Sign_Off
 @onready var soundBankWhipTransition = $Whip_Transition
 @onready var soundBankLevelFinish = $Level_Finish
+@onready var soundBankLevelFinish2 = $Level_Finish2
 @onready var soundBankLevelMusic = $Level_Music
+@onready var levelMusic = $AudioStreamPlayer2D
 
 var hasCowboy = false;
 var hasHorse = false;
@@ -23,18 +26,24 @@ var musicPlaying = false;
 func _ready():
 	afternoon.visible = !useSunset
 	sunset.visible = useSunset
+	if isLevelOne :
+		#soundBankLevelMusic.post_event();
+		pass
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if !musicPlaying:
-		soundBankLevelMusic.post_event();
-		musicPlaying = true;
+	if Input.is_action_just_pressed("reset"):
+		#soundBankLevelMusic.stop_event();
+		pass
+
 	if victory:
 		if !timeStarted:
-			soundBankLevelMusic.stop_event();
+			#soundBankLevelMusic.stop_event();
+			levelMusic.stop()
 			soundBankLevelFinish.post_event();
+			#soundBankLevelFinish2.post_event();
 			timer.start();
 			timerWhip.start();
 			timeStarted = true;
@@ -80,10 +89,20 @@ func _on_body_entered(body:Node2D):
 
 
 func _on_timer_timeout():
+	soundBankLevelMusic.stop_event();
+	soundBankLevelFinish.stop_event();
 	get_tree().change_scene_to_packed(nextScene);
 	pass # Replace with function body.
 
 
 func _on_whip_timer_timeout():
 	soundBankWhipTransition.post_event();
+	pass # Replace with function body.
+
+func stopMusic():
+	soundBankLevelMusic.stop_event();
+	pass
+
+func _on_level_music_end_of_event(data:Dictionary):
+	#musicPlaying = false;
 	pass # Replace with function body.
