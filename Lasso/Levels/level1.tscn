@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bt6a1ar70ffh2"]
+[gd_scene load_steps=14 format=3 uid="uid://bt6a1ar70ffh2"]
 
 [ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="1_6nst2"]
 [ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="2_xauqs"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="9_rfqrk"]
 [ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="10_haejg"]
 [ext_resource type="PackedScene" uid="uid://u1sgbxgffb3w" path="res://assets/DecorSpikeAfternoon.tscn" id="12_8njo5"]
+[ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="13_tioo7"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -87,3 +88,10 @@ scale = Vector2(0.51, 0.51)
 [node name="CactusSpikes5" parent="." instance=ExtResource("12_8njo5")]
 position = Vector2(299, 133)
 scale = Vector2(0.51, 0.51)
+
+[node name="Instructions" parent="." instance=ExtResource("13_tioo7")]
+offset_left = -383.0
+offset_top = -213.0
+offset_right = -383.0
+offset_bottom = -213.0
+scale = Vector2(0.378898, 0.359471)

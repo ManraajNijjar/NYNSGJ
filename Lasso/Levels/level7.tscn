@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d2thb3t7nq1n2"]
+[gd_scene load_steps=16 format=3 uid="uid://d2thb3t7nq1n2"]
 
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_oe02j"]
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_huequ"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://8v36g1aui6t4" path="res://assets/fruit.tscn" id="11_m3x1w"]
 [ext_resource type="PackedScene" uid="uid://sxatfbe5l6ol" path="res://assets/lasso_post_2d.tscn" id="12_mgae2"]
 [ext_resource type="PackedScene" uid="uid://doy8ch5n8h1as" path="res://assets/javelina.tscn" id="13_m1x8k"]
+[ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="15_h6wlb"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -145,3 +146,10 @@ useSunset = true
 [node name="Javelina" parent="." instance=ExtResource("13_m1x8k")]
 position = Vector2(365, 143)
 hunger = 3
+
+[node name="Instructions" parent="." instance=ExtResource("15_h6wlb")]
+offset_left = -468.0
+offset_top = -258.0
+offset_right = -468.0
+offset_bottom = -258.0
+scale = Vector2(0.843791, 0.800529)

@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0pesp6xsbakm"]
+
+[ext_resource type="Texture2D" uid="uid://dtouqn4qkab2w" path="res://images/Intro/IMG_4959.PNG" id="1_1gfo5"]
+[ext_resource type="Texture2D" uid="uid://bik650txp5jce" path="res://images/Intro/IMG_4961.PNG" id="2_ngek8"]
+[ext_resource type="Texture2D" uid="uid://bhabgfcmjbh6j" path="res://images/Intro/IMG_4962.PNG" id="3_o7d1b"]
+[ext_resource type="Texture2D" uid="uid://e0ndio3h2thb" path="res://images/Intro/IMG_4965.PNG" id="4_vsocy"]
+[ext_resource type="Texture2D" uid="uid://lbq0ysusnx3w" path="res://images/Intro/IMG_4967.PNG" id="5_a5oon"]
+[ext_resource type="Texture2D" uid="uid://dqbl44fsxft6b" path="res://images/Intro/IMG_4968.PNG" id="6_vqnl8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_1gfo5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_ngek8")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_o7d1b")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_o7d1b")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_vsocy")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_a5oon")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_vqnl8")

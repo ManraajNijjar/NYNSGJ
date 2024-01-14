@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://34312c1wwd6f"]
+[gd_scene load_steps=15 format=3 uid="uid://34312c1wwd6f"]
 
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_c1ihq"]
 [ext_resource type="Script" path="res://Levels/level6.gd" id="1_mbpgv"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="10_qq6d2"]
 [ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="11_oo02q"]
 [ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="12_6qe7t"]
+[ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="14_a7lp8"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_mbpgv")
@@ -108,3 +109,10 @@ useSunset = true
 [node name="DecorPricklyPear2" parent="." instance=ExtResource("11_oo02q")]
 position = Vector2(463, 104)
 useSunset = true
+
+[node name="Instructions" parent="." instance=ExtResource("14_a7lp8")]
+offset_left = -468.0
+offset_top = -258.0
+offset_right = -468.0
+offset_bottom = -258.0
+scale = Vector2(0.843791, 0.800529)

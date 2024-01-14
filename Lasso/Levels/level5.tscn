@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c2aw85e7h4bjw"]
+[gd_scene load_steps=16 format=3 uid="uid://c2aw85e7h4bjw"]
 
 [ext_resource type="Script" path="res://Levels/level5.gd" id="1_fenpu"]
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_krhgh"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c66d37c47tpld" path="res://assets/button_area_2d.tscn" id="11_e41ve"]
 [ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="13_g4g0i"]
 [ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="14_rnamo"]
+[ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="15_0jq5q"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fenpu")
@@ -115,3 +116,10 @@ position = Vector2(-297, 147)
 
 [node name="DecorLargeBush" parent="." instance=ExtResource("14_rnamo")]
 position = Vector2(-86, 141)
+
+[node name="Instructions" parent="." instance=ExtResource("15_0jq5q")]
+offset_left = -383.0
+offset_top = -213.0
+offset_right = -383.0
+offset_bottom = -213.0
+scale = Vector2(0.378898, 0.359471)

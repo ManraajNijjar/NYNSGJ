@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://rxdyejdjqenf"]
+[gd_scene load_steps=15 format=3 uid="uid://rxdyejdjqenf"]
 
 [ext_resource type="PackedScene" uid="uid://cqyajh3ukg6xx" path="res://assets/cowboy_2d.tscn" id="1_kyue4"]
 [ext_resource type="PackedScene" uid="uid://b1naniduoabeq" path="res://assets/lasso_projectile.tscn" id="2_s0xo8"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="11_whjj7"]
 [ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="12_7p6nc"]
 [ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="13_yyh6a"]
+[ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="14_5e4fb"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -91,3 +92,10 @@ position = Vector2(320, 57)
 
 [node name="DecorSmallBush2" parent="." instance=ExtResource("12_7p6nc")]
 position = Vector2(222, 101)
+
+[node name="Instructions" parent="." instance=ExtResource("14_5e4fb")]
+offset_left = -383.0
+offset_top = -213.0
+offset_right = -383.0
+offset_bottom = -213.0
+scale = Vector2(0.378898, 0.359471)

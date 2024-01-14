@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmeyi43yare64"]
+[gd_scene load_steps=14 format=3 uid="uid://dmeyi43yare64"]
 
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_dxe4f"]
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_ifv54"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="9_iirqg"]
 [ext_resource type="PackedScene" uid="uid://cjfa5kxh5bijq" path="res://assets/decor_largeBush.tscn" id="11_r07ba"]
 [ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="12_6dulk"]
+[ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="13_x6ye2"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -87,3 +88,10 @@ position = Vector2(15, 134)
 
 [node name="DecorPricklyPear3" parent="." instance=ExtResource("9_iirqg")]
 position = Vector2(176, 140)
+
+[node name="Instructions" parent="." instance=ExtResource("13_x6ye2")]
+offset_left = -383.0
+offset_top = -213.0
+offset_right = -383.0
+offset_bottom = -213.0
+scale = Vector2(0.378898, 0.359471)

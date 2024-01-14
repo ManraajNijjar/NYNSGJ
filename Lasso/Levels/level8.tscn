@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1f0s0vcrm6wn"]
+[gd_scene load_steps=15 format=3 uid="uid://b1f0s0vcrm6wn"]
 
 [ext_resource type="Script" path="res://Levels/level8.gd" id="1_bt72k"]
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_ivjdh"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="10_8cv3l"]
 [ext_resource type="PackedScene" uid="uid://d0lfg7gahhae3" path="res://assets/fire.tscn" id="10_8qohs"]
 [ext_resource type="PackedScene" uid="uid://sxatfbe5l6ol" path="res://assets/lasso_post_2d.tscn" id="11_klgpf"]
+[ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="14_x2hxu"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_bt72k")
@@ -120,3 +121,10 @@ useSunset = true
 [node name="DecorSmallBush3" parent="." instance=ExtResource("10_8cv3l")]
 position = Vector2(375, -199)
 useSunset = true
+
+[node name="Instructions" parent="." instance=ExtResource("14_x2hxu")]
+offset_left = -468.0
+offset_top = -258.0
+offset_right = -468.0
+offset_bottom = -258.0
+scale = Vector2(0.843791, 0.800529)

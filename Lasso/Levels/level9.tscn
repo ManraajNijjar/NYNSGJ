@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bns6rto0kdnoq"]
+[gd_scene load_steps=15 format=3 uid="uid://bns6rto0kdnoq"]
 
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="1_w2xth"]
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="2_u6ud8"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://8v36g1aui6t4" path="res://assets/fruit.tscn" id="10_f8ojp"]
 [ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="11_5sart"]
 [ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="12_gclxc"]
+[ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="14_l0y4f"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -121,3 +122,10 @@ position = Vector2(-517, 209)
 
 [node name="DecorSmallBush" parent="." instance=ExtResource("12_gclxc")]
 position = Vector2(-553, 242)
+
+[node name="Instructions" parent="." instance=ExtResource("14_l0y4f")]
+offset_left = -587.0
+offset_top = -329.0
+offset_right = -587.0
+offset_bottom = -329.0
+scale = Vector2(0.843791, 0.800529)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxsj4kelruidt"]
+[gd_scene load_steps=11 format=3 uid="uid://bxsj4kelruidt"]
 
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="1_7rurt"]
 [ext_resource type="Script" path="res://Levels/level10.gd" id="1_ncfsp"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="7_46qbq"]
 [ext_resource type="PackedScene" uid="uid://d0lfg7gahhae3" path="res://assets/fire.tscn" id="8_tusmf"]
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="9_uacej"]
+[ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="10_7uoep"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ncfsp")
@@ -136,3 +137,10 @@ rotation = 4.71239
 [node name="GroundLong4" parent="." instance=ExtResource("9_uacej")]
 position = Vector2(602, -276)
 rotation = 4.71239
+
+[node name="Instructions" parent="." instance=ExtResource("10_7uoep")]
+offset_left = -584.0
+offset_top = -324.0
+offset_right = -584.0
+offset_bottom = -324.0
+scale = Vector2(0.843791, 0.800529)
