@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7dofeonpfhta"]
+[gd_scene load_steps=7 format=3 uid="uid://b7dofeonpfhta"]
 
 [ext_resource type="Script" path="res://Levels/main_menu.gd" id="1_qp0i6"]
 [ext_resource type="Texture2D" uid="uid://cm21274epimvj" path="res://images/MenuImages/Title screen-small_1152x642.png" id="1_uct0i"]
 [ext_resource type="Texture2D" uid="uid://cjg13xkdo86ut" path="res://images/MenuImages/Title screen-playbutton.png" id="2_ruhpm"]
 [ext_resource type="Texture2D" uid="uid://di4fd77mbj6jb" path="res://images/MenuImages/Title screen-play green.png" id="3_fd88q"]
 [ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="5_x0o4n"]
+[ext_resource type="AudioStream" uid="uid://dk1bx11vkest6" path="res://audio/Main_Menu_Music.wav" id="6_bg3ma"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -52,5 +53,9 @@ event = {
 }
 
 [node name="AkListener2D" type="AkListener2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_bg3ma")
+autoplay = true
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

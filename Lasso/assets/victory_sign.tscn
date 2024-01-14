@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b18s8fhlhlm0n" path="res://images/Continue sign (no ground).png" id="1_rwhum"]
 [ext_resource type="Texture2D" uid="uid://sn1yki0teulf" path="res://images/Continue sign-sunset.png" id="2_ush58"]
 [ext_resource type="Texture2D" uid="uid://bauv588o4hl0f" path="res://images/Continue sign.png" id="3_bssqj"]
-[ext_resource type="AudioStream" uid="uid://btwmhyjvw05fy" path="res://audio/Gameplay_TEST.wav" id="5_svnf8"]
+[ext_resource type="AudioStream" uid="uid://b6xxo1uf8a6od" path="res://audio/Gameplay_Music.wav" id="5_32v4d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yv2j2"]
 
@@ -81,7 +81,7 @@ wait_time = 2.5
 one_shot = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_svnf8")
+stream = ExtResource("5_32v4d")
 autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
