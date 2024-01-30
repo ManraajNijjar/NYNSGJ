@@ -150,7 +150,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{3923D0A2-848A-601E-13E1-A18D949FB9DD}">
+		<SoundBank Id="2218482606" Type="User" Language="SFX" Hash="{6E2E031B-DF15-9CA9-4E83-4F7642412B42}">
 			<ShortName>Default_Soundbank</ShortName>
 			<Path>Default_Soundbank.bnk</Path>
 			<Media>
@@ -176,7 +176,7 @@
 				</File>
 				<File Id="77716993" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Baby_Throw_5.wav</ShortName>
-					<CachePath>SFX/Baby_Throw_5_1FFB45D7.wem</CachePath>
+					<CachePath>SFX/Baby_Throw_5_98DD08C1.wem</CachePath>
 				</File>
 				<File Id="95272385" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lasso_Catch.wav</ShortName>
@@ -188,7 +188,7 @@
 				</File>
 				<File Id="206783646" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Baby_Throw_2.wav</ShortName>
-					<CachePath>SFX/Baby_Throw_2_4EB54B8A.wem</CachePath>
+					<CachePath>SFX/Baby_Throw_2_3D9906A7.wem</CachePath>
 				</File>
 				<File Id="218572268" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Button Activated.wav</ShortName>
@@ -216,7 +216,7 @@
 				</File>
 				<File Id="344768612" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fire.wav</ShortName>
-					<CachePath>SFX/Fire_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/Fire_11A93380.wem</CachePath>
 				</File>
 				<File Id="344937593" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lasso_Throw.wav</ShortName>
@@ -276,7 +276,7 @@
 				</File>
 				<File Id="636329215" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Baby_Throw_3.wav</ShortName>
-					<CachePath>SFX/Baby_Throw_3_CFCDA907.wem</CachePath>
+					<CachePath>SFX/Baby_Throw_3_C1464439.wem</CachePath>
 				</File>
 				<File Id="651466090" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Breaking Wooden Crate.wav</ShortName>
@@ -284,7 +284,7 @@
 				</File>
 				<File Id="680249149" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Baby_Throw_4.wav</ShortName>
-					<CachePath>SFX/Baby_Throw_4_442F8D42.wem</CachePath>
+					<CachePath>SFX/Baby_Throw_4_537235DA.wem</CachePath>
 				</File>
 				<File Id="746391585" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Hog Exit.wav</ShortName>
@@ -357,6 +357,11 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="704518912" Name="Dynamite_Activated">
+					<MediaRefs>
+						<MediaRef Id="508155028"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2513872280" Name="Dynamite_Activated_lvl10">
 					<MediaRefs>
 						<MediaRef Id="508155028"/>
 					</MediaRefs>
@@ -494,5 +499,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5BD349E8-4038-08BD-B75A-6B28F299E11A}</FileHash>
+	<FileHash>{28889319-CB12-21C9-D774-C9037A15CA62}</FileHash>
 </SoundBanksInfo>

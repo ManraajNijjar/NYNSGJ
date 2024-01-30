@@ -42,6 +42,18 @@
 											<PropertyList>
 												<Property Name="LoopCount" Type="int16" Value="0"/>
 											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{7ACC1706-B529-42B9-BB0E-EF2FC271DBB2}" ShortID="151934705">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Main Menu Test" ID="{751008B6-D594-4ACB-8D2A-6ED106A1E1EB}" WorkUnitID="{BD6C800F-310C-4F58-95E7-4A4D5E2ECB0C}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
 										</MusicPlaylistItem>
 									</Custom>
 								</Reference>
@@ -147,7 +159,7 @@
 													<MusicCue Name="Exit Cue" ID="{878EEEF9-3E3C-49CB-A2C3-4396FE11825B}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="36000"/>
+															<Property Name="TimeMs" Type="Real64" Value="87000"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
@@ -171,6 +183,18 @@
 											<PropertyList>
 												<Property Name="LoopCount" Type="int16" Value="0"/>
 											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{66C70615-6B6E-4E1B-B28C-F620B844488C}" ShortID="256793551">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Gamplay Test" ID="{6311B380-EB66-4115-8398-3A3B8B5296D7}" WorkUnitID="{BD6C800F-310C-4F58-95E7-4A4D5E2ECB0C}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
 										</MusicPlaylistItem>
 									</Custom>
 								</Reference>
@@ -276,7 +300,7 @@
 													<MusicCue Name="Exit Cue" ID="{75651015-67EF-4FB4-92EB-67BB6CB91422}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="36125"/>
+															<Property Name="TimeMs" Type="Real64" Value="143875"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
