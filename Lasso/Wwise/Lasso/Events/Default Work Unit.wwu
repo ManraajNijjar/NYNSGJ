@@ -195,7 +195,7 @@
 						<Action Name="" ID="{9FDE3150-5D38-437B-B014-E91977668A5E}" ShortID="605200971">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Gamplay Test" ID="{6311B380-EB66-4115-8398-3A3B8B5296D7}" WorkUnitID="{BD6C800F-310C-4F58-95E7-4A4D5E2ECB0C}"/>
+									<ObjectRef Name="Gameplay Music" ID="{8FA03045-ECF7-40FE-9D80-760AE1A6D320}" WorkUnitID="{BD6C800F-310C-4F58-95E7-4A4D5E2ECB0C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -328,6 +328,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Intro Music" ID="{6DA5B88D-2783-492E-9C94-7883D0F3D7E9}" WorkUnitID="{BD6C800F-310C-4F58-95E7-4A4D5E2ECB0C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dynamite_Activated_lvl10" ID="{E500354C-2D14-4389-BC2C-35F4EF8EBF9A}">
+					<ChildrenList>
+						<Action Name="" ID="{DB6CA9B3-C8CF-456C-AE4F-8E9C99531158}" ShortID="276889380">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dynamite Activated_lvl10" ID="{AB526DBB-FF93-4D37-92DF-625169630D91}" WorkUnitID="{E8CB2EAF-9845-42C6-95C7-5D34BA78F148}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

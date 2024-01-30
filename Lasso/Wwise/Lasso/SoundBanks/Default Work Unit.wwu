@@ -10,6 +10,7 @@
 						<ObjectRef Name="Baby_Talk_Positive" ID="{8E55F71A-F334-4334-9D11-F6E48506F74C}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Horse_Footsteps" ID="{41B164F5-C5D5-434B-96A2-60905185D817}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Gameplay_Music" ID="{7F970973-4ED1-434E-9798-0E4285BB8A2E}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Dynamite_Activated_lvl10" ID="{E500354C-2D14-4389-BC2C-35F4EF8EBF9A}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Lasso_Throw" ID="{44DE9677-95D5-43A2-B210-DAB02E5FF6A8}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Baby_Fly" ID="{A468F97D-C2DB-44B1-9208-62D5D3C39541}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Level_Finish" ID="{DE7232F0-A373-44C0-83BC-E9A3EDFA6C7A}" WorkUnitID="{0CE3B870-30A6-4A57-B0C1-389E9A89CA0D}" Origin="Manual" Filter="7"/>

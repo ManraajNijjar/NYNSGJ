@@ -17,6 +17,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2322231365	Gameplay_Music			\Default Work Unit\Gameplay_Music	
 	2401031616	Lasso_Whirl			\Default Work Unit\Lasso_Whirl	
 	2491012383	Rock_Moving			\Default Work Unit\Rock_Moving	
+	2513872280	Dynamite_Activated_lvl10			\Default Work Unit\Dynamite_Activated_lvl10	
 	2529140474	Hog_Eat			\Default Work Unit\Hog_Eat	
 	2678880713	Fire			\Default Work Unit\Fire	
 	3018083661	Horse_Neigh_Baby_Sits			\Default Work Unit\Horse_Neigh_Baby_Sits	
@@ -36,24 +37,24 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	63415594	Lasso_Catch_2	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Lasso_Catch_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Lasso_Catch\Lasso_Catch_2		74640
 	67786165	Baby_Fly	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Fly_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Fly\Baby_Fly		540860
 	75466385	Horse_Neigh_5	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Horse_Neigh_5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Horse\Horse_Neigh\Horse_Neigh_5		110328
-	77716993	Baby_Throw_5	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Throw_5_1FFB45D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Talk_Throw\Baby_Throw_5		57176
+	77716993	Baby_Throw_5	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Throw_5_98DD08C1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Talk_Throw\Baby_Throw_5		57176
 	95272385	Lasso_Catch	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Lasso_Catch_B5DC2C2D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Lasso_Catch\Lasso_Catch		65012
 	140461079	Rock Moving	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Rock Moving_FAE079E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\Rock\Rock Moving		9883080
-	206783646	Baby_Throw_2	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Throw_2_4EB54B8A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Talk_Throw\Baby_Throw_2		106484
+	206783646	Baby_Throw_2	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Throw_2_3D9906A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Talk_Throw\Baby_Throw_2		106484
 	218572268	Button Activated	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Button Activated_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\Button\Button Activated		48336
 	237961405	Dynamite Explostion	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Dynamite_Explosion_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\Dynamite\Dynamite Explosion\Dynamite Explostion		152128
 	290688754	Horse_Neigh_2	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Horse_Neigh_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Horse\Horse_Neigh\Horse_Neigh_2		260692
 	313669753	Baby Throw	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Throw_9453AB0F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Talk_Throw\Baby Throw		170036
 	326452975	Gameplay_Music	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Gameplay_Music_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Gameplay Music\Gamplay Test\Gameplay_Music		27626924
 	343948218	Whip Transition	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Whip Transition_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\Level Transition\Whip Transition		330316
-	344768612	Fire	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Fire_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\Fire\Fire		7105036
+	344768612	Fire	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Fire_11A93380.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\Fire\Fire		7105036
 	344937593	Lasso_Throw	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Lasso_Throw_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Lasso_Throw\Lasso_Throw		44848
 	375319896	Lasso_Catch_4	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Lasso_Catch_4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Lasso_Catch\Lasso_Catch_4		54200
 	420131888	Lasso_Catch_3	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Lasso_Catch_3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Lasso_Catch\Lasso_Catch_3		91148
 	429452082	Level Finished	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Level_Finished_E376AEA8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\Level Finish\Level Finished		645364
 	474620729	Horse_Neigh_4	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Horse_Neigh_4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Horse\Horse_Neigh\Horse_Neigh_4		87004
 	488817919	Lasso_Catch_5	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Lasso_Catch_5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Lasso_Catch\Lasso_Catch_5		64944
-	508155028	Dynamite Activated	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Dynamite Activated_958F44C7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\Dynamite\Dynamite Activated		10624608
+	508155028	Dynamite Activated_lvl10	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Dynamite Activated_958F44C7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\Dynamite\Dynamite Activated_lvl10		10624608
 	526766481	Horse_Kick	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Horse_Kick_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Horse\Horse_Kick\Horse_Kick		45052
 	528347092	Horse_Jump	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Horse Jump_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Horse\Horse_Jump\Horse_Jump		168276
 	546832929	Fruit Pluck	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Fruit Pluck_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\Fruit Pluck\Fruit Pluck		86844
@@ -61,9 +62,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	587545019	Baby_Positive_2	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Positive_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Talk_Positive\Baby_Positive_2		206896
 	609357073	Hog Sleeping	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Hog Sleeping_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hog\Hog Sleeping\Hog Sleeping		6870716
 	625980483	Lasso_Whirl	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Lasso Whirl_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Lasso_Whirl\Lasso_Whirl		2567176
-	636329215	Baby_Throw_3	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Throw_3_CFCDA907.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Talk_Throw\Baby_Throw_3		73428
+	636329215	Baby_Throw_3	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Throw_3_C1464439.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Talk_Throw\Baby_Throw_3		73428
 	651466090	SFX	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Breaking Wooden Crate_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test\SFX		302372
-	680249149	Baby_Throw_4	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Throw_4_442F8D42.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Talk_Throw\Baby_Throw_4		71632
+	680249149	Baby_Throw_4	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Baby_Throw_4_537235DA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Baby\Baby_Talk_Throw\Baby_Throw_4		71632
 	746391585	Hog Exit	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Hog Exit_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hog\Hog Exit\Hog Exit		1555528
 	756702451	Sign Off	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Sign Turn Off_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment Objects\End Sign\Sign Off\Sign Off		7868
 	797284294	Horse_Footsteps	C:\Users\asher\Documents\Godot Projects\Game Jams\NYNSGJ\Lasso\Wwise\Lasso\.cache\Windows\SFX\Horse_Footsteps_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Horse\Horse_Footsteps\Horse_Footsteps		634848
