@@ -116,6 +116,7 @@ event = {
 "id": 701459736,
 "name": "Horse_Footsteps"
 }
+stop_on = 3
 
 [node name="AkListener2D" type="AkListener2D" parent="."]
 
