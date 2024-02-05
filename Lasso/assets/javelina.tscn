@@ -131,7 +131,6 @@ event = {
 "id": 998140643,
 "name": "Hog_Sleeping"
 }
-trigger_on = 1
 stop_on = 3
 
 [node name="Hog_Walk" type="AkEvent2D" parent="."]
@@ -145,7 +144,6 @@ event = {
 "id": 2529140474,
 "name": "Hog_Eat"
 }
-trigger_on = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
