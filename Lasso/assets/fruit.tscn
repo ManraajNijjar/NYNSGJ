@@ -33,5 +33,4 @@ event = {
 "id": 336049027,
 "name": "Fruit_Pluck"
 }
-trigger_on = 1
 position = Vector2(0, 50)

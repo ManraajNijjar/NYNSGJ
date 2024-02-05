@@ -11,7 +11,7 @@ extends Area2D
 
 var leaving = false;
 var finishWakeUp = false;
-var sleepSoundPlaying = false;
+var sleepSoundPlaying = true;
 var walkSoundPlaying = false;
 
 # Called when the node enters the scene tree for the first time.

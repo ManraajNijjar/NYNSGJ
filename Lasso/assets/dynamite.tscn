@@ -38,6 +38,7 @@ event = {
 "id": 704518912,
 "name": "Dynamite_Activated"
 }
+stop_on = 3
 
 [node name="Dynamite_Explosion" type="AkEvent2D" parent="."]
 event = {
