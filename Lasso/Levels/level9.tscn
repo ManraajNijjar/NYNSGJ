@@ -29,7 +29,8 @@ position = Vector2(-376, 284)
 useSunset = true
 
 [node name="GroundLong3" parent="Environment" instance=ExtResource("2_u6ud8")]
-position = Vector2(262, 284)
+position = Vector2(294, 304)
+scale = Vector2(1.435, 1.435)
 useSunset = true
 
 [node name="GroundLong8" parent="Environment" instance=ExtResource("2_u6ud8")]
@@ -128,4 +129,4 @@ offset_left = -587.0
 offset_top = -329.0
 offset_right = -587.0
 offset_bottom = -329.0
-scale = Vector2(0.843791, 0.800529)
+scale = Vector2(1.22534, 1.16251)

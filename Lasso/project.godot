@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 
+[display]
+
+window/size/resizable=false
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Wwise/plugin.cfg")

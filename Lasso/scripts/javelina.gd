@@ -4,6 +4,7 @@ extends Area2D
 @onready var animationPlayer : AnimationPlayer = $AnimationPlayer
 @onready var sprite2DIdle : Sprite2D = $CollisionShape2D/Sprite2DIdle
 @onready var sprite2DWalk : Sprite2D = $CollisionShape2D/Sprite2DWalk
+@onready var sprite2DDream : Sprite2D = $Sprite2DDream
 
 @onready var soundBankHogSleep = $Hog_Sleeping
 @onready var soundBankHogWalk = $Hog_Walk
@@ -48,6 +49,7 @@ func _on_animation_player_animation_finished(anim_name:StringName):
 		animationPlayer.play("idle");
 	elif anim_name == "eat" && hunger <= 0:
 		animationPlayer.play("wakeup");
+		sprite2DDream.visible = false;
 	elif anim_name == "wakeup":
 		finishWakeUp = true;
 		animationPlayer.play("walk");

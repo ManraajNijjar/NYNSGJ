@@ -18,6 +18,7 @@ var lassoedObject = null;
 var throwCharge = 0;
 @export var lassoProjectile: PackedScene = null;
 var currentLasso = null;
+var lassoBridges = [];
 var lassoTimeOut = 0;
 
 var horseLassoed = false;
@@ -52,13 +53,16 @@ func _input(event):
 				lassoedObject = null;
 				hasLassoedObject = false;
 				ropeToObject.queue_free();
-				lassoTimeOut = 0.5;
+				lassoTimeOut = 0.3;
 			else:
 				leftMouseHeld = false;
 				leftMouseReleased = true;
 				hasLassoedObject = false;
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if event.pressed:
+				if lassoBridges.size() > 0:
+					var ropeBridge = lassoBridges.pop_back();
+					ropeBridge.queue_free();
 				if ropeToObject != null:
 					#ropeToObject.remove_piece();
 					pass
@@ -177,6 +181,7 @@ func set_Lassoed_Area(area: Area2D):
 	var rope = Rope.instantiate()
 	add_child(rope);
 	rope.spawn_rope(position, area.global_position);
+	lassoBridges.append(rope);
 
 func setAnimation(animName: String):
 	animationPlayer.play(animName);

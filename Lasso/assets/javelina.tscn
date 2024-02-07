@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://doy8ch5n8h1as"]
+[gd_scene load_steps=12 format=3 uid="uid://doy8ch5n8h1as"]
 
 [ext_resource type="Texture2D" uid="uid://bfys1r18dby86" path="res://images/Javelina eating sprite sheet.png" id="1_ss5id"]
 [ext_resource type="Script" path="res://scripts/javelina.gd" id="1_y2lmh"]
 [ext_resource type="Texture2D" uid="uid://b6xvd6rk7m34f" path="res://images/Javelina-walk.png" id="2_dxq1h"]
+[ext_resource type="Texture2D" uid="uid://blawe1faarpxt" path="res://images/MenuImages/thoughtBubble.png" id="4_s8ddq"]
+[ext_resource type="Texture2D" uid="uid://ftu5leeg06th" path="res://images/Prickly fruit(1).png" id="5_g0ggj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l2c7o"]
 
@@ -110,11 +112,11 @@ position = Vector2(-1.5, 0.625)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("1_ss5id")
 hframes = 3
-frame = 2
+frame = 1
 
 [node name="Sprite2DWalk" type="Sprite2D" parent="CollisionShape2D"]
 visible = false
-position = Vector2(-1.5, 0.625)
+position = Vector2(-1.375, -4.005)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("2_dxq1h")
 hframes = 2
@@ -144,6 +146,17 @@ event = {
 "id": 2529140474,
 "name": "Hog_Eat"
 }
+
+[node name="Sprite2DDream" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(-133, -110)
+scale = Vector2(0.63945, 0.63945)
+texture = ExtResource("4_s8ddq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2DDream"]
+position = Vector2(2, -20)
+scale = Vector2(0.320596, 0.244067)
+texture = ExtResource("5_g0ggj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

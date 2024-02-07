@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://brwftp8w3m6ti" path="res://assets/horse_2d.tscn" id="4_esqv7"]
 [ext_resource type="PackedScene" uid="uid://dsyq8e0ohiyf8" path="res://assets/victory_sign.tscn" id="6_gtbmp"]
 [ext_resource type="PackedScene" uid="uid://caf3mirb7diwx" path="res://assets/crate_2d.tscn" id="7_46qbq"]
-[ext_resource type="PackedScene" uid="uid://b7dofeonpfhta" path="res://Levels/main_menu.tscn" id="7_li41u"]
+[ext_resource type="PackedScene" uid="uid://nqd8d05r583t" path="res://Levels/finish_game.tscn" id="7_xdtvm"]
 [ext_resource type="PackedScene" uid="uid://d0lfg7gahhae3" path="res://assets/fire.tscn" id="8_tusmf"]
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="9_uacej"]
 [ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="10_7uoep"]
@@ -38,7 +38,7 @@ cowboy = NodePath("../Cowboy2D")
 [node name="VictorySign" parent="." instance=ExtResource("6_gtbmp")]
 position = Vector2(513, -266)
 useSunset = true
-nextScene = ExtResource("7_li41u")
+nextScene = ExtResource("7_xdtvm")
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -145,4 +145,4 @@ offset_left = -584.0
 offset_top = -324.0
 offset_right = -584.0
 offset_bottom = -324.0
-scale = Vector2(0.843791, 0.800529)
+scale = Vector2(1.18988, 1.12888)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d2thb3t7nq1n2"]
+[gd_scene load_steps=15 format=3 uid="uid://d2thb3t7nq1n2"]
 
 [ext_resource type="PackedScene" uid="uid://c588ee1qlml63" path="res://assets/ground_long.tscn" id="1_oe02j"]
 [ext_resource type="PackedScene" uid="uid://crkuk68ie5k5u" path="res://assets/background.tscn" id="2_huequ"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://ds43wbjmolygo" path="res://assets/decor_pricklypear.tscn" id="9_hlxok"]
 [ext_resource type="PackedScene" uid="uid://c6306jbij6dvn" path="res://assets/deco_smallBush.tscn" id="10_6fywg"]
 [ext_resource type="PackedScene" uid="uid://8v36g1aui6t4" path="res://assets/fruit.tscn" id="11_m3x1w"]
-[ext_resource type="PackedScene" uid="uid://sxatfbe5l6ol" path="res://assets/lasso_post_2d.tscn" id="12_mgae2"]
 [ext_resource type="PackedScene" uid="uid://doy8ch5n8h1as" path="res://assets/javelina.tscn" id="13_m1x8k"]
 [ext_resource type="PackedScene" uid="uid://bdr0pf3kvk71" path="res://assets/instructions.tscn" id="15_h6wlb"]
 
@@ -136,11 +135,6 @@ useSunset = true
 position = Vector2(-388, 83)
 rotation = 0.981328
 scale = Vector2(0.93, 0.93)
-useSunset = true
-
-[node name="LassoPost2D" parent="." instance=ExtResource("12_mgae2")]
-position = Vector2(424, -179)
-rotation = -1.32345
 useSunset = true
 
 [node name="Javelina" parent="." instance=ExtResource("13_m1x8k")]

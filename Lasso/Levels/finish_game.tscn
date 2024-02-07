@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://nqd8d05r583t"]
+
+[ext_resource type="Texture2D" uid="uid://uvi8n4n21bbc" path="res://images/MenuImages/Completion screen.png" id="1_jmixq"]
+[ext_resource type="AudioStream" uid="uid://dk1bx11vkest6" path="res://audio/Main_Menu_Music.wav" id="2_fsqfh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jmixq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_fsqfh")
+autoplay = true

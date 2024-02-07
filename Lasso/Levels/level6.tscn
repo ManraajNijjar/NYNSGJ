@@ -29,7 +29,7 @@ position = Vector2(31, -138)
 useSunset = true
 
 [node name="Ground5" parent="Environment" instance=ExtResource("1_c1ihq")]
-position = Vector2(433, 184)
+position = Vector2(344, 192)
 rotation = -0.0872665
 useSunset = true
 
