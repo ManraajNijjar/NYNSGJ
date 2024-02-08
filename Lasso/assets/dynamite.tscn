@@ -40,6 +40,13 @@ event = {
 }
 stop_on = 3
 
+[node name="Dynamite_Activated_Reduced" type="AkEvent2D" parent="."]
+event = {
+"id": 2513872280,
+"name": "Dynamite_Activated_lvl10"
+}
+stop_on = 3
+
 [node name="Dynamite_Explosion" type="AkEvent2D" parent="."]
 event = {
 "id": 1512346300,

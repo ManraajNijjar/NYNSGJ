@@ -40,6 +40,7 @@ func _process(delta):
 
 func spawnDynamite(spawnSpot: Vector2):
 	var newDynamite = dynamite.instantiate();
+	newDynamite.isReducedSound = true;
 	add_child(newDynamite);
 	newDynamite.position = spawnSpot;
 

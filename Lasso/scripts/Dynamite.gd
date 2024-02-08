@@ -5,17 +5,26 @@ extends RigidBody2D
 @onready var explosionArea = $Area2D;
 
 @onready var soundBankDynamiteActivated = $Dynamite_Activated
+@onready var soundBankDynamiteActivatedReduced = $Dynamite_Activated_Reduced
 @onready var soundBankDynamiteExplosion = $Dynamite_Explosion
+
+@export var isReducedSound = false;
 
 func setFire():
 	if sprite2D.frame != 1:
-		soundBankDynamiteActivated.post_event();
+		if isReducedSound:
+			soundBankDynamiteActivatedReduced.post_event();
+		else:
+			soundBankDynamiteActivated.post_event();
 		sprite2D.frame = 1;
 		timer.start();
 
 
 func _on_timer_timeout():
-	soundBankDynamiteActivated.stop_event();
+	if isReducedSound:
+		soundBankDynamiteActivatedReduced.stop_event();
+	else:
+		soundBankDynamiteActivated.stop_event();
 	soundBankDynamiteExplosion.post_event();
 	var bodies = explosionArea.get_overlapping_bodies();
 	for body in bodies:
